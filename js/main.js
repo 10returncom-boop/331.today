@@ -181,13 +181,12 @@
     document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // ===== 建立作品卡片 =====
+  // ===== 建立作品卡片（連結至詳情頁） =====
   function createCard(artwork, index) {
-    const card = document.createElement('div');
+    const card = document.createElement('a');
     card.className = 'artwork-card';
+    card.href = 'artwork.html?id=' + encodeURIComponent(artwork.id);
     card.dataset.index = index;
-    card.setAttribute('role', 'button');
-    card.setAttribute('tabindex', '0');
     card.setAttribute('aria-label', artwork.title + ' (' + artwork.id + ')');
 
     const catName = CATEGORY_NAMES[artwork.category] || artwork.category;
@@ -205,17 +204,6 @@
       '</div>';
 
     lazyLoadImage(card.querySelector('.artwork-image'));
-
-    card.addEventListener('click', function () {
-      openLightbox(index);
-    });
-
-    card.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openLightbox(index);
-      }
-    });
 
     return card;
   }

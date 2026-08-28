@@ -370,11 +370,14 @@ a {
 /* ===== Artwork Card ===== */
 .artwork-card {
   position: relative;
+  display: block;
   overflow: hidden;
   border-radius: var(--radius);
   background: var(--card-bg);
   box-shadow: var(--shadow-sm);
   cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
