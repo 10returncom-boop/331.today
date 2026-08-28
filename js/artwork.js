@@ -47,8 +47,8 @@
 
   // 相關作品（同分類）
   function getRelated(artwork, count) {
-    if (!window.ARTWORKS) return [];
-    return window.ARTWORKS
+    if (!ARTWORKS) return [];
+    return ARTWORKS
       .filter(function (a) { return a.category === artwork.category && a.id !== artwork.id; })
       .slice(0, count);
   }
@@ -56,18 +56,18 @@
   // 主渲染
   function render() {
     var id = getParam('id');
-    if (!id || !window.ARTWORKS) {
+    if (!id || !ARTWORKS) {
       document.getElementById('artwork-layout').innerHTML = '<p style="color:#999;">找不到作品。</p>';
       return;
     }
 
-    var artwork = window.ARTWORKS.find(function (a) { return a.id === id; });
+    var artwork = ARTWORKS.find(function (a) { return a.id === id; });
     if (!artwork) {
       document.getElementById('artwork-layout').innerHTML = '<p style="color:#999;">找不到作品 ' + escapeHtml(id) + '。</p>';
       return;
     }
 
-    var article = window.ARTICLES && window.ARTICLES[id] ? window.ARTICLES[id] : null;
+    var article = ARTICLES && ARTICLES[id] ? ARTICLES[id] : null;
     var catName = CATEGORY_NAMES[artwork.category] || artwork.category;
     var title = article && article.title ? article.title : catName + '作品 ' + artwork.id;
     var articleText = article ? article.content : '';
@@ -94,8 +94,8 @@
       html += '<h2 class="related-title">相關作品</h2>';
       html += '<div class="related-grid">';
       related.forEach(function (r) {
-        var rTitle = window.ARTICLES && window.ARTICLES[r.id] && window.ARTICLES[r.id].title
-          ? window.ARTICLES[r.id].title
+        var rTitle = ARTICLES && ARTICLES[r.id] && ARTICLES[r.id].title
+          ? ARTICLES[r.id].title
           : catName + ' ' + r.id;
         html += '<a href="artwork.html?id=' + encodeURIComponent(r.id) + '" class="related-item">';
         html += '<img src="' + escapeHtml(r.thumb) + '" alt="' + escapeHtml(rTitle) + '" class="related-thumb" loading="lazy">';
