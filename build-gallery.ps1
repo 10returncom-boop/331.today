@@ -170,6 +170,41 @@ if ($images.Count -eq 0) {
   Write-Host "請將圖片放入 import/ 後重新執行。" -ForegroundColor Yellow
 }
 
+# ===== 同步刪除：移除 import/ 中已不存在的作品 =====
+$currentTitles = @{}
+foreach ($img in $images) {
+  $title = [System.IO.Path]::GetFileNameWithoutExtension($img.Name)
+  $currentTitles[$title] = $true
+}
+
+$removedCount = 0
+$keptArtworks = @()
+foreach ($art in $existingArtworks) {
+  if ($currentTitles.ContainsKey($art.title)) {
+    $keptArtworks += $art
+  } else {
+    # 刪除對應的 WebP 檔案
+    $fullPath = Join-Path $base $art.full
+    $thumbPath = Join-Path $base $art.thumb
+    if (Test-Path $fullPath) { Remove-Item $fullPath -Force }
+    if (Test-Path $thumbPath) { Remove-Item $thumbPath -Force }
+    $removedCount++
+    Write-Host "  [刪除] $($art.id) $($art.title)（來源已移除）" -ForegroundColor Red
+  }
+}
+$existingArtworks = $keptArtworks
+
+# 清理 manifest 中已不存在的檔案
+$validPaths = @{}
+foreach ($img in $images) { $validPaths[$img.FullName] = $true }
+$cleanProcessed = @{}
+foreach ($key in $processed.Keys) {
+  if ($validPaths.ContainsKey($key)) {
+    $cleanProcessed[$key] = $processed[$key]
+  }
+}
+$processed = $cleanProcessed
+
 $newArtworks = @()
 $newProcessed = @{}
 $processedCount = 0
@@ -263,6 +298,7 @@ Write-Host "  建置完成" -ForegroundColor Green
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "  總作品數：$($allArtworks.Count)" -ForegroundColor White
 Write-Host "  新增：$processedCount 件" -ForegroundColor Green
+Write-Host "  刪除：$removedCount 件" -ForegroundColor Red
 Write-Host "  跳過（未變更）：$skippedCount 件" -ForegroundColor Gray
 Write-Host ""
 Write-Host "  分類統計：" -ForegroundColor White
