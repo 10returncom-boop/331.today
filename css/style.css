@@ -21,8 +21,9 @@
   --radius: 4px;
   --gap: 16px;
   --header-h: 64px;
-  --font-sans: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-serif: "Noto Serif TC", "Songti TC", "SimSun", Georgia, serif;
+  --font-sans: "ZCOOL XiaoWei", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "ZCOOL XiaoWei", "Cormorant Garamond", "Noto Serif TC", "Songti TC", "SimSun", Georgia, serif;
+  --font-display: "Ma Shan Zheng", "ZCOOL XiaoWei", "Cormorant Garamond", serif;
 }
 
 html {
@@ -155,9 +156,9 @@ a {
 }
 
 .hero-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.12em;
   line-height: 1.1;
   margin-bottom: 12px;
