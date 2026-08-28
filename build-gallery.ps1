@@ -170,20 +170,27 @@ if ($images.Count -eq 0) {
   Write-Host "請將圖片放入 import/ 後重新執行。" -ForegroundColor Yellow
 }
 
-# ===== 同步刪除：移除 import/ 中已不存在的作品 =====
-$currentTitles = @{}
+# ===== 同步刪除與分類更新 =====
+$currentFiles = @{}
 foreach ($img in $images) {
   $title = [System.IO.Path]::GetFileNameWithoutExtension($img.Name)
-  $currentTitles[$title] = $true
+  $currentFiles[$title] = $img
 }
 
 $removedCount = 0
+$updatedCount = 0
 $keptArtworks = @()
 foreach ($art in $existingArtworks) {
-  if ($currentTitles.ContainsKey($art.title)) {
+  if ($currentFiles.ContainsKey($art.title)) {
+    $img = $currentFiles[$art.title]
+    $newCategory = Get-Category -filePath $img.FullName
+    if ($art.category -ne $newCategory) {
+      $art.category = $newCategory
+      $updatedCount++
+      Write-Host "  [分類更新] $($art.id) $($art.title) → $newCategory" -ForegroundColor Yellow
+    }
     $keptArtworks += $art
   } else {
-    # 刪除對應的 WebP 檔案
     $fullPath = Join-Path $base $art.full
     $thumbPath = Join-Path $base $art.thumb
     if (Test-Path $fullPath) { Remove-Item $fullPath -Force }
@@ -299,6 +306,7 @@ Write-Host "========================================" -ForegroundColor Cyan
 Write-Host "  總作品數：$($allArtworks.Count)" -ForegroundColor White
 Write-Host "  新增：$processedCount 件" -ForegroundColor Green
 Write-Host "  刪除：$removedCount 件" -ForegroundColor Red
+Write-Host "  分類更新：$updatedCount 件" -ForegroundColor Yellow
 Write-Host "  跳過（未變更）：$skippedCount 件" -ForegroundColor Gray
 Write-Host ""
 Write-Host "  分類統計：" -ForegroundColor White
