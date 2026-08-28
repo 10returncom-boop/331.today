@@ -70,7 +70,7 @@
     bindEvents();
   }
 
-  // ===== 動態產生分類導航 =====
+  // ===== 動態產生分類導航（下拉選單） =====
   function renderCategoryNav() {
     // 計算各分類數量
     const counts = {};
@@ -78,25 +78,20 @@
       counts[a.category] = (counts[a.category] || 0) + 1;
     });
 
-    let html = '';
+    let html = '<select class="cat-select" id="cat-select" aria-label="選擇分類">';
 
     // 全部作品
-    html += '<button class="cat-nav-item active" data-category="all">' +
-      '<span class="cat-nav-name">全部作品</span>' +
-      '<span class="cat-nav-count">' + ARTWORKS.length.toLocaleString() + '</span>' +
-      '</button>';
+    html += '<option value="all">全部作品（' + ARTWORKS.length.toLocaleString() + '）</option>';
 
     // 遍歷預定義分類（固定順序，0件也顯示）
     Object.keys(CATEGORY_NAMES).forEach(function (cat) {
       if (cat === 'all') return;
       const name = CATEGORY_NAMES[cat];
       const count = counts[cat] || 0;
-      html += '<button class="cat-nav-item' + (count === 0 ? ' is-empty' : '') + '" data-category="' + cat + '">' +
-        '<span class="cat-nav-name">' + escapeHtml(name) + '</span>' +
-        '<span class="cat-nav-count">' + count.toLocaleString() + '</span>' +
-        '</button>';
+      html += '<option value="' + cat + '">' + escapeHtml(name) + '（' + count.toLocaleString() + '）</option>';
     });
 
+    html += '</select>';
     els.categoryNav.innerHTML = html;
   }
 
@@ -369,15 +364,12 @@
 
   // ===== 事件綁定 =====
   function bindEvents() {
-    // 分類導航
-    els.categoryNav.addEventListener('click', function (e) {
-      const item = e.target.closest('.cat-nav-item');
-      if (!item) return;
-
-      els.categoryNav.querySelectorAll('.cat-nav-item').forEach(function (b) { b.classList.remove('active'); });
-      item.classList.add('active');
-      state.category = item.dataset.category;
-      applyFilters();
+    // 分類導航（下拉選單）
+    els.categoryNav.addEventListener('change', function (e) {
+      if (e.target.classList.contains('cat-select')) {
+        state.category = e.target.value;
+        applyFilters();
+      }
     });
 
     // 排序

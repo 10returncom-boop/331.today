@@ -190,60 +190,40 @@ a {
   padding: 0 24px 80px;
 }
 
-/* ===== Category Navigation (Christie's style) ===== */
+/* ===== Category Navigation (Dropdown) ===== */
 .category-nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 0;
+  padding: 20px 0;
   border-bottom: 1px solid var(--border);
   margin-bottom: 0;
 }
 
-.cat-nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-  padding: 16px 24px;
+.cat-select {
   font-family: var(--font-serif);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   color: #000;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  transition: all 0.2s ease;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 10px 40px 10px 16px;
   cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23000' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  transition: border-color 0.2s;
+  min-width: 220px;
 }
 
-.cat-nav-item:hover {
-  color: #000;
+.cat-select:hover {
+  border-color: #999;
 }
 
-.cat-nav-item.active {
-  color: #000;
-  border-bottom-color: #000;
-}
-
-.cat-nav-name {
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  color: #000;
-}
-
-.cat-nav-count {
-  font-family: var(--font-sans);
-  font-size: 0.6875rem;
-  color: var(--text-light);
-  letter-spacing: 0.05em;
-}
-
-.cat-nav-item.active .cat-nav-count {
-  color: var(--text-muted);
-}
-
-.cat-nav-item.is-empty {
-  opacity: 0.4;
+.cat-select:focus {
+  outline: none;
+  border-color: #000;
 }
 
 /* ===== Toolbar ===== */
