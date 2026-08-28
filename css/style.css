@@ -717,9 +717,9 @@ a {
 
 /* ===== Footer ===== */
 .site-footer {
-  border-top: 1px solid var(--border);
-  background: var(--bg-alt);
-  color: var(--text-muted);
+  border-top: 1px solid #333;
+  background: #1a1a1a;
+  color: #aaa;
   font-size: 0.8125rem;
 }
 
@@ -742,7 +742,7 @@ a {
   font-family: var(--font-serif);
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--text);
+  color: #fff;
   letter-spacing: 0.08em;
 }
 
@@ -751,7 +751,7 @@ a {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--text-light);
+  color: #888;
 }
 
 .footer-contact {
@@ -770,25 +770,25 @@ a {
   font-size: 0.6875rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-light);
+  color: #888;
 }
 
 .contact-value {
   font-size: 1rem;
-  color: var(--text);
+  color: #fff;
   font-weight: 500;
   transition: color 0.2s;
 }
 
 a.contact-value:hover {
-  color: var(--accent-hover);
+  color: #ccc;
 }
 
 .footer-bottom {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #333;
   padding: 20px 24px;
   text-align: center;
-  color: var(--text-light);
+  color: #666;
   font-size: 0.75rem;
 }
 
