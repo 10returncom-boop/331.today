@@ -70,7 +70,7 @@
     bindEvents();
   }
 
-  // ===== 動態產生分類導航（下拉選單） =====
+  // ===== 動態產生分類導航（下拉選單，只顯示有作品的分類） =====
   function renderCategoryNav() {
     // 計算各分類數量
     const counts = {};
@@ -78,17 +78,26 @@
       counts[a.category] = (counts[a.category] || 0) + 1;
     });
 
+    // 只取有作品的分類，依 CATEGORY_NAMES 順序排列，未知分類排最後
+    const cats = Object.keys(counts).filter(function (c) { return counts[c] > 0; });
+    cats.sort(function (a, b) {
+      const ai = Object.keys(CATEGORY_NAMES).indexOf(a);
+      const bi = Object.keys(CATEGORY_NAMES).indexOf(b);
+      if (ai === -1 && bi === -1) return a.localeCompare(b);
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    });
+
     let html = '<select class="cat-select" id="cat-select" aria-label="選擇分類">';
 
     // 全部作品
     html += '<option value="all">全部作品（' + ARTWORKS.length.toLocaleString() + '）</option>';
 
-    // 遍歷預定義分類（固定順序，0件也顯示）
-    Object.keys(CATEGORY_NAMES).forEach(function (cat) {
-      if (cat === 'all') return;
-      const name = CATEGORY_NAMES[cat];
-      const count = counts[cat] || 0;
-      html += '<option value="' + cat + '">' + escapeHtml(name) + '（' + count.toLocaleString() + '）</option>';
+    // 有作品的分類（動態）
+    cats.forEach(function (cat) {
+      const name = CATEGORY_NAMES[cat] || cat;
+      html += '<option value="' + cat + '">' + escapeHtml(name) + '（' + counts[cat].toLocaleString() + '）</option>';
     });
 
     html += '</select>';
