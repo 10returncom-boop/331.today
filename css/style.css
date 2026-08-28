@@ -84,18 +84,14 @@ a {
   align-items: baseline;
   gap: 2px;
   font-family: var(--font-display);
-}
-
-.logo-mark {
-  font-size: 1.5rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  text-decoration: none;
 }
 
 .logo-text {
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  color: var(--text);
 }
 
 .site-nav {
