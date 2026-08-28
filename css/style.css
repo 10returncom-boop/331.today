@@ -23,7 +23,7 @@
   --header-h: 64px;
   --font-sans: "Songti TC", "SimSun", "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
   --font-serif: "Songti TC", "SimSun", "Noto Serif TC", Georgia, serif;
-  --font-display: "Songti TC", "SimSun", "Noto Serif TC", serif;
+  --font-display: "FangSong", "STFangsong", "仿宋", "Noto Serif TC", "Songti TC", serif;
 }
 
 html {
@@ -83,13 +83,13 @@ a {
   display: flex;
   align-items: baseline;
   gap: 2px;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
 }
 
 .logo-mark {
   font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 .logo-text {
@@ -739,9 +739,9 @@ a {
 }
 
 .footer-logo {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #fff;
   letter-spacing: 0.08em;
 }
