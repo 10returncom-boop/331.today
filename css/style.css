@@ -719,7 +719,7 @@ a {
 .site-footer {
   border-top: 1px solid #333;
   background: #1a1a1a;
-  color: #aaa;
+  color: #fff;
   font-size: 0.8125rem;
 }
 
@@ -751,7 +751,7 @@ a {
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #888;
+  color: #fff;
 }
 
 .footer-contact {
@@ -770,7 +770,7 @@ a {
   font-size: 0.6875rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: #888;
+  color: #fff;
 }
 
 .contact-value {
@@ -788,7 +788,7 @@ a.contact-value:hover {
   border-top: 1px solid #333;
   padding: 20px 24px;
   text-align: center;
-  color: #666;
+  color: #fff;
   font-size: 0.75rem;
 }
 
