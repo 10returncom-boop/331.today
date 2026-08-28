@@ -1,6 +1,15 @@
 # Build artifacts
 js/.build-manifest.json
 
+# Import staging (local only, processed output goes to images/)
+import/
+
+# Large media files
+*.mp4
+*.mov
+*.avi
+*.mkv
+
 # OS
 Thumbs.db
 .DS_Store
