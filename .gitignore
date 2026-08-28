@@ -1,0 +1,15 @@
+# Build artifacts
+js/.build-manifest.json
+
+# Import staging (local only)
+import/*
+!import/README.md
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
