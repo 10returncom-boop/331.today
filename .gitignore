@@ -1,8 +1,5 @@
-# Build artifacts
-js/.build-manifest.json
-
-# Import staging (local only, processed output goes to images/)
-import/
+# 備用資料區（來源圖、建置腳本、說明文件，不上傳）
+備用資料區/
 
 # Large media files
 *.mp4
