@@ -5,10 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>聖經的世界 | Bible World - 331 Gallery</title>
   <meta name="description" content="聖經的世界：從創世記到啟示錄，探索66卷書中的人物、故事與屬靈世界。">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0d1420">
+  <link rel="canonical" href="https://331.today/bible/index.html">
   <meta property="og:title" content="聖經的世界 | Bible World">
   <meta property="og:description" content="從創世記到啟示錄，探索66卷書中的人物、故事與屬靈世界。">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://331.today/bible/index.html">
   <meta property="og:image" content="https://331.today/bible/bible_hero_david_background.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" sizes="32x32">
+  <link rel="icon" href="favicon-192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
@@ -19,9 +31,12 @@
       font-family: 'ZCOOL+XiaoWei', 'Cormorant Garamond', serif;
       color: #f5f1e8;
       background: #0d1420 url('bible_hero_david_background.webp') center/cover no-repeat;
-      background-attachment: fixed;
       min-height: 100vh;
       position: relative;
+    }
+    /* 桌面版 fixed 背景；手機改用 scroll 避免卡頓 */
+    @media (min-width: 768px) {
+      body { background-attachment: fixed; }
     }
     body::before {
       content: '';
@@ -38,9 +53,10 @@
       padding: 28px 24px;
     }
     .top-bar {
-      display: flex; justify-content: space-between; align-items: center;
+      display: flex; justify-content: flex-end; align-items: center;
       font-size: 0.78rem; letter-spacing: 0.18em; text-transform: uppercase;
       color: rgba(245,241,232,0.7);
+      min-height: 32px;
     }
     .top-bar a { color: inherit; text-decoration: none; border-bottom: 1px solid rgba(245,241,232,0.4); }
     .top-bar a:hover { color: #fff; }
@@ -52,6 +68,7 @@
       padding: 9px 18px;
       background: rgba(13,20,32,0.72);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       border: 1px solid rgba(232,200,122,0.5);
       color: #e8c87a;
       font-family: inherit; font-size: 0.82rem; letter-spacing: 0.18em;
@@ -59,6 +76,7 @@
       transition: all 0.2s;
     }
     .cat-toggle:hover { background: rgba(232,200,122,0.15); color: #fff; }
+    .cat-toggle:focus-visible { outline: 2px solid #e8c87a; outline-offset: 2px; }
     .cat-toggle .bars { display: inline-block; width: 14px; height: 10px; position: relative; }
     .cat-toggle .bars::before, .cat-toggle .bars::after, .cat-toggle .bars span {
       content: ''; position: absolute; left: 0; width: 100%; height: 1.5px; background: currentColor;
@@ -70,6 +88,7 @@
       margin-top: 8px;
       background: rgba(13,20,32,0.92);
       backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(232,200,122,0.35);
       border-radius: 2px;
       min-width: 220px;
@@ -131,6 +150,7 @@
       transition: all 0.25s;
     }
     .cta:hover { background: rgba(232,200,122,0.15); color: #fff; border-color: #e8c87a; }
+    .cta:focus-visible { outline: 2px solid #e8c87a; outline-offset: 2px; }
 
     /* === 左下：浮動站內 sitemap === */
     .sitemap-fab {
@@ -149,11 +169,13 @@
       font-size: 1.1rem;
     }
     .sitemap-btn:hover { transform: scale(1.06); }
+    .sitemap-btn:focus-visible { outline: 2px solid #e8c87a; outline-offset: 2px; }
     .sitemap-panel {
       position: absolute; bottom: 60px; left: 0;
       width: 240px;
       background: rgba(13,20,32,0.94);
       backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border: 1px solid rgba(232,200,122,0.35);
       border-radius: 4px;
       padding: 10px 0;
@@ -186,31 +208,31 @@
       color: rgba(245,241,232,0.45);
       letter-spacing: 0.05em;
       line-height: 1.9;
+      padding-bottom: 60px; /* 避開左下浮動按鈕 */
     }
     .footer .credit { color: rgba(232,200,122,0.55); font-size: 0.66rem; }
   </style>
 </head>
 <body>
   <!-- 左上：聖經分類 dropdown -->
-  <div class="cat-menu">
-    <button class="cat-toggle" id="catToggle" aria-haspopup="true" aria-expanded="false">
-      <span class="bars"><span></span></span>
+  <nav class="cat-menu" aria-label="聖經分類">
+    <button class="cat-toggle" id="catToggle" aria-haspopup="true" aria-expanded="false" aria-controls="catDropdown">
+      <span class="bars" aria-hidden="true"><span></span></span>
       聖經分類
     </button>
-    <div class="cat-dropdown" id="catDropdown">
-      <a href="index1.html#books"><span>摩西五經</span><span class="cnt">5 卷</span></a>
-      <a href="index1.html#books"><span>歷史書</span><span class="cnt">12 卷</span></a>
-      <a href="index1.html#books"><span>詩歌智慧書</span><span class="cnt">5 卷</span></a>
-      <a href="index1.html#books"><span>大先知書</span><span class="cnt">5 卷</span></a>
-      <a href="index1.html#books"><span>小先知書</span><span class="cnt">12 卷</span></a>
-      <a href="index1.html#books"><span>新約全書</span><span class="cnt">27 卷</span></a>
+    <div class="cat-dropdown" id="catDropdown" role="menu">
+      <a href="index1.html#books" role="menuitem"><span>摩西五經</span><span class="cnt">5 卷</span></a>
+      <a href="index1.html#books" role="menuitem"><span>歷史書</span><span class="cnt">12 卷</span></a>
+      <a href="index1.html#books" role="menuitem"><span>詩歌智慧書</span><span class="cnt">5 卷</span></a>
+      <a href="index1.html#books" role="menuitem"><span>大先知書</span><span class="cnt">5 卷</span></a>
+      <a href="index1.html#books" role="menuitem"><span>小先知書</span><span class="cnt">12 卷</span></a>
+      <a href="index1.html#books" role="menuitem"><span>新約全書</span><span class="cnt">27 卷</span></a>
     </div>
-  </div>
+  </nav>
 
   <div class="wrap">
     <div class="top-bar">
-      <span>三三藝 · 331 Gallery</span>
-      <a href="../index.html">← 返回首頁</a>
+      <a href="../index.html">← 返回 331 Gallery</a>
     </div>
     <div class="hero">
       <div class="eyebrow">The World of Bible</div>
@@ -226,14 +248,14 @@
 
   <!-- 左下：浮動站內 sitemap -->
   <div class="sitemap-fab">
-    <button class="sitemap-btn" id="smBtn" aria-label="站內地圖">☰</button>
+    <button class="sitemap-btn" id="smBtn" aria-label="站內地圖" aria-expanded="false" aria-controls="smPanel">☰</button>
     <div class="sitemap-panel" id="smPanel">
       <div class="sm-title">站內地圖</div>
-      <a href="index.html">首頁</a>
       <a href="index1.html">聖經閱讀器</a>
       <a href="index1.html#books">書卷導覽</a>
       <a href="index1.html#golden">今日金句</a>
-      <a href="index1.html#articles">精選文章</a>
+      <a href="index1.html#articles">功能文章</a>
+      <a href="index1.html#stats">數據統計</a>
       <a href="../index.html">← 返回 331 Gallery</a>
     </div>
   </div>
@@ -241,22 +263,30 @@
   <script>
     const catToggle = document.getElementById('catToggle');
     const catDropdown = document.getElementById('catDropdown');
-    catToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      catDropdown.classList.toggle('open');
-    });
-    document.addEventListener('click', (e) => {
-      if (!catDropdown.contains(e.target)) catDropdown.classList.remove('open');
-    });
-
     const smBtn = document.getElementById('smBtn');
     const smPanel = document.getElementById('smPanel');
+
+    function closeCat() { catDropdown.classList.remove('open'); catToggle.setAttribute('aria-expanded','false'); }
+    function closeSm() { smPanel.classList.remove('open'); smBtn.setAttribute('aria-expanded','false'); }
+
+    catToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const open = catDropdown.classList.toggle('open');
+      catToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) closeSm();
+    });
     smBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      smPanel.classList.toggle('open');
+      const open = smPanel.classList.toggle('open');
+      smBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (open) closeCat();
     });
     document.addEventListener('click', (e) => {
-      if (!smPanel.contains(e.target)) smPanel.classList.remove('open');
+      if (!catDropdown.contains(e.target) && e.target !== catToggle) closeCat();
+      if (!smPanel.contains(e.target) && e.target !== smBtn) closeSm();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { closeCat(); closeSm(); catToggle.focus(); }
     });
   </script>
 </body>
