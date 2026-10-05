@@ -537,11 +537,39 @@ html{scroll-padding-top:148px}
   .printable .v-fav{display:none !important}
   .no-print{display:none !important}
   .sidebar,.topbar,.scrinav,.floatnav,.site-footer{display:none !important}
-}
+/* === 右上：聖經分類浮動 dropdown === */
+.bcat-menu{position:fixed;top:64px;right:16px;z-index:55}
+.bcat-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--gold);color:var(--gold);font-family:inherit;font-size:13px;letter-spacing:2px;cursor:pointer;border-radius:3px;transition:.2s}
+.bcat-toggle:hover{background:color-mix(in srgb,var(--gold) 15%,transparent);color:var(--ink)}
+.bcat-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.bcat-toggle .bars{display:inline-block;width:14px;height:10px;position:relative}
+.bcat-toggle .bars::before,.bcat-toggle .bars::after,.bcat-toggle .bars span{content:'';position:absolute;left:0;width:100%;height:1.5px;background:currentColor}
+.bcat-toggle .bars::before{top:0}.bcat-toggle .bars span{top:50%}.bcat-toggle .bars::after{bottom:0}
+.bcat-dropdown{margin-top:6px;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid color-mix(in srgb,var(--gold) 40%,transparent);border-radius:4px;min-width:210px;padding:6px 0;opacity:0;visibility:hidden;transform:translateY(-6px);transition:.22s;box-shadow:0 12px 36px rgba(0,0,0,.4);position:relative}
+.bcat-dropdown.open{opacity:1;visibility:visible;transform:translateY(0)}
+.bcat-dropdown a{display:flex;justify-content:space-between;align-items:center;padding:9px 16px;color:var(--ink);text-decoration:none;font-size:13.5px;letter-spacing:.05em;border-left:2px solid transparent;transition:.15s}
+.bcat-dropdown a:hover{background:color-mix(in srgb,var(--gold) 12%,transparent);border-left-color:var(--gold);color:var(--ink)}
+.bcat-dropdown a .cnt{font-size:11px;color:var(--gold)}
 </style>
 </head>
 <body>
 <div id="readingbar" aria-hidden="true"></div>
+
+<!-- 右上：聖經分類 dropdown -->
+<nav class="bcat-menu" aria-label="聖經分類">
+  <button class="bcat-toggle" id="bcatToggle" aria-haspopup="true" aria-expanded="false" aria-controls="bcatDropdown">
+    <span class="bars" aria-hidden="true"><span></span></span>
+    聖經分類
+  </button>
+  <div class="bcat-dropdown" id="bcatDropdown" role="menu">
+    <a href="javascript:void(0)" role="menuitem" data-cat="摩西五經"><span>摩西五經</span><span class="cnt">5 卷</span></a>
+    <a href="javascript:void(0)" role="menuitem" data-cat="歷史書"><span>歷史書</span><span class="cnt">12 卷</span></a>
+    <a href="javascript:void(0)" role="menuitem" data-cat="詩歌智慧書"><span>詩歌智慧書</span><span class="cnt">5 卷</span></a>
+    <a href="javascript:void(0)" role="menuitem" data-cat="大先知書"><span>大先知書</span><span class="cnt">5 卷</span></a>
+    <a href="javascript:void(0)" role="menuitem" data-cat="小先知書"><span>小先知書</span><span class="cnt">12 卷</span></a>
+    <a href="javascript:void(0)" role="menuitem" data-cat="新約全書"><span>新約全書</span><span class="cnt">27 卷</span></a>
+  </div>
+</nav>
 <div class="app">
 
 <!-- ================= 側欄導覽 ================= -->
@@ -1658,6 +1686,39 @@ init();
   if(!('serviceWorker' in navigator))return;
   if(location.protocol!=='https:'&&location.hostname!=='localhost'&&location.hostname!=='127.0.0.1')return;
   window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});
+})();
+</script>
+<script>
+/* === 右上：聖經分類 dropdown === */
+(function(){
+  const toggle=document.getElementById('bcatToggle');
+  const dd=document.getElementById('bcatDropdown');
+  function close(){dd.classList.remove('open');toggle.setAttribute('aria-expanded','false');}
+  toggle.addEventListener('click',function(e){
+    e.stopPropagation();
+    const open=dd.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  document.addEventListener('click',function(e){
+    if(!dd.contains(e.target)&&e.target!==toggle)close();
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){close();toggle.focus();}
+  });
+  dd.querySelectorAll('a[data-cat]').forEach(function(a){
+    a.addEventListener('click',function(){
+      const cat=a.dataset.cat;
+      if(typeof bkFilter!=='undefined'){bkFilter=cat;}
+      close();
+      go('books');
+      /* 切到 books view 後同步更新 filter 按鈕高亮 */
+      setTimeout(function(){
+        const btns=document.querySelectorAll('#bkFilter button');
+        btns.forEach(function(b){b.classList.toggle('on',b.dataset.g===cat);});
+        drawBkGrid();
+      },80);
+    });
+  });
 })();
 </script>
 </body>
