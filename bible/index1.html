@@ -181,6 +181,8 @@ img{max-width:100%;display:block}
 .hero .hb{position:absolute;inset:0;background-image:url("assets/hero-bible.jpg");background-size:cover;background-position:center 40%;opacity:.55}
 .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,var(--hero-ov) 0%,rgba(20,26,40,.55) 50%,rgba(20,26,40,.2) 100%)}
 .hero .h-in{position:relative;z-index:2}
+.hero .h-back{display:inline-block;margin-bottom:14px;font-size:13px;letter-spacing:2px;color:var(--gold-soft);text-decoration:none;border:1px solid rgba(232,200,122,.45);padding:6px 14px;border-radius:999px;transition:.2s}
+.hero .h-back:hover{background:rgba(232,200,122,.15);color:#fff;border-color:var(--gold)}
 .hero .h-kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:3px;color:var(--gold-soft);font-weight:600;text-transform:uppercase;margin-bottom:18px}
 .hero .h-kicker::before{content:"";width:26px;height:1px;background:var(--gold)}
 .hero h1{font-family:"Noto Serif TC",serif;font-size:clamp(30px,4.4vw,50px);font-weight:900;line-height:1.25;letter-spacing:1px}
@@ -1039,6 +1041,7 @@ function renderHome(){
   <section class="hero">
     <div class="hb"></div>
     <div class="h-in">
+      <a class="h-back" href="index.html">← 聖經英雄</a>
       <div class="h-kicker">THE BIBLE · 和合本修訂版</div>
       <h1>探索<em>聖經Bible</em><br>領受生命的話語</h1>
       <p class="h-sub">一座完整收錄 66 卷書、1,189 章、31,021 節經文的數位聖經寶庫。支援全文檢索、網站地圖、快速跳轉、每日默想，與讀經進度、背誦記憶、填空測驗等互動複習工具。</p>
