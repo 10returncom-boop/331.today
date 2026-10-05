@@ -934,12 +934,8 @@ function initQuickJump(){
     bkFilter=cat;
     $("#qjBookLabel").textContent=cat;
     $("#qjBookWrap").classList.remove("open");
-    go('books');
-    setTimeout(()=>{
-      const btns=document.querySelectorAll('#bkFilter button');
-      btns.forEach(b=>b.classList.toggle('on',b.dataset.g===cat));
-      drawBkGrid();
-    },80);
+    if(location.hash.indexOf('books')!==-1){renderBooks();}
+    else{go('books');}
   });
   $("#qjBookBtn").addEventListener("click",()=>{$("#qjBookWrap").classList.toggle("open");$("#qjChapWrap").classList.remove("open");});
   $("#qjChapBtn").addEventListener("click",()=>{if(!curBook){toast("請先至書卷導覽選擇書卷");return;}$("#qjChapWrap").classList.toggle("open");$("#qjBookWrap").classList.remove("open");});
