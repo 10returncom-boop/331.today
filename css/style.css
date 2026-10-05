@@ -759,6 +759,16 @@ a {
   gap: 40px;
 }
 
+.footer-credit {
+  width: 100%;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed #444;
+  font-size: 0.8125rem;
+  letter-spacing: 0.05em;
+  color: #ccc;
+}
+
 .contact-item {
   display: flex;
   flex-direction: column;
