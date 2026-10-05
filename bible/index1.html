@@ -1059,14 +1059,6 @@ function renderHome(){
     </div>
   </section>
 
-  <div class="sect-head"><h2>六大分類總覽<small>依六藏分類瀏覽全部 66 卷</small></h2></div>
-  <div class="grid grid-3" style="grid-template-columns:repeat(3,1fr);margin-bottom:26px">${SIX_SECTIONS.map(s=>{const n=ALL_BOOKS.filter(b=>s.grps.includes(b.grp));return `
-    <div class="card" style="padding:20px;cursor:pointer" onclick="bkFilter='${s.name}';go('books')">
-      <div class="bk-no" style="font-size:11px;color:var(--ink-faint);letter-spacing:1px">${s.name}</div>
-      <h3 style="font-family:'Noto Serif TC',serif;font-size:18px;color:var(--ink);margin:4px 0 6px">${n.length} 卷 <span style="font-size:12px;color:var(--ink-faint);font-weight:400">${s.desc}</span></h3>
-      <p style="font-size:12.5px;color:var(--ink-dim);line-height:1.7">${n.map(b=>b.name).join("、")}</p>
-    </div>`;}).join("")}</div>
-
   <div class="sect-head"><h2>書卷導覽<small>依聖經分類瀏覽全部 66 卷</small></h2><a class="more" href="#books" onclick="go('books')">查看全部 →</a></div>
   <div class="bk-grid">${ALL_BOOKS.slice(0,12).map(b=>bkCard(b)).join("")}</div>
 
