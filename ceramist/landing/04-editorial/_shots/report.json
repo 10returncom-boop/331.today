@@ -1,0 +1,322 @@
+{
+  "src": "D:\\_WWW_325_public\\331.today\\ceramist\\landing\\04-editorial\\index.html",
+  "url": "file:///D:/_WWW_325_public/331.today/ceramist/landing/04-editorial/index.html",
+  "outdir": "D:\\_WWW_325_public\\331.today\\ceramist\\landing\\04-editorial\\_shots",
+  "include": [
+    "lint",
+    "screenshots",
+    "structure"
+  ],
+  "shots": {
+    "desktop": {
+      "screenshot": "D:\\_WWW_325_public\\331.today\\ceramist\\landing\\04-editorial\\_shots\\index_desktop.jpg",
+      "screenshotBytes": 109291,
+      "truncated": false,
+      "structure": {
+        "title": "青禾窯・林青禾｜陶藝家誌・手作器物的故事",
+        "firstH1": "REPLACE-NAME與一窯火的日常",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "fullpage": {
+          "w": 1440,
+          "h": 3091
+        },
+        "counts": {
+          "section": 6,
+          "h1": 1,
+          "h2": 5,
+          "img": 0,
+          "canvas": 0,
+          "svg": 0,
+          "links": 6,
+          "buttons": 0
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "misalignedBlocks": [
+        {
+          "tag": "section.hero",
+          "text": "手作器物・人物側寫\n        REPLACE-NAME與一窯火的日常\n        REPLACE-SUB。從練",
+          "rect": [
+            0,
+            127,
+            1440,
+            445
+          ],
+          "widthDeltaVsGrid": 360,
+          "gridWidth": 1080,
+          "containerWidth": 1440,
+          "containerTag": "main"
+        },
+        {
+          "tag": "section.section",
+          "text": "01主題介紹\n      \n        REPLACE-THEME。陶，是一門關於「等待」的手藝——等待土的陳腐、坯",
+          "rect": [
+            0,
+            571,
+            1440,
+            409
+          ],
+          "widthDeltaVsGrid": 360,
+          "gridWidth": 1080,
+          "containerWidth": 1440,
+          "containerTag": "main"
+        },
+        {
+          "tag": "section.section",
+          "text": "02藝術家簡介\n      \n        大頭照assets/portrait.webp（待置入）\n        ",
+          "rect": [
+            0,
+            981,
+            1440,
+            469
+          ],
+          "widthDeltaVsGrid": 360,
+          "gridWidth": 1080,
+          "containerWidth": 1440,
+          "containerTag": "main"
+        },
+        {
+          "tag": "section.section",
+          "text": "03作品集\n      \n        作品 01assets/work-01.webp（待置入）青瓷茶碗／2024\n",
+          "rect": [
+            0,
+            1449,
+            1440,
+            996
+          ],
+          "widthDeltaVsGrid": 360,
+          "gridWidth": 1080,
+          "containerWidth": 1440,
+          "containerTag": "main"
+        },
+        {
+          "tag": "section.section",
+          "text": "04創作歷程\n      \n        2025個展・土的詩篇／台北藝廊\n        2024柴燒系列成形／逐步",
+          "rect": [
+            0,
+            2445,
+            1440,
+            440
+          ],
+          "widthDeltaVsGrid": 360,
+          "gridWidth": 1080,
+          "containerWidth": 1440,
+          "containerTag": "main"
+        }
+      ],
+      "misalignedBlocksHint": "含义：section/main/article 直接子级里，个别元素撑到父容器全宽、其他兄弟明显更窄。widthDeltaVsGrid=比栅格宽多少 px、gridWidth=正常栅格宽度、containerWidth=父容器宽度。最常见根因：HTML 标签闭合错位（<p> 忘了 </p> 等）导致元素跳出 .wrap/.container 层级，浏览器容错解析、不报 console 错但布局层级已被打乱。 | 修法：从 containerTag 定位到出问题的 section，逐行检查该 section 内前面的 HTML 标签闭合。 | 豁免：(1) **full-bleed / breakout 布局**——故意做全宽 hero、全宽 gradient divider、文章里跳出正文栏的大图/引用块（杂志排版）。看截图确认是设计意图后忽略；(2) sticky/absolute 顶栏错放在 section 直接子级下（罕见）。",
+      "reportSource": "cdp"
+    },
+    "mobile": {
+      "screenshot": "D:\\_WWW_325_public\\331.today\\ceramist\\landing\\04-editorial\\_shots\\index_mobile.jpg",
+      "screenshotBytes": 144843,
+      "truncated": false,
+      "structure": {
+        "title": "青禾窯・林青禾｜陶藝家誌・手作器物的故事",
+        "firstH1": "REPLACE-NAME與一窯火的日常",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "fullpage": {
+          "w": 390,
+          "h": 3899
+        },
+        "counts": {
+          "section": 6,
+          "h1": 1,
+          "h2": 5,
+          "img": 0,
+          "canvas": 0,
+          "svg": 0,
+          "links": 6,
+          "buttons": 0
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "reportSource": "cdp"
+    }
+  },
+  "engine": "chrome_cli",
+  "chromiumExec": "C:\\Users\\SUSI/AppData/Local/ms-playwright\\chromium_headless_shell-1234\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+  "engineDegraded": true,
+  "engineDegradedReason": "playwright 未装",
+  "elapsedSec": 7.0,
+  "schemaVersion": 2,
+  "status": "warning",
+  "engineInfo": {
+    "name": "chrome_cli",
+    "degraded": true,
+    "degradedReasons": [
+      "playwright 未装"
+    ]
+  },
+  "input": {
+    "original": "D:\\_WWW_325_public\\331.today\\ceramist\\landing\\04-editorial\\index.html",
+    "resolvedPath": "D:\\_WWW_325_public\\331.today\\ceramist\\landing\\04-editorial\\index.html",
+    "baseUrl": "file:///D:/_WWW_325_public/331.today/ceramist/landing/04-editorial/index.html",
+    "protocol": "file",
+    "cwd": "C:\\Users\\SUSI\\Doubao\\chats\\2026-10-13\\new-chat-17",
+    "mediaMode": {
+      "reducedMotion": true
+    }
+  },
+  "artifacts": {
+    "screenshots": [
+      {
+        "viewport": "desktop",
+        "path": "D:\\_WWW_325_public\\331.today\\ceramist\\landing\\04-editorial\\_shots\\index_desktop.jpg",
+        "size": 109291,
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      },
+      {
+        "viewport": "mobile",
+        "path": "D:\\_WWW_325_public\\331.today\\ceramist\\landing\\04-editorial\\_shots\\index_mobile.jpg",
+        "size": 144843,
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      }
+    ]
+  },
+  "summary": {
+    "blocker": 0,
+    "error": 0,
+    "warning": 5,
+    "info": 0
+  },
+  "findings": [
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "desktop",
+      "selector": "section.hero",
+      "evidence": {
+        "tag": "section.hero",
+        "text": "手作器物・人物側寫\n        REPLACE-NAME與一窯火的日常\n        REPLACE-SUB。從練",
+        "rect": [
+          0,
+          127,
+          1440,
+          445
+        ],
+        "widthDeltaVsGrid": 360,
+        "gridWidth": 1080,
+        "containerWidth": 1440,
+        "containerTag": "main"
+      },
+      "dedupeKey": "misalignedBlocks|desktop|section.hero|0"
+    },
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "desktop",
+      "selector": "section.section",
+      "evidence": {
+        "tag": "section.section",
+        "text": "01主題介紹\n      \n        REPLACE-THEME。陶，是一門關於「等待」的手藝——等待土的陳腐、坯",
+        "rect": [
+          0,
+          571,
+          1440,
+          409
+        ],
+        "widthDeltaVsGrid": 360,
+        "gridWidth": 1080,
+        "containerWidth": 1440,
+        "containerTag": "main"
+      },
+      "dedupeKey": "misalignedBlocks|desktop|section.section|1"
+    },
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "desktop",
+      "selector": "section.section",
+      "evidence": {
+        "tag": "section.section",
+        "text": "02藝術家簡介\n      \n        大頭照assets/portrait.webp（待置入）\n        ",
+        "rect": [
+          0,
+          981,
+          1440,
+          469
+        ],
+        "widthDeltaVsGrid": 360,
+        "gridWidth": 1080,
+        "containerWidth": 1440,
+        "containerTag": "main"
+      },
+      "dedupeKey": "misalignedBlocks|desktop|section.section|2"
+    },
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "desktop",
+      "selector": "section.section",
+      "evidence": {
+        "tag": "section.section",
+        "text": "03作品集\n      \n        作品 01assets/work-01.webp（待置入）青瓷茶碗／2024\n",
+        "rect": [
+          0,
+          1449,
+          1440,
+          996
+        ],
+        "widthDeltaVsGrid": 360,
+        "gridWidth": 1080,
+        "containerWidth": 1440,
+        "containerTag": "main"
+      },
+      "dedupeKey": "misalignedBlocks|desktop|section.section|3"
+    },
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "desktop",
+      "selector": "section.section",
+      "evidence": {
+        "tag": "section.section",
+        "text": "04創作歷程\n      \n        2025個展・土的詩篇／台北藝廊\n        2024柴燒系列成形／逐步",
+        "rect": [
+          0,
+          2445,
+          1440,
+          440
+        ],
+        "widthDeltaVsGrid": 360,
+        "gridWidth": 1080,
+        "containerWidth": 1440,
+        "containerTag": "main"
+      },
+      "dedupeKey": "misalignedBlocks|desktop|section.section|4"
+    }
+  ],
+  "prioritizedActions": [
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "viewport": "desktop",
+      "selector": "section.hero"
+    }
+  ],
+  "reportPath": "D:\\_WWW_325_public\\331.today\\ceramist\\landing\\04-editorial\\_shots\\report.json"
+}

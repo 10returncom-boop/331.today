@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>青禾窯・林青禾｜柴燒陶藝・火與土的對話</title>
+<!--
+  ──────────────── 範本 02：柴燒・土火質樸 ────────────────
+  可重用版型（純 HTML/CSS/JS、UTF-8 繁中）。替換點搜尋：
+    REPLACE-NAME / REPLACE-KILN / REPLACE-SUB
+    REPLACE-THEME / REPLACE-BIO / REPLACE-EMAIL
+    REPLACE-PORTRAIT（建議 assets/portrait.webp）
+    REPLACE-WORKxx（建議 assets/work-xx.webp）
+  佔位圖框：將實際 .webp 放入本資料夾 assets/ 後取代路徑即可。
+  ─────────────────────────────────────────────────────────
+-->
+<meta name="description" content="青禾窯以柴燒陶藝見長，林青禾專注火痕與自然釉的質樸之美，柴燒茶器、陶壺、花器皆為手作。">
+<meta name="keywords" content="柴燒,柴燒陶,陶藝,火痕,自然釉,台灣陶藝家,青禾窯">
+<meta property="og:title" content="青禾窯・林青禾｜柴燒陶藝">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232E2118'/%3E%3Ccircle cx='32' cy='36' r='13' fill='%23A85A34'/%3E%3Cpath d='M32 18c-3 8-3 14 0 18s6 2 6-2-1-8-6-16z' fill='%23E8DCC8'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"林青禾","jobTitle":"柴燒陶藝家","worksFor":{"@type":"Organization","name":"青禾窯"},"address":{"@type":"PostalAddress","addressCountry":"TW"},"knowsAbout":["柴燒","自然釉","茶器","花器"]}
+</script>
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@400;500&display=swap">
+<style>
+:root{
+  --char:#2E2118; --fire:#A85A34; --clay:#E8DCC8; --cream:#F5EDE0;
+  --serif:"Noto Serif TC","PMingLiU",serif; --sans:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--char);line-height:1.8}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+header{position:sticky;top:0;z-index:50;background:var(--char);color:var(--clay)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--serif);font-weight:900;letter-spacing:.14em;font-size:16px}
+.nav-links{display:none;gap:24px;font-size:14px;letter-spacing:.1em}
+.nav-links a:hover{color:var(--fire)}
+.nav-toggle{background:none;border:0;color:var(--clay);font-size:22px;cursor:pointer;padding:6px 10px}
+@media(min-width:768px){.nav-links{display:flex}.nav-toggle{display:none}}
+.nav-panel{display:none;flex-direction:column;gap:14px;padding:16px 22px 24px;background:var(--char);color:var(--clay)}
+.nav-panel.open{display:flex}
+@media(min-width:768px){.nav-panel{display:none!important}}
+
+.hero{position:relative;background:var(--char);color:var(--clay);padding-block:84px 66px}
+.hero .wrap{position:relative;z-index:2}
+.hero .eyebrow{font-size:12px;letter-spacing:.34em;color:var(--fire);font-weight:500;margin-bottom:16px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:52px;line-height:1.2;letter-spacing:.05em}
+.hero h1 .hanzi{color:var(--fire)}
+.hero p.sub{margin-top:18px;max-width:600px;color:#CFBFA6;font-size:16px}
+.grain{position:absolute;inset:0;opacity:.5;pointer-events:none}
+.grain svg{width:100%;height:100%;display:block}
+
+.section{padding-block:56px}
+.sec-head{margin-bottom:26px}
+.sec-no{display:inline-block;font-family:var(--serif);color:var(--fire);font-size:12px;letter-spacing:.24em;border:1px solid var(--fire);padding:3px 10px;border-radius:999px;margin-bottom:12px}
+.sec-title{font-family:var(--serif);font-size:26px;letter-spacing:.06em;font-weight:900}
+.sec-title::after{content:"";display:block;width:40px;height:3px;background:var(--fire);margin-top:10px}
+
+.theme{max-width:760px}
+.theme p{color:#4A3A2B;margin-bottom:16px}
+.theme .lead{font-family:var(--serif);font-size:19px;line-height:2}
+
+.bio-grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:768px){.bio-grid{grid-template-columns:260px 1fr;gap:40px}}
+.portrait{aspect-ratio:3/4;background:var(--clay);border:2px solid var(--char);display:flex;align-items:center;justify-content:center;text-align:center;color:#8A7760;font-size:12px;letter-spacing:.12em;line-height:1.9}
+.bio p{max-width:660px;color:#4A3A2B;margin-bottom:14px}
+.bio .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+.bio .tags span{border:1px solid #C9B69B;color:#6A5A48;border-radius:999px;padding:4px 14px;font-size:13px}
+
+.works{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(min-width:768px){.works{grid-template-columns:repeat(3,1fr)}}
+.work figure{background:#FFF;border:1px solid #D8CBB2;box-shadow:0 1px 0 rgba(46,33,24,.05)}
+.ph{aspect-ratio:1/1;background:var(--clay);display:flex;align-items:center;justify-content:center;text-align:center;color:#9A8770;font-size:11px;letter-spacing:.14em;line-height:1.9}
+.work figcaption{padding:10px 12px;font-size:13px;color:#7A6A55}
+.work figcaption b{display:block;color:var(--char);font-family:var(--serif);font-weight:700}
+
+/* 製程時間軸 */
+.timeline{margin-top:14px;border-top:1px solid #D8CBB2;padding-top:20px}
+.tl-item{display:grid;grid-template-columns:1fr;gap:4px;padding:14px 0;border-bottom:1px solid #E3D8C2}
+.tl-item:last-child{border-bottom:0}
+.tl-step{font-family:var(--serif);color:var(--fire);font-weight:700;font-size:14px}
+.tl-desc{color:#5C4B39;font-size:15px}
+@media(min-width:768px){.tl-item{grid-template-columns:180px 1fr;align-items:baseline;gap:24px}}
+
+.contact{background:var(--char);color:var(--clay);padding-block:52px 40px}
+.contact h2{font-family:var(--serif);font-size:24px;letter-spacing:.08em;font-weight:900}
+.contact p{color:#CFBFA6;margin-top:10px;font-size:15px}
+.contact a{color:var(--fire);font-weight:500}
+footer{background:#1E150E;color:#9C8A70;padding:22px 0;font-size:12px;letter-spacing:.1em}
+.foot{display:flex;flex-direction:column;gap:6px}
+@media(min-width:768px){.foot{flex-direction:row;justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">青禾窯</a>
+    <nav class="nav-links" aria-label="主選單">
+      <a href="#theme">主題</a><a href="#bio">簡介</a><a href="#works">作品</a><a href="#process">製程</a><a href="#contact">聯絡</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+  </div>
+  <nav class="nav-panel" id="navPanel" aria-label="行動選單">
+    <a href="#theme">主題</a><a href="#bio">簡介</a><a href="#works">作品</a><a href="#process">製程</a><a href="#contact">聯絡</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="grain" aria-hidden="true"><svg preserveAspectRatio="none"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2"/><feColorMatrix values="0 0 0 0 .18 0 0 0 0 .12 0 0 0 0 .09 0 0 0 .6 0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg></div>
+  <div class="wrap">
+    <div class="eyebrow">柴燒・自然釉・一窯火</div>
+    <h1><span class="hanzi">柴</span>火淬煉<br>REPLACE-NAME</h1>
+    <p class="sub">REPLACE-SUB。以薪柴為火、以灰燼為釉，器物在三日三夜的窯火中，烙下獨一無二的火痕。此頁為版型示範，請替換真實定位語。</p>
+  </div>
+</section>
+
+<main>
+  <section class="section wrap" id="theme">
+    <div class="sec-head"><span class="sec-no">主題介紹</span><h2 class="sec-title">柴燒・火的銘記</h2></div>
+    <div class="theme">
+      <p class="lead">REPLACE-THEME。柴燒是最古老也最不可控的燒成方式——不施釉，讓薪柴的灰燼在千度高溫下熔融，於坯體表面凝成自然的釉與火痕。</p>
+      <p>每一件柴燒器物都是窯火與木材留下的獨特簽名：火痕的深淺、灰釉的分布、落灰的斑點，全由窯內氣流與燃燒的偶然決定。正因如此，沒有兩只柴燒杯是相同的，這份「不可複製」正是柴燒最動人的質地。</p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="bio">
+    <div class="sec-head"><span class="sec-no">藝術家簡介</span><h2 class="sec-title">REPLACE-NAME</h2></div>
+    <div class="bio-grid">
+      <div class="portrait" aria-label="大頭照佔位">大頭照<br>assets/portrait.webp<br>（待置入）</div>
+      <div class="bio">
+        <p>REPLACE-BIO。REPLACE-NAME 長期以柴燒為主要的燒成方式，親手壘窯、備柴、守火，追求土、火、灰三者之間的平衡與驚喜。</p>
+        <p>作品以茶器、陶壺與花器為主，講求厚實的握感與樸素的造型，讓器物在歲月與使用中越顯溫潤。</p>
+        <div class="tags">
+          <span>柴燒</span><span>自然釉</span><span>茶器</span><span>陶壺</span><span>花器</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="works">
+    <div class="sec-head"><span class="sec-no">作品集</span><h2 class="sec-title">器物選</h2></div>
+    <div class="works">
+      <figure class="work"><div class="ph">作品 01<br>assets/work-01.webp<br>（待置入）</div><figcaption><b>柴燒側把壺</b>／2024</figcaption></figure>
+      <figure class="work"><div class="ph">作品 02<br>assets/work-02.webp<br>（待置入）</div><figcaption><b>落灰茶碗</b>／2024</figcaption></figure>
+      <figure class="work"><div class="ph">作品 03<br>assets/work-03.webp<br>（待置入）</div><figcaption><b>柴燒花器</b>／2023</figcaption></figure>
+      <figure class="work"><div class="ph">作品 04<br>assets/work-04.webp<br>（待置入）</div><figcaption><b>火痕杯</b>／2023</figcaption></figure>
+      <figure class="work"><div class="ph">作品 05<br>assets/work-05.webp<br>（待置入）</div><figcaption><b>陶罐</b>／2022</figcaption></figure>
+      <figure class="work"><div class="ph">作品 06<br>assets/work-06.webp<br>（待置入）</div><figcaption><b>柴燒水方</b>／2022</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="section wrap" id="process">
+    <div class="sec-head"><span class="sec-no">製程</span><h2 class="sec-title">從土到器</h2></div>
+    <div class="timeline">
+      <div class="tl-item"><div class="tl-step">第一步・練土</div><div class="tl-desc">選土、揉練、陳腐，讓土質均勻而富有韌性。</div></div>
+      <div class="tl-item"><div class="tl-step">第二步・成型</div><div class="tl-desc">手拉坯或手捏，於轉盤上塑出器物的基本形。</div></div>
+      <div class="tl-item"><div class="tl-step">第三步・修坯</div><div class="tl-desc">陰乾後細修，控制厚度與線條的張力。</div></div>
+      <div class="tl-item"><div class="tl-step">第四步・入窯</div><div class="tl-desc">壘柴、升火，以三天三夜的窯火燒成至千度以上。</div></div>
+      <div class="tl-item"><div class="tl-step">第五步・出窯</div><div class="tl-desc">降溫後開窯，揀選火痕與灰釉最美的器物。</div></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>訂製與交流</h2>
+      <p>柴燒器物訂製、茶席與展覽邀約：<a href="mailto:REPLACE-EMAIL">REPLACE-EMAIL</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> REPLACE-NAME・REPLACE-KILN</span>
+    <span>柴燒陶藝｜331.today 陶藝家平台</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+  var t=document.getElementById('navToggle'), p=document.getElementById('navPanel');
+  t.addEventListener('click',function(){var o=p.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
+  p.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){p.classList.remove('open');t.setAttribute('aria-expanded','false');});});
+})();
+</script>
+</body>
+</html>

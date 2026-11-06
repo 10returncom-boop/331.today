@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>青禾窯・林青禾｜手作陶・工藝日記</title>
+<!-- 範本 09：手繪・工藝插畫風（筆記／拍立得／紙膠帶）。替換點：REPLACE-NAME / KILN / SUB / THEME / BIO / EMAIL / PORTRAIT / WORKxx -->
+<meta name="description" content="以手繪日記的筆觸記錄青禾窯——林青禾的青瓷與柴燒器物，像拍立得一張張收進工藝筆記本。">
+<meta name="keywords" content="手繪,工藝,拍立得,陶藝筆記,青瓷,柴燒,台灣陶藝家,青禾窯">
+<meta property="og:title" content="青禾窯・林青禾｜工藝日記">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23F6F1E6'/%3E%3Crect x='10' y='14' width='44' height='40' rx='3' fill='%23B4553D'/%3E%3Crect x='22' y='22' width='20' height='24' fill='%23F6F1E6'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"林青禾","jobTitle":"陶藝家","worksFor":{"@type":"Organization","name":"青禾窯"},"address":{"@type":"PostalAddress","addressCountry":"TW"},"knowsAbout":["青瓷","柴燒","茶器"]}
+</script>
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@300;400;500&display=swap">
+<style>
+:root{--paper:#F6F1E6;--ink:#3A3328;--muted:#7A6E5B;--line:#E2D8C4;--clay:#B4553D;--kraft:#A98A5E;--serif:"Noto Serif TC","PMingLiU",serif;--sans:"Noto Sans TC","Microsoft JhengHei",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.85}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+
+/* 紙膠帶 */
+.tape{position:relative}
+.tape::before{content:"";position:absolute;top:-12px;left:50%;transform:translateX(-50%) rotate(-2deg);width:120px;height:26px;background:rgba(180,85,61,.85);opacity:.85;border-radius:2px;box-shadow:0 1px 2px rgba(0,0,0,.1)}
+.tape.clay::before{background:rgba(169,138,94,.85)}
+
+.top{display:flex;align-items:center;justify-content:space-between;padding-block:22px;border-bottom:2px dashed var(--line);flex-wrap:wrap;gap:10px}
+.brand{font-family:var(--serif);font-weight:900;font-size:19px;letter-spacing:.1em}
+.brand small{color:var(--clay);font-weight:600;margin-left:8px;letter-spacing:.12em}
+.top a{font-size:14px;color:var(--muted);letter-spacing:.06em}.top a:hover{color:var(--clay)}
+
+.hero{padding-block:54px 44px;text-align:center;position:relative}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:40px;line-height:1.4;letter-spacing:.04em;display:inline-block;padding:14px 30px;border:2px dashed var(--clay);border-radius:6px;background:#FFFDF6;transform:rotate(-1deg)}
+.hero .eyebrow{font-size:12px;letter-spacing:.34em;color:var(--clay);font-weight:500;margin-bottom:18px}
+.hero p.lead{margin:22px auto 0;max-width:600px;color:var(--muted);font-size:16px;font-weight:300}
+.hero .badge{display:inline-block;margin-top:26px;background:var(--clay);color:#FFF8EC;border-radius:999px;padding:7px 22px;font-size:13px;letter-spacing:.14em;transform:rotate(1deg)}
+
+.section{padding-block:46px}
+.sec-head{text-align:center;margin-bottom:30px}
+.sec-title{font-family:var(--serif);font-size:26px;letter-spacing:.08em;font-weight:900;display:inline-block;padding:8px 22px;background:var(--kraft);color:#FFF8EC;border-radius:4px;transform:rotate(-1deg)}
+
+/* 筆記紙 */
+.note{background:#FFFDF6;border:2px dashed var(--line);border-radius:10px;padding:26px 28px;max-width:720px;margin:0 auto;position:relative;box-shadow:0 4px 0 var(--line)}
+.note p{color:#4A4236;margin-bottom:14px}
+.note .lead{font-family:var(--serif);font-size:18px;line-height:2}
+
+.bio-grid{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;max-width:760px;margin:0 auto}
+@media(min-width:700px){.bio-grid{grid-template-columns:250px 1fr;gap:40px}}
+.polaroid{aspect-ratio:3/4;background:#FFFDF6;border:10px solid #FFFDF6;box-shadow:0 6px 0 var(--line);transform:rotate(-2deg);position:relative}
+.polaroid::after{content:"REPLACE-KILN ✦";position:absolute;left:0;right:0;bottom:-6px;text-align:center;font-size:11px;letter-spacing:.2em;color:var(--muted)}
+.ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;color:#B7AC99;font-size:11px;letter-spacing:.14em;line-height:1.9;background:linear-gradient(150deg,#EFE9DA,#E4DCC8)}
+.bio p{max-width:620px;color:#4A4236;margin-bottom:14px}
+.bio .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px}
+.bio .tags span{border:1px dashed var(--clay);color:var(--clay);border-radius:6px;padding:5px 15px;font-size:13px;background:#FFFDF6;transform:rotate(.5deg)}
+
+.works{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:880px;margin:0 auto}
+@media(min-width:720px){.works{grid-template-columns:repeat(3,1fr)}}
+.card{background:#FFFDF6;border:1px solid var(--line);padding:12px;box-shadow:0 6px 0 var(--line);transform:rotate(var(--r,0deg));transition:transform .2s}
+.card:nth-child(odd){--r:-1.5deg}.card:nth-child(even){--r:1.5deg}
+.card:hover{transform:rotate(0deg) translateY(-4px)}
+.card .ph{aspect-ratio:1/1;background:linear-gradient(150deg,#EFE9DA,#E4DCC8);display:flex;align-items:center;justify-content:center;text-align:center;color:#B7AC99;font-size:10px;letter-spacing:.12em;line-height:1.9}
+.card figcaption{padding:10px 4px 4px;font-family:var(--serif);font-weight:600;font-size:14px;text-align:center}
+.card .cap{display:block;font-family:var(--sans);font-size:12px;color:var(--muted);font-weight:400}
+
+.contact{background:var(--ink);color:#EFE9DA;padding-block:46px 34px;margin-top:10px}
+.contact h2{font-family:var(--serif);font-size:24px;letter-spacing:.08em;margin-bottom:10px}
+.contact p{color:#C4B9A4;font-size:15px}.contact a{color:#F0C9A8;font-weight:500}
+footer{background:#221D15;color:#9C8F76;padding:18px 0;font-size:12px;letter-spacing:.08em}
+.foot{display:flex;flex-direction:column;gap:6px}
+@media(min-width:768px){.foot{flex-direction:row;justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <a class="brand" href="#top">青禾窯<small>工藝日記</small></a>
+  <nav aria-label="單元"><a href="#theme">主題</a>・<a href="#bio">簡介</a>・<a href="#works">作品</a>・<a href="#contact">聯絡</a></nav>
+</header>
+
+<main>
+  <section class="hero wrap" id="top">
+    <div class="eyebrow">手作・土與火的日記</div>
+    <h1 class="tape clay">REPLACE-NAME</h1>
+    <p class="lead">REPLACE-SUB。一張張拍立得，記下器物的誕生與日常。此頁為版型示範，請替換真實內容。</p>
+    <span class="badge">職人手作・REPLACE-KILN</span>
+  </section>
+
+  <section class="section wrap" id="theme">
+    <div class="sec-head"><h2 class="sec-title">主題介紹</h2></div>
+    <div class="note">
+      <p class="lead">REPLACE-THEME。手作陶的迷人之處，在於每一件都帶著製作者的掌溫與時間——邊緣的指痕、釉色的深淺，都是無法量產的簽名。</p>
+      <p>REPLACE-NAME 相信「器物會陪你很久」，因此寧可慢，也要讓每一只杯碗都經得起日子的檢驗。</p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="bio">
+    <div class="sec-head"><h2 class="sec-title">藝術家簡介</h2></div>
+    <div class="bio-grid">
+      <div class="polaroid" aria-label="大頭照佔位"><div class="ph">大頭照<br>assets/portrait.webp<br>（待置入）</div></div>
+      <div class="bio">
+        <p>REPLACE-BIO。REPLACE-NAME 在 REPLACE-KILN 工作室裡，以青瓷與柴燒兩種語言反覆練習，讓手感與火候愈發默契。</p>
+        <p>作品不多，但每一件都想好好被使用——泡茶、插花、盛食，讓陶回到生活的正中央。</p>
+        <div class="tags"><span>青瓷</span><span>柴燒</span><span>茶器</span><span>花器</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="works">
+    <div class="sec-head"><h2 class="sec-title">作品集・拍立得</h2></div>
+    <div class="works">
+      <figure class="card"><div class="ph">作品 01<br>assets/work-01.webp<br>（待置入）</div><figcaption>青瓷茶碗<span class="cap">2024</span></figcaption></figure>
+      <figure class="card"><div class="ph">作品 02<br>assets/work-02.webp<br>（待置入）</div><figcaption>柴燒陶壺<span class="cap">2024</span></figcaption></figure>
+      <figure class="card"><div class="ph">作品 03<br>assets/work-03.webp<br>（待置入）</div><figcaption>青釉花器<span class="cap">2023</span></figcaption></figure>
+      <figure class="card"><div class="ph">作品 04<br>assets/work-04.webp<br>（待置入）</div><figcaption>落灰茶碗<span class="cap">2023</span></figcaption></figure>
+      <figure class="card"><div class="ph">作品 05<br>assets/work-05.webp<br>（待置入）</div><figcaption>青瓷茶托<span class="cap">2022</span></figcaption></figure>
+      <figure class="card"><div class="ph">作品 06<br>assets/work-06.webp<br>（待置入）</div><figcaption>柴燒水方<span class="cap">2022</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>寫封信給我</h2>
+      <p>訂製茶器、展覽邀約：<a href="mailto:REPLACE-EMAIL">REPLACE-EMAIL</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot"><span>© <span id="year"></span> REPLACE-NAME・REPLACE-KILN</span><span>工藝日記｜331.today 陶藝家平台</span></div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

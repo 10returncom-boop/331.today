@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>青禾窯・林青禾｜當代陶藝・透光空間</title>
+<!-- 範本 07：琉璃・透光現代（Mega Menu + Breadcrumb + 非對稱版面）。替換點：REPLACE-NAME / KILN / SUB / THEME / BIO / EMAIL / PORTRAIT / WORKxx / LINK -->
+<meta name="description" content="青禾窯以透光與留白構築當代陶藝空間，林青禾的青瓷茶器與柴燒器物，在非對稱的版面中陳列如詩。">
+<meta name="keywords" content="當代陶藝,青瓷,柴燒,透光,台灣陶藝家,青禾窯,網站模板">
+<meta property="og:title" content="青禾窯・林青禾｜當代陶藝空間">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23F4F7F6'/%3E%3Cpath d='M32 8c7 9 12 17 12 29 0 12-6 18-12 18s-12-6-12-18c0-12 5-20 12-29z' fill='%232FA8A0'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"林青禾","jobTitle":"陶藝家","worksFor":{"@type":"Organization","name":"青禾窯"},"address":{"@type":"PostalAddress","addressCountry":"TW"},"knowsAbout":["青瓷","柴燒","茶器"]}
+</script>
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+TC:wght@400;600;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap">
+<style>
+:root{--bg:#F4F7F6;--ink:#14202C;--muted:#5F6B78;--line:#DCE4E2;--cy:#2FA8A0;--amber:#D9A050;--serif:"Noto Serif TC","PMingLiU",serif;--sans:"Noto Sans TC","Microsoft JhengHei",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.85}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}
+
+header{position:sticky;top:0;z-index:100;background:rgba(244,247,246,.86);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{font-family:var(--serif);font-weight:900;letter-spacing:.12em;font-size:16px}
+.brand small{color:var(--cy);font-weight:400;margin-left:8px;letter-spacing:.2em;font-size:11px}
+.mainnav{display:none;align-items:center;gap:6px}
+.m-item{position:relative;padding:10px 14px;font-family:inherit;font-size:14px;letter-spacing:.06em;color:var(--muted);background:none;border:0;cursor:pointer;border-radius:10px}
+.m-item:hover{color:var(--ink);background:rgba(47,168,160,.09)}
+.m-item.has-caret{display:inline-flex;align-items:center;gap:6px}
+.m-item .caret{width:10px;height:10px}
+.nav-cta{display:none;background:var(--ink);color:#F4F7F6;border-radius:999px;padding:9px 20px;font-size:13px;letter-spacing:.06em}
+.nav-cta:hover{background:var(--cy)}
+@media(min-width:900px){.mainnav{display:flex}.nav-cta{display:inline-block}.nav-toggle{display:none}}
+.nav-toggle{background:none;border:0;color:var(--ink);padding:6px 10px;cursor:pointer}
+.nav-panel{display:none;flex-direction:column;padding:14px 24px 22px;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav-panel.open{display:flex}
+.nav-panel a{font-size:15px;color:var(--ink);padding:9px 0;border-bottom:1px dashed var(--line)}
+.nav-panel .sub{display:none;flex-direction:column;padding-left:14px}
+.nav-panel .sub.open{display:flex}
+.nav-panel .sub a{font-size:13px;color:var(--muted);border:0}
+@media(min-width:900px){.nav-panel{display:none!important}}
+
+/* Mega 面板（透光） */
+.mega{position:absolute;left:0;right:0;top:66px;background:rgba(255,255,255,.98);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);box-shadow:0 24px 44px rgba(20,32,44,.14);opacity:0;visibility:hidden;transform:translateY(-6px);transition:.18s ease}
+.mega.open{opacity:1;visibility:visible;transform:none}
+.mega-inner{max-width:1180px;margin:0 auto;padding:26px 24px;display:grid;grid-template-columns:1fr;gap:22px}
+@media(min-width:900px){.mega-inner{grid-template-columns:1.5fr 1fr}}
+.mega-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.mega-cols .col b{display:block;font-family:var(--serif);font-size:13px;letter-spacing:.2em;color:var(--cy);margin-bottom:10px}
+.mega-cols .col a{display:block;font-size:14px;color:var(--muted);padding:5px 0}
+.mega-cols .col a:hover{color:var(--ink)}
+.mega-feat{border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:12px;padding:20px;background:#FFFEFB}
+.mega-feat b{font-family:var(--serif);font-size:17px;letter-spacing:.06em}
+.mega-feat p{font-size:13px;color:var(--muted);margin:8px 0 14px}
+.mega-feat a{font-size:13px;color:var(--cy);font-weight:500}
+
+/* Breadcrumb */
+.breadcrumb{background:#EDF2F1;border-bottom:1px solid var(--line)}
+.crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);padding-block:12px;flex-wrap:wrap}
+.crumb a:hover{color:var(--cy)}.crumb .sep{opacity:.5}.crumb [aria-current="page"]{color:var(--ink);font-weight:500}
+
+/* Hero 非對稱 */
+.hero{padding-block:72px 54px}
+.hero .grid{display:grid;grid-template-columns:1fr;gap:34px;align-items:center}
+@media(min-width:900px){.hero .grid{grid-template-columns:1.15fr 1fr;gap:60px}}
+.hero .eyebrow{font-size:11px;letter-spacing:.4em;color:var(--cy);font-weight:500;margin-bottom:16px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:44px;line-height:1.3;letter-spacing:.03em}
+.hero h1 .accent{color:var(--cy)}
+.hero p.sub{margin-top:18px;max-width:520px;color:var(--muted);font-size:16px;font-weight:300}
+.hero .cta-row{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{border-radius:999px;padding:11px 24px;font-size:14px;letter-spacing:.06em;display:inline-block}
+.btn-solid{background:var(--ink);color:#F4F7F6}.btn-solid:hover{background:var(--cy)}
+.btn-ghost{border:1px solid var(--line);color:var(--muted)}.btn-ghost:hover{border-color:var(--cy);color:var(--cy)}
+.hero-ph{position:relative;aspect-ratio:4/5;background:linear-gradient(150deg,#E6EFED,#D6E5E2);border:1px solid var(--line);border-radius:22px;display:flex;align-items:center;justify-content:center;text-align:center;color:#8AA6A2;font-size:12px;letter-spacing:.12em;line-height:1.9;transform:translateY(14px)}
+@media(min-width:900px){.hero-ph{transform:translate(26px,18px) rotate(1.5deg)}}
+
+.section{padding-block:58px}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:26px}
+.sec-no{font-family:var(--serif);color:var(--cy);font-size:12px;letter-spacing:.24em}
+.sec-title{font-family:var(--serif);font-size:26px;letter-spacing:.06em;font-weight:900}
+.sec-title::after{content:"";display:block;width:40px;height:2px;background:var(--amber);margin-top:10px}
+
+.theme{max-width:760px}.theme p{color:#3E4B58;margin-bottom:16px}.theme .lead{font-family:var(--serif);font-size:19px;line-height:2;color:var(--ink)}
+.bio-grid{display:grid;grid-template-columns:1fr;gap:28px}
+@media(min-width:768px){.bio-grid{grid-template-columns:240px 1fr;gap:44px}}
+.portrait{aspect-ratio:3/4;border-radius:18px;background:linear-gradient(150deg,#E6EFED,#D6E5E2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;color:#8AA6A2;font-size:12px;letter-spacing:.12em;line-height:1.9}
+.bio p{max-width:660px;color:#3E4B58;margin-bottom:14px}
+.bio .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+.bio .tags span{border:1px solid var(--line);color:var(--cy);border-radius:999px;padding:5px 16px;font-size:13px}
+
+.works{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:640px){.works{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.works{grid-template-columns:repeat(3,1fr)}}
+.work{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#fff;transition:transform .2s,box-shadow .2s}
+.work:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(20,32,44,.08)}
+.ph{aspect-ratio:1/1;background:linear-gradient(150deg,#EDF3F2,#DFE9E7);display:flex;align-items:center;justify-content:center;text-align:center;color:#93ADA9;font-size:11px;letter-spacing:.14em;line-height:1.9}
+.work figcaption{padding:12px 14px;font-size:13px;color:var(--muted)}
+.work figcaption b{display:block;color:var(--ink);font-family:var(--serif);font-weight:700}
+
+.contact{border-top:1px solid var(--line);padding-block:46px 28px}
+.contact h2{font-family:var(--serif);font-size:24px;letter-spacing:.08em;margin-bottom:10px}
+.contact p{color:var(--muted);font-size:15px}.contact a{color:var(--cy);font-weight:500}
+footer{background:var(--ink);color:#B9C7CE;padding:22px 0;font-size:12px;letter-spacing:.1em}
+.foot{display:flex;flex-direction:column;gap:6px}
+@media(min-width:768px){.foot{flex-direction:row;justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">青禾窯<small>LUMEN</small></a>
+    <nav class="mainnav" aria-label="主選單">
+      <button class="m-item has-caret" data-mega="megaWorks">作品集
+        <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <a class="m-item" href="#theme">主題</a>
+      <a class="m-item" href="#bio">簡介</a>
+      <a class="m-item" href="#contact">聯絡</a>
+    </nav>
+    <a class="nav-cta" href="#works">查看器物</a>
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+  </div>
+
+  <!-- Mega 面板 -->
+  <div class="mega" id="megaWorks" role="menu">
+    <div class="mega-inner">
+      <div class="mega-cols">
+        <div class="col"><b>青瓷</b><a href="#works">青瓷茶碗</a><a href="#works">青釉杯組</a><a href="#works">青瓷水方</a></div>
+        <div class="col"><b>柴燒</b><a href="#works">柴燒陶壺</a><a href="#works">落灰茶碗</a><a href="#works">火痕杯</a></div>
+        <div class="col"><b>器型</b><a href="#works">茶器</a><a href="#works">花器</a><a href="#works">水方・罐</a></div>
+      </div>
+      <div class="mega-feat">
+        <b>本季特展・土的詩篇</b>
+        <p>REPLACE-NAME 柴燒系列精選，現正於台北藝廊展出。</p>
+        <a href="REPLACE-LINK">前往展訊 →</a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav-panel" id="navPanel" aria-label="行動選單">
+    <button class="m-item has-caret" data-mega="megaMobile" style="text-align:left;padding:0">作品集
+      <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="sub" id="megaMobile"><a href="#works">青瓷</a><a href="#works">柴燒</a><a href="#works">器型</a><a href="#works">本季特展</a></div>
+    <a href="#theme">主題</a><a href="#bio">簡介</a><a href="#contact">聯絡</a>
+  </nav>
+</header>
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb" aria-label="麵包屑導航">
+  <div class="wrap crumb">
+    <a href="#top">首頁</a><span class="sep">›</span>
+    <a href="../">陶藝家</a><span class="sep">›</span>
+    <a href="#top">REPLACE-KILN</a><span class="sep">›</span>
+    <span aria-current="page">作品集</span>
+  </div>
+</nav>
+
+<main>
+  <section class="hero" id="top">
+    <div class="wrap grid">
+      <div>
+        <div class="eyebrow">CONTEMPORARY CERAMICS &middot; 當代陶藝</div>
+        <h1>在透光中<br>與<span class="accent">REPLACE-NAME</span>相遇</h1>
+        <p class="sub">REPLACE-SUB。以留白與光，陳列火與釉的日常。此頁為版型示範，請替換真實內容。</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="#works">瀏覽作品</a>
+          <a class="btn btn-ghost" href="#bio">認識藝術家</a>
+        </div>
+      </div>
+      <div class="hero-ph" aria-label="主視覺佔位">主視覺<br>assets/hero.webp<br>（待置入）</div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="theme">
+    <div class="sec-head"><span class="sec-no">01</span><h2 class="sec-title">主題介紹</h2></div>
+    <div class="theme">
+      <p class="lead">REPLACE-THEME。當代陶藝不再只是工藝，而是一種以土、火與釉書寫的當代語言——在器物線條之間，藏著對生活的理解。</p>
+      <p>REPLACE-NAME 讓青瓷的澄澈與柴燒的沉厚並存於同一空間，使器物既能在茶席上服務日常，也能在展櫃中獨自成篇。</p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="bio">
+    <div class="sec-head"><span class="sec-no">02</span><h2 class="sec-title">藝術家簡介</h2></div>
+    <div class="bio-grid">
+      <div class="portrait" aria-label="大頭照佔位">大頭照<br>assets/portrait.webp<br>（待置入）</div>
+      <div class="bio">
+        <p>REPLACE-BIO。REPLACE-NAME 於 REPLACE-KILN 工作室創作，以釉藥為語言、以柴燒為方法，在實用與美之間尋求平衡。</p>
+        <p>相信「器物是生活的接點」，作品以茶器與花器為主，強調手感、留白與時間的痕跡。</p>
+        <div class="tags"><span>青瓷</span><span>柴燒</span><span>茶器</span><span>花器</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="works">
+    <div class="sec-head"><span class="sec-no">03</span><h2 class="sec-title">作品集</h2></div>
+    <div class="works">
+      <figure class="work"><div class="ph">作品 01<br>assets/work-01.webp<br>（待置入）</div><figcaption><b>青瓷茶碗</b>／2024</figcaption></figure>
+      <figure class="work"><div class="ph">作品 02<br>assets/work-02.webp<br>（待置入）</div><figcaption><b>柴燒陶壺</b>／2024</figcaption></figure>
+      <figure class="work"><div class="ph">作品 03<br>assets/work-03.webp<br>（待置入）</div><figcaption><b>青釉花器</b>／2023</figcaption></figure>
+      <figure class="work"><div class="ph">作品 04<br>assets/work-04.webp<br>（待置入）</div><figcaption><b>落灰茶碗</b>／2023</figcaption></figure>
+      <figure class="work"><div class="ph">作品 05<br>assets/work-05.webp<br>（待置入）</div><figcaption><b>青瓷茶托</b>／2022</figcaption></figure>
+      <figure class="work"><div class="ph">作品 06<br>assets/work-06.webp<br>（待置入）</div><figcaption><b>柴燒水方</b>／2022</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="wrap contact" id="contact">
+    <h2>收藏與合作</h2>
+    <p>作品收藏、展覽邀約與茶席合作：<a href="mailto:REPLACE-EMAIL">REPLACE-EMAIL</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot"><span>© <span id="year"></span> REPLACE-NAME・REPLACE-KILN</span><span>當代陶藝空間｜331.today 陶藝家平台</span></div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('year').textContent=new Date().getFullYear();
+  var trigger=document.querySelector('.m-item[data-mega="megaWorks"]');
+  var mega=document.getElementById('megaWorks');
+  if(trigger&&mega){
+    trigger.addEventListener('mouseenter',function(){mega.classList.add('open');});
+    trigger.addEventListener('click',function(e){e.preventDefault();mega.classList.toggle('open');});
+    mega.addEventListener('mouseleave',function(){mega.classList.remove('open');});
+  }
+  var t=document.getElementById('navToggle'),p=document.getElementById('navPanel');
+  var mobTrig=p.querySelector('.m-item[data-mega="megaMobile"]'),mobSub=document.getElementById('megaMobile');
+  t.addEventListener('click',function(){var o=p.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
+  mobTrig.addEventListener('click',function(){mobSub.classList.toggle('open');});
+  p.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){if(a.getAttribute('href')!=='#'){p.classList.remove('open');t.setAttribute('aria-expanded','false');}});});
+})();
+</script>
+</body>
+</html>

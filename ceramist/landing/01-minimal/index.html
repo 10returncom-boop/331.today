@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>林青禾・青禾窯｜台灣陶藝家・青瓷茶器</title>
+<!--
+  ──────────────── 範本 01：留白・新東方極簡 ────────────────
+  這是一套可重用的陶藝家 landing page 版型（純 HTML/CSS/JS、UTF-8 繁中）。
+  套用到實際藝術家資料夾時，搜尋並取代下列「替換點」即可：
+    REPLACE-NAME     藝術家姓名（預設示範：林青禾）
+    REPLACE-KILN     窯名／工作室（預設示範：青禾窯）
+    REPLACE-SUB      一句定位語（主標下方副標）
+    REPLACE-THEME    主題介紹段落（可刪可改）
+    REPLACE-BIO      藝術家簡介段落
+    REPLACE-PORTRAIT 大頭照路徑（建議 assets/portrait.webp）
+    REPLACE-WORKxx   作品圖路徑（建議 assets/work-01.webp …）
+  作品集佔位圖框：把實際 .webp 放到本資料夾的 assets/ 後，取代對應路徑即可。
+  ─────────────────────────────────────────────────────────
+-->
+<meta name="description" content="林青禾為台灣陶藝家，以青瓷茶器與柴燒器物見長，青禾窯專注釉藥研究與手作生活陶。">
+<meta name="keywords" content="台灣陶藝家,陶藝,青瓷,柴燒,茶器,青禾窯,手作陶">
+<meta property="og:title" content="林青禾・青禾窯｜台灣陶藝家">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%236F8F80'/%3E%3Cpath d='M32 12c7 8 12 16 12 26 0 10-6 15-12 15s-12-5-12-15c0-10 5-18 12-26z' fill='%23F6F5F1'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"林青禾","jobTitle":"陶藝家","worksFor":{"@type":"Organization","name":"青禾窯"},"address":{"@type":"PostalAddress","addressCountry":"TW"},"knowsAbout":["青瓷","柴燒","茶器","釉藥"]}
+</script>
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap">
+<style>
+/* 窄屏優先：先為 375px 寫 */
+:root{
+  --paper:#F6F5F1; --ink:#26241F; --muted:#6E6A61;
+  --accent:#6F8F80; --line:#DCD8CC;
+  --serif:"Noto Serif TC","PMingLiU",serif; --sans:"Noto Sans TC","Microsoft JhengHei",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.85;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* 導覽 */
+header{position:sticky;top:0;z-index:50;background:rgba(246,245,241,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-family:var(--serif);font-weight:700;letter-spacing:.12em;font-size:15px}
+.brand small{color:var(--muted);font-weight:400;margin-left:8px;letter-spacing:.2em}
+.nav-links{display:none;gap:26px;font-size:14px;letter-spacing:.08em}
+.nav-links a:hover{color:var(--accent)}
+.nav-toggle{background:none;border:0;font-size:22px;cursor:pointer;padding:6px 10px}
+@media(min-width:768px){.nav-links{display:flex}.nav-toggle{display:none}}
+.nav-panel{display:none;flex-direction:column;gap:14px;padding:14px 22px 22px;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-panel.open{display:flex}
+@media(min-width:768px){.nav-panel{display:none!important}}
+
+/* Hero */
+.hero{padding-block:72px 40px;text-align:left}
+.hero .eyebrow{font-size:12px;letter-spacing:.32em;color:var(--accent);font-weight:500;margin-bottom:18px}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:44px;line-height:1.25;letter-spacing:.04em}
+.hero .name-cn{font-size:30px;display:block;margin-top:6px;color:var(--ink)}
+.hero p.sub{margin-top:20px;max-width:560px;color:var(--muted);font-size:16px;font-weight:300}
+
+/* 主題介紹 */
+.section{padding-block:56px}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:26px}
+.sec-no{font-family:var(--serif);color:var(--accent);font-size:13px;letter-spacing:.2em}
+.sec-title{font-family:var(--serif);font-size:22px;letter-spacing:.06em}
+.sec-title::after{content:"";display:block;width:34px;height:1px;background:var(--accent);margin-top:8px}
+.theme{max-width:720px}
+.theme p{color:#403D35;margin-bottom:16px}
+.theme .lead{font-family:var(--serif);font-size:19px;line-height:2;color:var(--ink)}
+
+/* 簡介 */
+.bio-grid{display:grid;grid-template-columns:1fr;gap:30px}
+@media(min-width:768px){.bio-grid{grid-template-columns:240px 1fr;gap:44px}}
+.portrait{aspect-ratio:3/4;background:#E7E4DA;display:flex;align-items:center;justify-content:center;text-align:center;border:1px solid var(--line);color:var(--muted);font-size:12px;letter-spacing:.12em;line-height:1.9;padding:10px}
+.bio p{max-width:640px;color:#403D35;margin-bottom:14px}
+.bio .meta{margin-top:18px;border-top:1px solid var(--line);padding-top:16px;font-size:13px;color:var(--muted);display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
+
+/* 作品集 */
+.works{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(min-width:768px){.works{grid-template-columns:repeat(3,1fr)}}
+.work figure{border:1px solid var(--line);background:#fff}
+.ph{aspect-ratio:1/1;background:#EFEDE5;display:flex;align-items:center;justify-content:center;text-align:center;color:#A9A49A;font-size:11px;letter-spacing:.14em;line-height:1.9;padding:8px}
+.work figcaption{padding:10px 12px;font-size:13px;color:var(--muted)}
+.work figcaption b{display:block;color:var(--ink);font-family:var(--serif);font-weight:600;letter-spacing:.05em}
+.work:hover figure .ph{background:#E4E1D6}
+
+/* 聯絡 + Footer */
+.contact{border-top:1px solid var(--line);padding-block:44px 28px}
+.contact h2{font-family:var(--serif);font-size:20px;letter-spacing:.06em;margin-bottom:8px}
+.contact p{color:var(--muted);font-size:14px}
+.contact a{color:var(--accent);font-weight:500}
+footer{background:var(--ink);color:#EFECE4;padding:24px 0;font-size:12px;letter-spacing:.08em}
+.foot{display:flex;flex-direction:column;gap:8px}
+@media(min-width:768px){.foot{flex-direction:row;justify-content:space-between}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">青禾窯<small>CHING-HO</small></a>
+    <nav class="nav-links" aria-label="主選單">
+      <a href="#theme">主題</a><a href="#bio">簡介</a><a href="#works">作品集</a><a href="#contact">聯絡</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+  </div>
+  <nav class="nav-panel" id="navPanel" aria-label="行動選單">
+    <a href="#theme">主題</a><a href="#bio">簡介</a><a href="#works">作品集</a><a href="#contact">聯絡</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div class="eyebrow">台灣陶藝・手作器物</div>
+    <h1>以土為紙<br><span class="name-cn">REPLACE-NAME</span></h1>
+    <p class="sub">REPLACE-SUB。青瓷的溫潤、柴燒的質樸，都在一掌土與火的對話之間成形。本頁為版型示範，請替換為藝術家的真實定位語。</p>
+  </section>
+
+  <section class="section wrap" id="theme">
+    <div class="sec-head"><span class="sec-no">01・主題</span><h2 class="sec-title">主題介紹</h2></div>
+    <div class="theme">
+      <p class="lead">REPLACE-THEME。陶，是台灣土地上最古老的工藝之一。從日治時期的窯業到當代陶藝的多元面貌，土與火在不同陶藝家手中，成為生活的器、藝術的載體。</p>
+      <p>每一件器物從揉土、拉坯、修坯、上釉到入窯，皆需數日乃至數週的耐心。釉藥在窯火的淬煉下變化萬千，或青如玉、或沉如石，正是手作與窯火不可複製的痕跡，讓每一只茶碗都獨一無二。</p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="bio">
+    <div class="sec-head"><span class="sec-no">02・簡介</span><h2 class="sec-title">藝術家簡介</h2></div>
+    <div class="bio-grid">
+      <div class="portrait" aria-label="藝術家大頭照佔位">
+        大頭照<br>assets/portrait.webp<br>（待置入）
+      </div>
+      <div class="bio">
+        <p>REPLACE-BIO。REPLACE-NAME 投入陶藝創作多年，專注於釉藥的實驗與茶器的造型，作品常見於台灣與海外的展覽與茶席。</p>
+        <p>對 REPLACE-NAME 而言，陶是生活的一部分——一只合掌可握的茶杯、一方沉穩的茶托，在每日的注水與品飲之間，器物才真正完成。</p>
+        <div class="meta">
+          <span>窯名／REPLACE-KILN</span><span>領域／青瓷・柴燒・茶器</span>
+          <span>駐點／台灣</span><span>狀態／接受訂製與展覽邀約</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="works">
+    <div class="sec-head"><span class="sec-no">03・作品</span><h2 class="sec-title">作品集</h2></div>
+    <div class="works">
+      <figure class="work"><div class="ph">作品 01<br>assets/work-01.webp<br>（待置入）</div><figcaption><b>青瓷茶碗</b>／2024</figcaption></figure>
+      <figure class="work"><div class="ph">作品 02<br>assets/work-02.webp<br>（待置入）</div><figcaption><b>柴燒側把壺</b>／2024</figcaption></figure>
+      <figure class="work"><div class="ph">作品 03<br>assets/work-03.webp<br>（待置入）</div><figcaption><b>青釉杯組</b>／2023</figcaption></figure>
+      <figure class="work"><div class="ph">作品 04<br>assets/work-04.webp<br>（待置入）</div><figcaption><b>茶托</b>／2023</figcaption></figure>
+      <figure class="work"><div class="ph">作品 05<br>assets/work-05.webp<br>（待置入）</div><figcaption><b>柴燒花器</b>／2022</figcaption></figure>
+      <figure class="work"><div class="ph">作品 06<br>assets/work-06.webp<br>（待置入）</div><figcaption><b>青瓷水方</b>／2022</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="wrap contact" id="contact">
+    <h2>聯絡與訂製</h2>
+    <p>作品展示、茶席合作與訂製詢問，歡迎來信：<a href="mailto:REPLACE-EMAIL">REPLACE-EMAIL</a></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> REPLACE-NAME・REPLACE-KILN</span>
+    <span>台灣陶藝｜331.today 陶藝家平台</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // 年份
+  document.getElementById('year').textContent = new Date().getFullYear();
+  // 行動選單開合（真實 handler，非殭屍按鈕）
+  var toggle=document.getElementById('navToggle');
+  var panel=document.getElementById('navPanel');
+  toggle.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    toggle.setAttribute('aria-expanded',open?'true':'false');
+  });
+  panel.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){panel.classList.remove('open');toggle.setAttribute('aria-expanded','false');});
+  });
+})();
+</script>
+</body>
+</html>

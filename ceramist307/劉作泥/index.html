@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>劉作泥｜台灣陶藝家平台・資料建置中</title>
+<meta name="description" content="劉作泥，台灣陶藝創作者。本站為依公開資料建置之展示站（非官方網站），內容將於查證到權威來源後持續更新。">
+<meta name="keywords" content="劉作泥,台灣陶藝,陶藝">
+<meta property="og:title" content="劉作泥｜台灣陶藝家平台・資料建置中">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23241a12'/%3E%3Cpath d='M32 10c7 9 12 20 12 32 0 12-5 15-12 15s-12-3-12-15c0-12 5-23 12-32z' fill='%23A85A34'/%3E%3Cpath d='M32 18c-3 6-4 12-4 18 0 7 2 10 4 10s4-3 4-10c0-6-1-12-4-18z' fill='%23F5EDE0'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Person", "name": "劉作泥", "jobTitle": "陶藝家", "address": {"@type": "PostalAddress", "addressCountry": "TW"}}
+</script>
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500&display=swap">
+<style>
+:root{--char:#241a12;--clay:#E8DCC8;--fire:#A85A34;--jade:#5B7A6E;--cream:#F5EDE0;--muted:#6E6252;--line:#D8CBB2;--serif:"Noto Serif TC","PMingLiU","Songti TC",serif;--sans:"Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--cream);color:var(--char);line-height:1.85}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit;text-decoration:none}
+
+/* 頂欄 */
+header{position:sticky;top:0;z-index:90;background:var(--char);color:var(--clay);border-bottom:2px solid var(--fire)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-family:var(--serif);font-weight:900;letter-spacing:.1em;font-size:17px}
+.brand small{display:block;font-size:10px;font-weight:400;letter-spacing:.26em;color:var(--fire);margin-top:1px}
+.mainnav{display:none;gap:2px}
+.m-item{font-family:inherit;font-size:14px;letter-spacing:.06em;color:var(--clay);background:none;border:0;cursor:pointer;padding:9px 12px;border-radius:6px}
+.m-item:hover{background:rgba(232,220,200,.14);color:#fff}
+@media(min-width:860px){.mainnav{display:flex}.nav-toggle{display:none}}
+.nav-toggle{background:none;border:0;color:var(--clay);padding:6px 8px;cursor:pointer}
+.nav-panel{display:none;flex-direction:column;background:var(--char);border-top:1px solid #4a3628;padding:10px 22px 18px}
+.nav-panel.open{display:flex}
+.nav-panel a{font-size:15px;padding:10px 0;border-bottom:1px dashed #4a3628;color:var(--clay)}
+@media(min-width:860px){.nav-panel{display:none!important}}
+
+/* 麵包屑 */
+.breadcrumb{background:#e6d9c2;border-bottom:1px solid var(--line)}
+.crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);padding-block:10px;flex-wrap:wrap}
+.crumb a:hover{color:var(--fire)}.crumb .sep{opacity:.5}.crumb [aria-current="page"]{color:var(--char);font-weight:600}
+
+/* Hero */
+.hero{position:relative;background:var(--char);color:var(--clay);padding-block:68px 56px;overflow:hidden}
+.hero .grain{position:absolute;inset:0;opacity:.5;pointer-events:none}
+.hero .wrap{position:relative;z-index:2}
+.hero .eyebrow{font-size:12px;letter-spacing:.32em;color:var(--fire);font-weight:500;margin-bottom:14px}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:34px;line-height:1.25;letter-spacing:.04em}
+.hero h1 .jade{color:#9BC4B4}
+.hero p.sub{margin-top:16px;max-width:640px;color:#cfbfa6;font-size:15px}
+.hero .meta-line{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 24px;font-size:13px;color:#b9a88e;letter-spacing:.05em}
+.hero .meta-line b{color:#fff;font-weight:500}
+@media(min-width:768px){.hero h1{font-size:46px}.hero{padding-block:76px 62px}}
+
+/* 區段 */
+.section{padding-block:46px}
+.sec-head{margin-bottom:22px}
+.sec-no{display:inline-block;font-family:var(--serif);color:var(--fire);font-size:12px;letter-spacing:.22em;border:1px solid var(--fire);padding:3px 12px;border-radius:999px;margin-bottom:12px}
+.sec-title{font-family:var(--serif);font-size:24px;letter-spacing:.06em;font-weight:900}
+.sec-title::after{content:"";display:block;width:42px;height:3px;background:var(--jade);margin-top:10px}
+.sec-note{margin-top:8px;font-size:13px;color:var(--muted)}
+
+/* 簡介 */
+.bio-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:768px){.bio-grid{grid-template-columns:240px 1fr;gap:36px}}
+.portrait{aspect-ratio:3/4;background:var(--clay);border:2px dashed #B7A183;display:flex;align-items:center;justify-content:center;text-align:center;color:#8A7760;font-size:12px;letter-spacing:.1em;line-height:2}
+.bio p{max-width:680px;color:#4A3A2B;margin-bottom:13px;font-size:15px}
+.bio .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:9px}
+.bio .tags span{border:1px solid #C9B69B;color:#6A5A48;border-radius:999px;padding:3px 13px;font-size:13px}
+
+/* 主題 */
+.theme{max-width:760px}
+.theme p{color:#4a3c2d;margin-bottom:14px;font-size:15px}
+.theme .lead{font-family:var(--serif);font-size:18px;line-height:2;color:var(--char)}
+
+/* 作品集 4×grid 預留 */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:640px){.gallery{grid-template-columns:repeat(4,1fr);gap:18px}}
+.work{border:2px solid var(--char);background:#fff;overflow:hidden}
+.work .ph{aspect-ratio:1/1;background:var(--clay);display:flex;align-items:center;justify-content:center;text-align:center;color:#8A7760;font-size:11px;letter-spacing:.1em;line-height:2;padding:8px}
+.work figcaption{padding:9px 11px;font-size:12px;color:var(--muted);border-top:1px solid var(--line)}
+.work figcaption b{display:block;color:var(--char);font-family:var(--serif);font-weight:700;font-size:13px}
+.work figcaption .yr{color:var(--fire);font-size:11px}
+
+/* 展覽時間軸 */
+.timeline{margin-top:8px;border-top:1px solid var(--line);padding-top:14px}
+.tl-item{display:grid;grid-template-columns:1fr;gap:4px;padding:13px 0;border-bottom:1px solid #E3D8C2}
+.tl-item:last-child{border-bottom:0}
+.tl-step{font-family:var(--serif);color:var(--fire);font-weight:700;font-size:14px}
+.tl-desc{color:#5C4B39;font-size:14px}
+@media(min-width:768px){.tl-item{grid-template-columns:190px 1fr;align-items:baseline;gap:22px}}
+
+/* 著作 */
+.pub-list{max-width:760px}
+.pub-item{display:grid;grid-template-columns:1fr;gap:3px;padding:13px 0;border-bottom:1px solid #E3D8C2}
+.pub-item:last-child{border-bottom:0}
+.pub-name{font-family:var(--serif);font-weight:700;color:var(--char);font-size:15px}
+.pub-info{color:#5C4B39;font-size:14px}
+
+/* 待補充標示 */
+.tbd{display:inline-flex;align-items:center;gap:6px;background:#F3E9D3;border:1px solid #D8CBB2;color:var(--muted);border-radius:999px;padding:4px 14px;font-size:13px}
+.tbd-block{border:1px dashed #C9B69B;background:#FBF5EA;color:var(--muted);border-radius:10px;padding:16px 18px;font-size:14px;max-width:760px}
+
+/* 聯絡 */
+.contact{background:var(--char);color:var(--clay);padding-block:46px 38px;margin-top:10px}
+.contact h2{font-family:var(--serif);font-size:22px;letter-spacing:.06em;font-weight:900}
+.contact p{color:#CFBFA6;margin-top:10px;font-size:14px}
+.contact a{color:var(--fire);font-weight:500}
+.contact .meta{margin-top:16px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:13px;color:#b9a88e}
+.contact .meta b{color:#fff;font-weight:500}
+
+/* 頁尾 */
+footer{background:#1E150E;color:#9C8A70;padding:22px 0;font-size:12px;letter-spacing:.05em}
+.foot{display:flex;flex-direction:column;gap:7px}
+@media(min-width:768px){.foot{flex-direction:row;justify-content:space-between}}
+.foot .src-row{display:flex;flex-wrap:wrap;gap:5px 14px;margin-top:5px}
+.foot a{color:#9BC4B4}
+.foot a:hover{color:#fff}
+
+/* 浮動按鈕 */
+.floatbar{position:fixed;right:16px;bottom:16px;z-index:120;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.float-btn{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1px;font-size:10px;letter-spacing:.04em;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25);border:0;font-family:var(--sans)}
+.f-map{background:var(--char);color:var(--clay)}
+.f-map:hover{background:var(--jade)}
+.f-line{background:#06C755;color:#fff}
+.f-line:hover{filter:brightness(1.08)}
+.f-line svg{width:22px;height:22px}
+
+/* Sitemap modal */
+.modal{position:fixed;inset:0;background:rgba(20,14,9,.7);backdrop-filter:blur(4px);z-index:130;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-card{background:var(--cream);border:2px solid var(--char);border-radius:14px;max-width:520px;width:100%;padding:24px}
+.modal-card h3{font-family:var(--serif);font-size:20px;letter-spacing:.05em;margin-bottom:14px}
+.sitemap-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sitemap-list a{border:1px solid var(--line);background:#fff;border-radius:8px;padding:11px 13px;font-size:13px}
+.sitemap-list a b{display:block;font-family:var(--serif);font-weight:700}
+.sitemap-list a span{font-size:12px;color:var(--muted)}
+.modal-close{margin-top:16px;width:100%;background:var(--fire);color:#FFF6EC;border:0;border-radius:999px;padding:10px;cursor:pointer;font-size:14px;font-family:var(--sans)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">劉作泥<small>資料建置中</small></a>
+    <nav class="mainnav" aria-label="主選單">
+      <a class="m-item" href="#bio">簡介</a><a class="m-item" href="#theme">主題</a><a class="m-item" href="#works">作品</a><a class="m-item" href="#exhibitions">展覽</a><a class="m-item" href="#publications">著作</a><a class="m-item" href="#contact">聯絡</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
+  </div>
+  <nav class="nav-panel" id="navPanel" aria-label="行動選單">
+    <a href="#bio">簡介</a><a href="#theme">主題</a><a href="#works">作品</a><a href="#exhibitions">展覽</a><a href="#publications">著作</a><a href="#contact">聯絡</a>
+  </nav>
+</header>
+
+<nav class="breadcrumb" aria-label="麵包屑導航">
+  <div class="wrap crumb">
+    <a href="../../index.html">331.today</a><span class="sep">›</span>
+    <a href="../index.html#g-劉">陶藝家</a><span class="sep">›</span>
+    <span aria-current="page">劉作泥</span>
+  </div>
+</nav>
+
+<main>
+  <section class="hero" id="top">
+    <div class="grain" aria-hidden="true"><svg preserveAspectRatio="none"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2"/><feColorMatrix values="0 0 0 0 .18 0 0 0 0 .13 0 0 0 0 .09 0 0 0 .6 0"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg></div>
+    <div class="wrap">
+      <div class="eyebrow">資料建置中</div>
+      <h1>劉作泥<br><span class="jade">台灣陶藝</span></h1>
+      <p class="sub">本站為依公開資料建置之展示站（非官方網站），內容將於查證到權威來源後持續更新。</p>
+      <div class="meta-line">
+        <span>生年<b>待補充</b></span>
+        <span>窯名<b>待補充</b></span>
+        <span>專長<b>待補充</b></span>
+        <span>狀態<b>資料建置中</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="bio">
+    <div class="sec-head"><span class="sec-no">藝術家簡介</span><h2 class="sec-title">劉作泥</h2></div>
+    <div class="bio-grid">
+      <div class="portrait" aria-label="肖像照佔位">肖像照<br>（待置入）</div>
+      <div class="bio">
+        <p>關於劉作泥的生平、師承、窯口與創作風格等公開資料，目前仍在持續查證與補充中。</p>
+        <p>作品、展覽與出版等欄位，將於查證到畫廊官網、美術館、博物館或學術文獻等權威來源後陸續更新。為求專業正確，凡未經查證之生平、展覽與著作，本站一律標示「待補充」，不做臆測。</p>
+        <div class="tags">
+          <span>待補充查證</span>
+          <span>陶藝</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="theme">
+    <div class="sec-head"><span class="sec-no">主題介紹</span><h2 class="sec-title">創作主題</h2></div>
+    <div class="theme">
+      <p class="lead">創作主題與風格特色，待查證到權威來源後補入。</p>
+      <p>本欄位目前為待補充狀態。</p>
+    </div>
+  </section>
+
+  <section class="section wrap" id="works">
+    <div class="sec-head"><span class="sec-no">作品集</span><h2 class="sec-title">作品集圖庫</h2></div>
+    <p class="sec-note">圖庫預留：4×2 格（桌面 4 欄、行動 2 欄），未來置入作品照片；此站不抓取外部圖片，以下為預留佔位。</p>
+    <div class="gallery">
+      <figure class="work"><div class="ph">作品 01<br>（待置入）</div><figcaption><b>作品 01</b><span class="yr">待補充</span></figcaption></figure>
+      <figure class="work"><div class="ph">作品 02<br>（待置入）</div><figcaption><b>作品 02</b><span class="yr">待補充</span></figcaption></figure>
+      <figure class="work"><div class="ph">作品 03<br>（待置入）</div><figcaption><b>作品 03</b><span class="yr">待補充</span></figcaption></figure>
+      <figure class="work"><div class="ph">作品 04<br>（待置入）</div><figcaption><b>作品 04</b><span class="yr">待補充</span></figcaption></figure>
+      <figure class="work"><div class="ph">作品 05<br>（待置入）</div><figcaption><b>作品 05</b><span class="yr">待補充</span></figcaption></figure>
+      <figure class="work"><div class="ph">作品 06<br>（待置入）</div><figcaption><b>作品 06</b><span class="yr">待補充</span></figcaption></figure>
+      <figure class="work"><div class="ph">作品 07<br>（待置入）</div><figcaption><b>作品 07</b><span class="yr">待補充</span></figcaption></figure>
+      <figure class="work"><div class="ph">作品 08<br>（待置入）</div><figcaption><b>作品 08</b><span class="yr">待補充</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="section wrap" id="exhibitions">
+    <div class="sec-head"><span class="sec-no">展覽</span><h2 class="sec-title">重要展覽與歷程</h2></div>
+    <div class="tbd-block">尚待補充該藝術家重要展覽年表。</div>
+  </section>
+
+  <section class="section wrap" id="publications">
+    <div class="sec-head"><span class="sec-no">著作</span><h2 class="sec-title">著作與出版</h2></div>
+    <div class="tbd-block">公開資料中尚待整理該藝術家之專書與出版品。</div>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>聯絡與交流</h2>
+    <p>洽詢訂製、收藏、展覽與合作，歡迎透過 LINE 或電子郵件聯繫。</p>
+    <div class="meta">
+      <span>LINE<b><a href="https://line.me/R/ti/p/REPLACE-LINE" target="_blank" rel="noopener">REPLACE-LINE</a></b></span>
+      <span>Email<b>REPLACE-EMAIL</b></span><span>電話<b>REPLACE-PHONE</b></span>
+    </div>
+    <p style="font-size:12px;color:#9C8A70">聯絡資料為預留欄位，正式上線前請替換為實際 Email／電話／LINE ID。</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> 劉作泥｜依公開資料建置之展示站（非官方網站）</span>
+    <span>331.today 陶藝家平台</span>
+  </div>
+  <div class="wrap foot">
+    <span style="color:#7d6b55">主要資料來源：
+      <span class="src-row">
+        <a href="../index.html">331.today 陶藝家平台（資料建置中）</a>
+      </span>
+    </span>
+  </div>
+</footer>
+
+<div class="floatbar">
+  <button class="float-btn f-map" id="sitemapBtn" aria-label="站點地圖"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>地圖</button>
+  <a class="float-btn f-line" href="https://line.me/R/ti/p/REPLACE-LINE" aria-label="LINE 聯絡"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.9 2 10.8c0 4.1 3.1 7.6 7.4 8.7.3.1.7.3.8.6.1.3.1.9 0 1.4l-.2 1.1c0 .3-.1.7.6.4 4.9-2 7.5-4.3 8.9-5.9C21.7 15.6 22 13.2 22 10.8 22 5.9 17.5 2 12 2zm3.7 9.6h-2.6l-2.3 3.4c-.1.2-.4.1-.4-.1V11.6H7.8c-.2 0-.4-.2-.4-.4s.2-.4.4-.4h3.9v2.4c0 .2.3.3.4.1l2-3c.1-.2.4-.1.4.1v2.4h2.2c.2 0 .4.2.4.4s-.2.4-.4.4z"/></svg>LINE</a>
+</div>
+
+<div class="modal" id="sitemapModal" role="dialog" aria-modal="true" aria-label="站點地圖">
+  <div class="modal-card">
+    <h3>站點地圖</h3>
+    <div class="sitemap-list">
+      <a href="../index.html"><b>陶藝家總覽</b><span>331.today 陶藝家入口</span></a>
+      <a href="../../index.html"><b>331.today</b><span>三三藝 331 Gallery</span></a>
+      <a href="#bio"><b>藝術家簡介</b><span>生平・師承・創作</span></a>
+      <a href="#theme"><b>主題介紹</b><span>創作理念</span></a>
+      <a href="#works"><b>作品集</b><span>4×2 圖庫預留</span></a>
+      <a href="#exhibitions"><b>展覽</b><span>重要展覽年表</span></a>
+      <a href="#publications"><b>著作</b><span>出版品</span></a>
+      <a href="#contact"><b>聯絡</b><span>訂製・諮詢・LINE</span></a>
+    </div>
+    <button class="modal-close" id="modalClose">關閉</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  document.getElementById('year').textContent=new Date().getFullYear();
+  var t=document.getElementById('navToggle'),p=document.getElementById('navPanel');
+  t.addEventListener('click',function(){var o=p.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
+  p.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){p.classList.remove('open');t.setAttribute('aria-expanded','false');});});
+  var sb=document.getElementById('sitemapBtn'),sm=document.getElementById('sitemapModal'),mc=document.getElementById('modalClose');
+  sb.addEventListener('click',function(){sm.classList.add('open');});
+  mc.addEventListener('click',function(){sm.classList.remove('open');});
+  sm.addEventListener('click',function(e){if(e.target===sm){sm.classList.remove('open');}});
+})();
+</script>
+</body>
+</html>

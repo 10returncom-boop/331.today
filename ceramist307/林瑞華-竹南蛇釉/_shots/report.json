@@ -1,0 +1,223 @@
+{
+  "src": "D:\\_WWW_325_public\\331.today\\ceramist307\\林瑞華-竹南蛇釉\\index.html",
+  "url": "file:///D:/_WWW_325_public/331.today/ceramist307/%E6%9E%97%E7%91%9E%E8%8F%AF-%E7%AB%B9%E5%8D%97%E8%9B%87%E9%87%89/index.html",
+  "outdir": "D:\\_WWW_325_public\\331.today\\ceramist307\\林瑞華-竹南蛇釉\\_shots",
+  "include": [
+    "lint",
+    "screenshots",
+    "structure"
+  ],
+  "shots": {
+    "desktop": {
+      "revealed": 0,
+      "screenshot": "D:\\_WWW_325_public\\331.today\\ceramist307\\林瑞華-竹南蛇釉\\_shots\\index_desktop.jpg",
+      "screenshotBytes": 109740,
+      "truncated": false,
+      "structure": {
+        "title": "林瑞華・竹南蛇窯｜台灣陶藝家｜竹南蛇釉柴燒",
+        "firstH1": "蛇釉薪傳林瑞華",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "fullpage": {
+          "w": 1440,
+          "h": 3074
+        },
+        "counts": {
+          "section": 7,
+          "h1": 1,
+          "h2": 6,
+          "img": 0,
+          "canvas": 0,
+          "svg": 4,
+          "links": 26,
+          "buttons": 3
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "misalignedBlocks": [
+        {
+          "tag": "section.hero",
+          "text": "竹南蛇窯第二代・竹南蛇釉\n      蛇釉薪傳林瑞華\n      父親1972年砌下的蛇窯，到了他手中轉型成手工柴燒——",
+          "rect": [
+            0,
+            109,
+            1440,
+            379
+          ],
+          "widthDeltaVsGrid": 320,
+          "gridWidth": 1120,
+          "containerWidth": 1440,
+          "containerTag": "main"
+        }
+      ],
+      "misalignedBlocksHint": "含义：section/main/article 直接子级里，个别元素撑到父容器全宽、其他兄弟明显更窄。widthDeltaVsGrid=比栅格宽多少 px、gridWidth=正常栅格宽度、containerWidth=父容器宽度。最常见根因：HTML 标签闭合错位（<p> 忘了 </p> 等）导致元素跳出 .wrap/.container 层级，浏览器容错解析、不报 console 错但布局层级已被打乱。 | 修法：从 containerTag 定位到出问题的 section，逐行检查该 section 内前面的 HTML 标签闭合。 | 豁免：(1) **full-bleed / breakout 布局**——故意做全宽 hero、全宽 gradient divider、文章里跳出正文栏的大图/引用块（杂志排版）。看截图确认是设计意图后忽略；(2) sticky/absolute 顶栏错放在 section 直接子级下（罕见）。"
+    },
+    "mobile": {
+      "revealed": 0,
+      "screenshot": "D:\\_WWW_325_public\\331.today\\ceramist307\\林瑞華-竹南蛇釉\\_shots\\index_mobile.jpg",
+      "screenshotBytes": 149876,
+      "truncated": false,
+      "structure": {
+        "title": "林瑞華・竹南蛇窯｜台灣陶藝家｜竹南蛇釉柴燒",
+        "firstH1": "蛇釉薪傳林瑞華",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "fullpage": {
+          "w": 390,
+          "h": 3984
+        },
+        "counts": {
+          "section": 7,
+          "h1": 1,
+          "h2": 6,
+          "img": 0,
+          "canvas": 0,
+          "svg": 4,
+          "links": 26,
+          "buttons": 3
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "orphanCardsWarning": [
+        {
+          "tag": "div",
+          "count": 4,
+          "cols": 3,
+          "rows": [
+            3,
+            1
+          ],
+          "rect": [
+            22,
+            1285,
+            346,
+            73
+          ],
+          "cls": "tags"
+        }
+      ],
+      "orphanCardsHint": "warning · 含义：等宽卡片组最后一行只剩 1 个（`rows` 是每行个数，如 `[3,1]`），右侧拖一大片空白、上重下轻。判据是 `N % C == 1`（卡片数对列数取余）。 | 修法：让列数序列**跳过**这一档——4 张走 `4 → 2 → 1`（跳过 3 列）。卡片数固定就直接给这个栅格改断点即可；数量运行时才定，用 `.cards:has(> :nth-child(4):last-child)` 配媒体查询切列数，**通用那条要写成 `:not(:has(...))` 与它互斥**，否则 `:has()` 特异性更高，会压住宽屏那档、把 4 张永久钉在 2 列。 | 豁免：(1) 2 列档不报——那时孤儿等价于 N 为奇数，无解；(2) 最后一个已跨满整行的不报；(3) 瀑布流、自然宽度、刻意的非对称布局。"
+    }
+  },
+  "engine": "playwright",
+  "chromiumExec": "(playwright default)",
+  "elapsedSec": 4.78,
+  "schemaVersion": 2,
+  "status": "warning",
+  "engineInfo": {
+    "name": "playwright",
+    "degraded": false,
+    "degradedReasons": []
+  },
+  "input": {
+    "original": "D:\\_WWW_325_public\\331.today\\ceramist307\\林瑞華-竹南蛇釉\\index.html",
+    "resolvedPath": "D:\\_WWW_325_public\\331.today\\ceramist307\\林瑞華-竹南蛇釉\\index.html",
+    "baseUrl": "file:///D:/_WWW_325_public/331.today/ceramist307/%E6%9E%97%E7%91%9E%E8%8F%AF-%E7%AB%B9%E5%8D%97%E8%9B%87%E9%87%89/index.html",
+    "protocol": "file",
+    "cwd": "C:\\Users\\SUSI\\Doubao\\chats\\2026-10-13\\new-chat-17",
+    "mediaMode": {
+      "reducedMotion": true
+    }
+  },
+  "artifacts": {
+    "screenshots": [
+      {
+        "viewport": "desktop",
+        "path": "D:\\_WWW_325_public\\331.today\\ceramist307\\林瑞華-竹南蛇釉\\_shots\\index_desktop.jpg",
+        "size": 109740,
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      },
+      {
+        "viewport": "mobile",
+        "path": "D:\\_WWW_325_public\\331.today\\ceramist307\\林瑞華-竹南蛇釉\\_shots\\index_mobile.jpg",
+        "size": 149876,
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      }
+    ]
+  },
+  "summary": {
+    "blocker": 0,
+    "error": 0,
+    "warning": 2,
+    "info": 0
+  },
+  "findings": [
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "desktop",
+      "selector": "section.hero",
+      "evidence": {
+        "tag": "section.hero",
+        "text": "竹南蛇窯第二代・竹南蛇釉\n      蛇釉薪傳林瑞華\n      父親1972年砌下的蛇窯，到了他手中轉型成手工柴燒——",
+        "rect": [
+          0,
+          109,
+          1440,
+          379
+        ],
+        "widthDeltaVsGrid": 320,
+        "gridWidth": 1120,
+        "containerWidth": 1440,
+        "containerTag": "main"
+      },
+      "dedupeKey": "misalignedBlocks|desktop|section.hero|0"
+    },
+    {
+      "ruleId": "orphanCardsWarning",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "mobile",
+      "selector": "div.tags",
+      "evidence": {
+        "tag": "div",
+        "count": 4,
+        "cols": 3,
+        "rows": [
+          3,
+          1
+        ],
+        "rect": [
+          22,
+          1285,
+          346,
+          73
+        ],
+        "cls": "tags"
+      },
+      "dedupeKey": "orphanCardsWarning|mobile|div.tags|0"
+    }
+  ],
+  "prioritizedActions": [
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "viewport": "desktop",
+      "selector": "section.hero"
+    },
+    {
+      "ruleId": "orphanCardsWarning",
+      "severity": "warning",
+      "viewport": "mobile",
+      "selector": "div.tags"
+    }
+  ],
+  "reportPath": "D:\\_WWW_325_public\\331.today\\ceramist307\\林瑞華-竹南蛇釉\\_shots\\report.json"
+}

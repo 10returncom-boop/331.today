@@ -1,0 +1,332 @@
+{
+  "src": "D:\\_WWW_325_public\\331.today\\ceramist\\index.html",
+  "url": "file:///D:/_WWW_325_public/331.today/ceramist/index.html",
+  "outdir": "D:\\_WWW_325_public\\331.today\\ceramist\\_shots",
+  "include": [
+    "lint",
+    "screenshots",
+    "structure"
+  ],
+  "shots": {
+    "desktop": {
+      "slices": [
+        "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_desktop_p1of3.jpg",
+        "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_desktop_p2of3.jpg",
+        "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_desktop_p3of3.jpg"
+      ],
+      "sliceHint": "按顺序 Read slices 里的各分片。",
+      "truncated": false,
+      "structure": {
+        "title": "台灣陶藝家全覽｜331.today 陶藝家數位展廊",
+        "firstH1": "台灣陶藝家全覽索引",
+        "viewport": {
+          "w": 1440,
+          "h": 900
+        },
+        "fullpage": {
+          "w": 1440,
+          "h": 12607
+        },
+        "counts": {
+          "section": 66,
+          "h1": 1,
+          "h2": 65,
+          "img": 0,
+          "canvas": 0,
+          "svg": 4,
+          "links": 452,
+          "buttons": 4
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "misalignedBlocks": [
+        {
+          "tag": "div.sec-head",
+          "text": "統計收錄一覽",
+          "rect": [
+            0,
+            12170,
+            1440,
+            55
+          ],
+          "widthDeltaVsGrid": 680,
+          "gridWidth": 760,
+          "containerWidth": 1440,
+          "containerTag": "section#stat"
+        }
+      ],
+      "misalignedBlocksHint": "含义：section/main/article 直接子级里，个别元素撑到父容器全宽、其他兄弟明显更窄。widthDeltaVsGrid=比栅格宽多少 px、gridWidth=正常栅格宽度、containerWidth=父容器宽度。最常见根因：HTML 标签闭合错位（<p> 忘了 </p> 等）导致元素跳出 .wrap/.container 层级，浏览器容错解析、不报 console 错但布局层级已被打乱。 | 修法：从 containerTag 定位到出问题的 section，逐行检查该 section 内前面的 HTML 标签闭合。 | 豁免：(1) **full-bleed / breakout 布局**——故意做全宽 hero、全宽 gradient divider、文章里跳出正文栏的大图/引用块（杂志排版）。看截图确认是设计意图后忽略；(2) sticky/absolute 顶栏错放在 section 直接子级下（罕见）。",
+      "slopFontsWarning": [
+        {
+          "family": "arial",
+          "elementCount": 2,
+          "sampleText": "地圖"
+        }
+      ],
+      "slopFontsHint": "warning · 含义：页面使用了 skill 明确禁的 slop 高发字体（Inter / Roboto / Arial / Fraunces / Playfair）。elementCount 是命中该字体的元素数（不含 fallback），sampleText 是首个样例文字。 | 修法：换成主题相关的字体族（衬线/无衬线/等宽视调性而定），走自托管镜像 miaoda.feishu.cn/fonts/css2。 | 豁免：(1) **用户品牌指定使用**——例如客户 CI 明确要求 Inter/Roboto，写在 brief 里可忽略；(2) **系统字体 fallback 命中**——虽然本规则只取 fontFamily 首选族，但如果这个族本身写的是 \"Arial\"、可能只是保守 fallback；如果同一元素明显还挂了自定义字体但 fallback 落到 Arial（例如自定义字体 404 了），修的其实是字体加载而非字体选型；(3) 极简项目本就要 \"grotesque + 中性感\"，且用户未指定——罕见但存在，看截图和 design plan 确认后可豁免。",
+      "reportSource": "cdp"
+    },
+    "mobile": {
+      "slices": [
+        "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p1of5.jpg",
+        "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p2of5.jpg",
+        "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p3of5.jpg",
+        "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p4of5.jpg",
+        "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p5of5.jpg"
+      ],
+      "sliceHint": "按顺序 Read slices 里的各分片。",
+      "truncated": false,
+      "structure": {
+        "title": "台灣陶藝家全覽｜331.today 陶藝家數位展廊",
+        "firstH1": "台灣陶藝家全覽索引",
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "fullpage": {
+          "w": 390,
+          "h": 15490
+        },
+        "counts": {
+          "section": 66,
+          "h1": 1,
+          "h2": 65,
+          "img": 0,
+          "canvas": 0,
+          "svg": 4,
+          "links": 452,
+          "buttons": 4
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "slopFontsWarning": [
+        {
+          "family": "arial",
+          "elementCount": 2,
+          "sampleText": "地圖"
+        }
+      ],
+      "slopFontsHint": "warning · 含义：页面使用了 skill 明确禁的 slop 高发字体（Inter / Roboto / Arial / Fraunces / Playfair）。elementCount 是命中该字体的元素数（不含 fallback），sampleText 是首个样例文字。 | 修法：换成主题相关的字体族（衬线/无衬线/等宽视调性而定），走自托管镜像 miaoda.feishu.cn/fonts/css2。 | 豁免：(1) **用户品牌指定使用**——例如客户 CI 明确要求 Inter/Roboto，写在 brief 里可忽略；(2) **系统字体 fallback 命中**——虽然本规则只取 fontFamily 首选族，但如果这个族本身写的是 \"Arial\"、可能只是保守 fallback；如果同一元素明显还挂了自定义字体但 fallback 落到 Arial（例如自定义字体 404 了），修的其实是字体加载而非字体选型；(3) 极简项目本就要 \"grotesque + 中性感\"，且用户未指定——罕见但存在，看截图和 design plan 确认后可豁免。",
+      "orphanCardsWarning": [
+        {
+          "tag": "div",
+          "count": 6,
+          "cols": 5,
+          "rows": [
+            5,
+            1
+          ],
+          "rect": [
+            0,
+            11993,
+            390,
+            88
+          ],
+          "cls": "acards"
+        }
+      ],
+      "orphanCardsHint": "warning · 含义：等宽卡片组最后一行只剩 1 个（`rows` 是每行个数，如 `[3,1]`），右侧拖一大片空白、上重下轻。判据是 `N % C == 1`（卡片数对列数取余）。 | 修法：让列数序列**跳过**这一档——4 张走 `4 → 2 → 1`（跳过 3 列）。卡片数固定就直接给这个栅格改断点即可；数量运行时才定，用 `.cards:has(> :nth-child(4):last-child)` 配媒体查询切列数，**通用那条要写成 `:not(:has(...))` 与它互斥**，否则 `:has()` 特异性更高，会压住宽屏那档、把 4 张永久钉在 2 列。 | 豁免：(1) 2 列档不报——那时孤儿等价于 N 为奇数，无解；(2) 最后一个已跨满整行的不报；(3) 瀑布流、自然宽度、刻意的非对称布局。",
+      "edgeHuggingTextWarning": [
+        {
+          "tag": "p",
+          "text": "本入口整合 ceramist 資料夾下全部陶藝家個人網站：3",
+          "left": 0,
+          "viewportWidth": 390,
+          "paddingLeft": "0px",
+          "parentTag": "section.sec",
+          "parentPaddingLeft": "0px",
+          "parentMarginLeft": "0px",
+          "parentMaxWidth": "none"
+        }
+      ],
+      "edgeHuggingTextHint": "warning · 含义（仅 mobile shot 触发）：正文/标题文字的渲染左边缘贴到视口边（left ≤ 1px），左内边距完全塌陷。**桌面截图永远看不出这个问题**——它只在视口宽度 ≤ 容器 max-width 时出现。 | 最高频成因是 `padding` 简写把继承来的左右内边距清零：`.wrap{max-width:1180px;margin:0 auto;padding:0 28px}` 定义了左右 28px，而 `.hero-inner{padding:88px 0 96px}` 只想加上下内边距，简写却把左右一起重设为 0；元素同时挂着这两个 class（`class=\"wrap hero-inner\"`）时后写的简写胜出。宽屏下 `margin:0 auto` 的居中边距掩盖了它——1440px 视口时 (1440−1180)/2 = 130px，看起来完全正常；视口一旦 ≤ max-width，居中边距归零，padding 又是 0，文字就直接贴屏幕边缘。**`margin:0 auto` 不是 padding 的替代品**，它只在 viewport > max-width 时存在。 | 看字段判断：`parentPaddingLeft` 和 `parentMarginLeft` 同时为 `0px`、`parentMaxWidth` 有具体值，就是这个成因。 | 修法：把 `padding: A 0 B` 换成 `padding-block: A B`（逻辑属性，只动上下，不碰左右），或显式写全 `padding: A 28px B`。不要改成 `margin: 0 auto` 就完事。 | 豁免：(1) 祖先为 `position:absolute/fixed/sticky`、负向 `translateX`、`left < -40px` 的元素（移动端收起的抽屉、无障碍 skip link、绝对定位 badge）**本规则已自动过滤**，无需处理；(2) 刻意的满版设计——整块背景图上的装饰性大字、全宽色带里的标题，视觉上贴边成立；(3) `text-align:center` 的长文本在窄屏两侧各余几像素属正常，本规则阈值 1px 已排除这类。",
+      "reportSource": "cdp"
+    }
+  },
+  "engine": "chrome_cli",
+  "chromiumExec": "C:\\Users\\SUSI/AppData/Local/ms-playwright\\chromium_headless_shell-1234\\chrome-headless-shell-win64\\chrome-headless-shell.exe",
+  "engineDegraded": true,
+  "engineDegradedReason": "playwright 未装",
+  "elapsedSec": 9.7,
+  "schemaVersion": 2,
+  "status": "warning",
+  "engineInfo": {
+    "name": "chrome_cli",
+    "degraded": true,
+    "degradedReasons": [
+      "playwright 未装"
+    ]
+  },
+  "input": {
+    "original": "D:\\_WWW_325_public\\331.today\\ceramist\\index.html",
+    "resolvedPath": "D:\\_WWW_325_public\\331.today\\ceramist\\index.html",
+    "baseUrl": "file:///D:/_WWW_325_public/331.today/ceramist/index.html",
+    "protocol": "file",
+    "cwd": "C:\\Users\\SUSI\\Doubao\\chats\\2026-10-13\\new-chat-17",
+    "mediaMode": {
+      "reducedMotion": true
+    }
+  },
+  "artifacts": {
+    "screenshots": [
+      {
+        "viewport": "desktop",
+        "tiles": [
+          "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_desktop_p1of3.jpg",
+          "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_desktop_p2of3.jpg",
+          "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_desktop_p3of3.jpg"
+        ],
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      },
+      {
+        "viewport": "mobile",
+        "tiles": [
+          "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p1of5.jpg",
+          "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p2of5.jpg",
+          "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p3of5.jpg",
+          "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p4of5.jpg",
+          "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\index_mobile_p5of5.jpg"
+        ],
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      }
+    ]
+  },
+  "summary": {
+    "blocker": 0,
+    "error": 0,
+    "warning": 5,
+    "info": 0
+  },
+  "findings": [
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "desktop",
+      "selector": "div.sec-head",
+      "evidence": {
+        "tag": "div.sec-head",
+        "text": "統計收錄一覽",
+        "rect": [
+          0,
+          12170,
+          1440,
+          55
+        ],
+        "widthDeltaVsGrid": 680,
+        "gridWidth": 760,
+        "containerWidth": 1440,
+        "containerTag": "section#stat"
+      },
+      "dedupeKey": "misalignedBlocks|desktop|div.sec-head|0"
+    },
+    {
+      "ruleId": "slopFontsWarning",
+      "severity": "warning",
+      "kind": "typography",
+      "viewport": "desktop",
+      "selector": null,
+      "evidence": {
+        "family": "arial",
+        "elementCount": 2,
+        "sampleText": "地圖"
+      },
+      "dedupeKey": "slopFontsWarning|desktop||0"
+    },
+    {
+      "ruleId": "orphanCardsWarning",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "mobile",
+      "selector": "div.acards",
+      "evidence": {
+        "tag": "div",
+        "count": 6,
+        "cols": 5,
+        "rows": [
+          5,
+          1
+        ],
+        "rect": [
+          0,
+          11993,
+          390,
+          88
+        ],
+        "cls": "acards"
+      },
+      "dedupeKey": "orphanCardsWarning|mobile|div.acards|0"
+    },
+    {
+      "ruleId": "edgeHuggingTextWarning",
+      "severity": "warning",
+      "kind": "layout",
+      "viewport": "mobile",
+      "selector": "p",
+      "evidence": {
+        "tag": "p",
+        "text": "本入口整合 ceramist 資料夾下全部陶藝家個人網站：3",
+        "left": 0,
+        "viewportWidth": 390,
+        "paddingLeft": "0px",
+        "parentTag": "section.sec",
+        "parentPaddingLeft": "0px",
+        "parentMarginLeft": "0px",
+        "parentMaxWidth": "none"
+      },
+      "dedupeKey": "edgeHuggingTextWarning|mobile|p|0"
+    },
+    {
+      "ruleId": "slopFontsWarning",
+      "severity": "warning",
+      "kind": "typography",
+      "viewport": "mobile",
+      "selector": null,
+      "evidence": {
+        "family": "arial",
+        "elementCount": 2,
+        "sampleText": "地圖"
+      },
+      "dedupeKey": "slopFontsWarning|mobile||0"
+    }
+  ],
+  "prioritizedActions": [
+    {
+      "ruleId": "misalignedBlocks",
+      "severity": "warning",
+      "viewport": "desktop",
+      "selector": "div.sec-head"
+    },
+    {
+      "ruleId": "slopFontsWarning",
+      "severity": "warning",
+      "viewport": "desktop",
+      "selector": null
+    },
+    {
+      "ruleId": "orphanCardsWarning",
+      "severity": "warning",
+      "viewport": "mobile",
+      "selector": "div.acards"
+    },
+    {
+      "ruleId": "edgeHuggingTextWarning",
+      "severity": "warning",
+      "viewport": "mobile",
+      "selector": "p"
+    }
+  ],
+  "reportPath": "D:\\_WWW_325_public\\331.today\\ceramist\\_shots\\report.json"
+}
