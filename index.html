@@ -48,6 +48,7 @@
       </a>
       <nav class="site-nav">
         <a href="index.html#" class="nav-link active">首頁</a>
+        <a href="https://shop.331.today/#/category/331-gallery" class="nav-link" target="_blank" rel="noopener">商店 / 購物車</a>
         <a href="index.html#contact" class="nav-link">聯絡</a>
       </nav>
     </div>
@@ -126,12 +127,53 @@
         <p class="footer-tagline">331 Gallery</p>
       </div>
       <div class="footer-contact">規劃 | 設計 | 開發 | 整合行銷 : 舒安境工作室 Line: g-FTLSqJAR Tel: 0968-222201 <a href="mailto:10return.com@gmail.com">10return.com@gmail.com</a></div>
+      <div class="footer-shop" style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:flex-start;font-size:.9rem">
+        <a href="https://shop.331.today/#/category/331-gallery" target="_blank" rel="noopener">線上商店 / 購物車</a>
+        <a href="https://shop.331.today/#/lookup" target="_blank" rel="noopener">訂單查詢</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSep3QiMXBEPAPoJ7ifA1CBU3twj8UrNPVJing09b4kJkL_WOw/viewform" target="_blank" rel="noopener">訂單表單</a>
+        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=10return.com@gmail.com&amp;su=331%20%E8%A8%82%E8%B3%BC%E8%A9%A2%E5%95%8F" target="_blank" rel="noopener">寫信訂購</a>
+      </div>
       <div class="footer-credit">規劃/設計/開發：舒安境・Line：g-FTLSqJAR・📱 0968-222201</div>
     </div>
     <div class="footer-bottom">
       <p>&copy; 2026 三三藝 331 Gallery. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- ===== 統一收單入口（線上商店 / 訂單表單 / 寫信訂購） ===== -->
+  <style>
+    #skShopFab{
+      --sk-bg:#fffdf9; --sk-fg:#1c1917; --sk-line:#e2ddd2; --sk-accent:#8a6136; --sk-accent-fg:#fffdf9;
+      position:fixed; right:14px; bottom:14px; z-index:9000;
+      display:flex; flex-direction:column; gap:8px; align-items:flex-end;
+      font-family:-apple-system,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif;
+    }
+    #skShopFab a{
+      display:inline-flex; align-items:center; gap:7px;
+      padding:9px 14px; border-radius:999px; font-size:13px; font-weight:700; letter-spacing:.02em;
+      text-decoration:none; border:1px solid var(--sk-line); background:var(--sk-bg); color:var(--sk-fg);
+      box-shadow:0 4px 14px rgba(28,25,23,.12); transition:transform .15s ease, box-shadow .15s ease;
+    }
+    #skShopFab a:hover{ transform:translateY(-2px); box-shadow:0 8px 20px rgba(28,25,23,.18); }
+    #skShopFab a.primary{ background:var(--sk-accent); border-color:var(--sk-accent); color:var(--sk-accent-fg); }
+    #skShopFab svg{ width:14px; height:14px; flex:0 0 14px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+    @media (max-width:520px){ #skShopFab{ right:10px; bottom:10px; gap:6px; } #skShopFab a{ padding:8px 12px; font-size:12px; } }
+    @media print{ #skShopFab{ display:none; } }
+  </style>
+  <div id="skShopFab" aria-label="訂購入口">
+    <a class="primary" href="https://shop.331.today/#/category/331-gallery" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M3 4h2.2l2.3 11.2h11.2l2-8.2H6.4"/></svg>
+      線上商店
+    </a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSep3QiMXBEPAPoJ7ifA1CBU3twj8UrNPVJing09b4kJkL_WOw/viewform" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+      訂單表單
+    </a>
+    <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=10return.com@gmail.com&amp;su=331%20%E8%A8%82%E8%B3%BC%E8%A9%A2%E5%95%8F" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>
+      寫信訂購
+    </a>
+  </div>
 
   <script src="js/data.js" defer></script>
 <script src="js/main.js" defer></script>
