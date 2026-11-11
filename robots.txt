@@ -1,9 +1,9 @@
 User-agent: *
 Allow: /
 
-# 本站商品在 https://shop.331.today（統一收單）
-
-# 會員專區（不給搜尋引擎收錄）
-User-agent: *
+# 會員專區與會員圖庫不給搜尋引擎收錄
 Disallow: /member/
 Disallow: /images/member_clip/
+
+# 站內商品與收單在 shop.331.today
+Sitemap: https://331.today/sitemap.xml
