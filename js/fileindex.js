@@ -3,7 +3,7 @@ window.loadDirFiles = function (dir, cb) {
   if (window.FILE_INDEX && window.FILE_INDEX[dir]) { cb(window.FILE_INDEX[dir]); return; }
   if (window.FILE_INDEX) { cb([]); return; }
   var s = document.createElement('script');
-  s.src = './images/_fileindex.js';
+  s.src = './images/_fileindex.js?v=20261111b';
   s.onload = function () {
     cb((window.FILE_INDEX && window.FILE_INDEX[dir]) || []);
   };
