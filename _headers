@@ -1,4 +1,32 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Cross-Origin-Opener-Policy: same-origin
+
+# HTML 不快取，改版立刻可見
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 圖片與字型長快取（檔名不變的前提，更新時改檔名）
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# 會員專區與會員圖庫不給搜尋引擎收錄
 /member/*
   X-Robots-Tag: noindex, nofollow, noarchive
+  Cache-Control: private, no-store
+
 /images/member_clip/*
   X-Robots-Tag: noindex, nofollow
