@@ -431,6 +431,58 @@ a{color:inherit;text-decoration:none}
   .grid{grid-template-columns:repeat(5,minmax(0,1fr))}
 }
 </style>
+<style>
+/* ===== 導覽按鈕化（2026-11-11） ===== */
+.site-header .cat-nav{gap:6px;padding:0 2px;align-items:center}
+.cat-item+.cat-item::before{content:none}
+.site-header .cat-nav .cat-item>a,
+.site-header .cat-nav .nav-plain{
+  display:inline-flex;align-items:center;justify-content:center;
+  height:32px;padding:0 12px;border:1px solid #ded4c2;border-radius:999px;
+  background:#fffdf9;color:#3a2e1e;font-size:12.5px;line-height:1;letter-spacing:.03em;
+  text-decoration:none;white-space:nowrap;
+  box-shadow:0 1px 2px rgba(90,70,40,.05),inset 0 1px 0 rgba(255,255,255,.85);
+  transition:background .16s,border-color .16s,color .16s,box-shadow .16s;
+}
+.site-header .cat-nav .cat-item>a:hover,
+.site-header .cat-nav .nav-plain:hover{
+  background:#4a3527;border-color:#4a3527;color:#f8e8c7;
+  box-shadow:0 3px 10px rgba(59,42,32,.26);
+}
+.site-header .cat-nav .cat-item.active>a{
+  background:#3b2a20;border-color:#3b2a20;color:#f0d9a8;border-bottom-color:#3b2a20;
+  box-shadow:0 3px 10px rgba(59,42,32,.26);
+}
+.site-header .cat-nav .cat-item.active>a:hover{background:#4a3527;border-color:#4a3527;color:#f8e8c7}
+.site-header .cat-nav .cat-item>a .caret{display:none}
+.nav-sep{width:1px;height:18px;margin:0 3px;flex:0 0 auto;
+  background:linear-gradient(180deg,transparent,#d3c5ad 22%,#d3c5ad 78%,transparent)}
+@media (max-width:1439px){
+  .site-header .cat-nav{gap:4px}
+  .site-header .cat-nav .cat-item>a,
+  .site-header .cat-nav .nav-plain{height:30px;padding:0 9px;font-size:12px}
+  .nav-sep{margin:0 1px}
+}
+@media (min-width:821px) and (max-width:1279px){
+  .site-header .header-inner{height:auto;min-height:64px;padding:9px 0}
+  .site-header .cat-nav{flex-wrap:wrap;row-gap:6px;padding:2px 0}
+  .nav-sep{display:none}
+}
+@media (min-width:821px) and (max-width:1100px){
+  /* hero 的 aspect-ratio 被 min-height 反推寬度，導致 23px 橫向溢出 */
+  .hero{aspect-ratio:auto;min-height:320px}
+  /* 分類頁籤在 900 級寬度會推出右緣，改為換行 */
+  .tabs{flex-wrap:wrap;row-gap:6px}
+}
+@media (max-width:820px){
+  /* 原本 .header-inner 的 padding:9px 0 會在手機把左右留白歸零，這裡補回 */
+  .site-header .header-inner{padding:9px 14px 6px}
+  .site-header .cat-nav{gap:6px;padding:3px 0 7px}
+  .site-header .cat-nav .cat-item>a,
+  .site-header .cat-nav .nav-plain{height:29px;padding:0 11px;font-size:12px}
+  .nav-sep{display:none}
+}
+</style>
 </head>
 <body>
 <noscript>
@@ -463,6 +515,7 @@ a{color:inherit;text-decoration:none}
       <div class="cat-item" data-l1="wood"><a href="#cat-wood">原木<span class="caret">▾</span></a></div>
       <div class="cat-item" data-l1="coins_stamps"><a href="#cat-coins_stamps">錢幣與珍郵<span class="caret">▾</span></a></div>
       <div class="cat-item" data-l1="estate"><a href="#cat-estate">房與地<span class="caret">▾</span></a></div>
+      <span class="nav-sep" aria-hidden="true"></span>
       <a class="nav-plain" href="javascript:openFranz()">法藍瓷</a>
       <a class="nav-plain" href="javascript:__switchPage('fengzi')">豐子汝窯</a>
       <a class="nav-plain" href="javascript:showAbout()">關於三三藝</a>
