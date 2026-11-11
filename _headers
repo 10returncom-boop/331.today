@@ -10,18 +10,20 @@
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
-# 圖片與字型長快取（檔名不變的前提，更新時改檔名）
-/images/*
-  Cache-Control: public, max-age=31536000, immutable
-
+# 程式與樣式：每次回 origin 驗證（ETag 命中回 304，幾乎不增流量）
+# 理由：檔名不帶 hash，immutable 會讓改版對既有訪客與邊緣節點隱形（2026-11-11 修正）
 /assets/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
 
 /css/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
 
 /js/*
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 圖片：短快取一天，過期後驗證；改名或換圖一天內可見
+/images/*
+  Cache-Control: public, max-age=86400, must-revalidate
 
 # 會員專區與會員圖庫不給搜尋引擎收錄
 /member/*
