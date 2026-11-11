@@ -756,22 +756,7 @@ a {
 .footer-contact {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px 32px;
-  align-items: center;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #ddd;
-}
-.footer-contact a { color: #e8c87a; }
-
-.footer-credit {
-  width: 100%;
-  margin-top: 16px;
-  padding-top: 14px;
-  border-top: 1px dashed #444;
-  font-size: 0.8125rem;
-  letter-spacing: 0.05em;
-  color: #ccc;
+  gap: 40px;
 }
 
 .contact-item {

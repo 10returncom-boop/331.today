@@ -1,0 +1,8 @@
+# Cloudflare Pages：這些不隨站台上傳
+_ARCHIVE_*
+_backup_*
+.wrangler
+.git
+*.md
+*.py
+*.csv

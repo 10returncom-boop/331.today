@@ -1,2 +1,11 @@
 # ---- wrangler 本機快取（含帳號資訊，不進版控）----
 .wrangler/
+
+# ---- 歸檔資料（不進版控、不上傳）----
+_ARCHIVE_*/
+_backup_*/
+images/archive/
+
+# ---- 本地工具與暫存 ----
+*.py
+*.csv

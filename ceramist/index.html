@@ -3,180 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>台灣陶藝家全覽｜331.today 陶藝家數位展廊</title>
-<meta name="description" content="331.today 台灣陶藝家整合入口：以姓氏分類之 Mega Menu 導覽，收錄 306 位陶藝家與 19 座窯/品牌，每位均附個人多頁網站。">
-<meta name="robots" content="index,follow">
-<meta property="og:title" content="台灣陶藝家全覽｜331.today">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="zh_TW">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23241a12'/%3E%3Cpath d='M12 46c6 4 14 5 20 3 6-2 10-5 14-3 3 1 5 0 6-2V14l-6 2c-4-2-8 1-14 3-6 2-14 1-20-3v30z' fill='%235B7A6E'/%3E%3C/svg%3E">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"CollectionPage","name":"台灣陶藝家全覽","numberOfItems":306,"description":"331.today 台灣現代陶藝家數位展廊入口，按姓氏分類。"}
-</script>
-<link rel="preconnect" href="https://miaoda.feishu.cn">
-<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500&display=swap">
+<title>陶藝家 · 三三藝 331.today</title>
 <style>
-:root{--char:#241a12;--clay:#E8DCC8;--fire:#A85A34;--jade:#5B7A6E;--cream:#F5EDE0;--muted:#6E6252;--line:#D8CBB2;--serif:"Noto Serif TC","PMingLiU",serif;--sans:"Noto Sans TC","Microsoft JhengHei",sans-serif}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--cream);color:var(--char);line-height:1.7}
-.wrap{max-width:1120px;margin:0 auto;padding:0 22px}a{color:inherit;text-decoration:none}
-header{position:sticky;top:0;z-index:90;background:var(--char);color:var(--clay);border-bottom:2px solid var(--fire)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-family:var(--serif);font-weight:900;letter-spacing:.1em;font-size:17px}
-.brand small{display:block;font-size:11px;font-weight:400;letter-spacing:.26em;color:var(--fire);margin-top:2px}
-.mainnav{display:none;align-items:center;gap:4px}
-.m-item{font-family:inherit;font-size:14px;letter-spacing:.08em;color:var(--clay);background:none;border:0;cursor:pointer;padding:10px 14px;border-radius:6px}
-.m-item:hover{background:rgba(232,220,200,.12);color:#fff}
-.m-trigger{display:inline-flex;align-items:center;gap:5px}.m-trigger .caret{width:9px;height:9px}
-.nav-cta{display:none;background:var(--fire);color:#FFF6EC;border-radius:999px;padding:8px 18px;font-size:13px;letter-spacing:.05em}
-@media(min-width:900px){.mainnav{display:flex}.nav-cta{display:inline-block}.nav-toggle{display:none}}
-.nav-toggle{background:none;border:0;color:var(--clay);padding:6px 8px;cursor:pointer}
-.nav-panel{display:none;flex-direction:column;background:var(--char);border-top:1px solid #4a3628;padding:12px 22px 20px}
-.nav-panel.open{display:flex}.nav-panel a{font-size:15px;padding:10px 0;border-bottom:1px dashed #4a3628;color:var(--clay)}
-@media(min-width:900px){.nav-panel{display:none!important}}
-.mega{position:absolute;left:0;right:0;top:64px;background:var(--char);border-bottom:1px solid var(--fire);box-shadow:0 20px 40px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(-6px);transition:.18s ease;max-height:80vh;overflow:auto}
-.mega.open{opacity:1;visibility:visible;transform:none}
-.mega-inner{max-width:1120px;margin:0 auto;padding:22px;display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
-@media(min-width:900px){.mega-inner{grid-template-columns:repeat(4,1fr)}}
-.mc b{display:block;font-family:var(--serif);font-size:13px;letter-spacing:.16em;color:var(--fire);margin-bottom:8px}
-.mc a{display:inline-block;font-size:15px;color:#d6c9b0;padding:4px 9px;margin:3px;border:1px solid #4a3628;border-radius:8px}
-.mc a:hover{color:#fff;border-color:var(--fire)}
-.mega-feat{grid-column:1/-1;background:linear-gradient(135deg,rgba(91,122,110,.28),rgba(168,90,52,.18));border:1px solid #4a3628;border-radius:12px;padding:14px 18px;font-size:13px;color:#c9bda4}
-.mega-feat b{font-family:var(--serif);color:#fff}
-.breadcrumb{background:#e6d9c2;border-bottom:1px solid var(--line)}
-.crumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);padding-block:11px;flex-wrap:wrap}
-.crumb a:hover{color:var(--fire)}.crumb .sep{opacity:.5}.crumb [aria-current="page"]{color:var(--char);font-weight:600}
-.hero{position:relative;background:var(--char);color:var(--clay);padding-block:66px 54px;border-bottom:3px solid var(--jade)}
-.hero h1{font-family:var(--serif);font-weight:900;font-size:40px;letter-spacing:.05em;line-height:1.25}
-.hero .eyebrow{font-size:12px;letter-spacing:.34em;color:var(--fire);margin-bottom:14px}
-.hero p{color:#cfbfa6;max-width:660px;margin-top:14px;font-size:15px}
-.stats{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:640px}
-.stat{border:1px solid #4a3628;border-radius:10px;padding:12px 14px;background:rgba(255,255,255,.04)}
-.stat b{font-family:var(--serif);font-size:26px;color:#fff;display:block}
-.stat span{font-size:12px;color:#b9a88e;letter-spacing:.1em}
-.quickbar{position:sticky;top:64px;z-index:60;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 4px 14px rgba(36,26,18,.08)}
-.quick{display:flex;gap:8px;align-items:center;padding-block:12px;flex-wrap:wrap}
-.qk{font-family:var(--serif);border:1px solid var(--char);border-radius:999px;padding:6px 13px;font-size:14px;color:var(--char);background:#fff}
-.qk:hover,.qk.on{background:var(--fire);color:#FFF6EC;border-color:var(--fire)}
-.qk-s{color:#fff;background:var(--jade);border-color:var(--jade)}
-.sec{padding-block:30px;border-bottom:1px dashed var(--line)}
-.sec:target{scroll-margin-top:124px}
-.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:16px;flex-wrap:wrap}
-.sec-no{font-family:var(--serif);color:var(--fire);font-size:12px;letter-spacing:.2em;border:1px solid var(--fire);padding:3px 12px;border-radius:999px}
-.sec-title{font-family:var(--serif);font-size:26px;letter-spacing:.05em;font-weight:900}
-.sec-title::after{content:"";display:block;width:40px;height:3px;background:var(--jade);margin-top:8px}
-.sec-cnt{margin-left:auto;font-size:12px;color:var(--muted);letter-spacing:.1em}
-.acards{display:flex;flex-wrap:wrap;gap:8px}
-.ac{border:1px solid var(--char);background:#fff;border-radius:8px;padding:7px 12px;font-size:14px;color:var(--char)}
-.ac:hover{background:var(--char);color:var(--clay)}
-.scards{display:flex;flex-wrap:wrap;gap:12px}
-.sc{border:2px solid var(--jade);background:#fff;border-radius:10px;padding:14px 16px;min-width:160px;flex:1 1 200px}
-.sc b{font-family:var(--serif);font-size:16px;display:block}
-.sc:hover{background:var(--jade);color:#fff}
-.floatbar{position:fixed;right:18px;bottom:18px;z-index:120;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
-.float-btn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1px;font-size:11px;letter-spacing:.06em;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.25);border:0}
-.f-map{background:var(--char);color:var(--clay)}.f-map:hover{background:var(--jade)}
-.f-line{background:#06C755;color:#fff}.f-line svg{width:24px;height:24px}
-.modal{position:fixed;inset:0;background:rgba(20,14,9,.7);backdrop-filter:blur(4px);z-index:130;display:none;align-items:center;justify-content:center;padding:20px}
-.modal.open{display:flex}.modal-card{background:var(--cream);border:2px solid var(--char);border-radius:14px;max-width:560px;width:100%;padding:26px}
-.modal-card h3{font-family:var(--serif);font-size:22px;margin-bottom:14px}
-.smap-rows{display:flex;flex-wrap:wrap;gap:8px}
-.smap-rows a{border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 12px;font-size:13px}
-.modal-close{margin-top:18px;width:100%;background:var(--fire);color:#FFF6EC;border:0;border-radius:999px;padding:10px;cursor:pointer;font-size:14px}
-footer{background:var(--char);color:#c9bda4;padding:26px 0 96px;font-size:12px;letter-spacing:.06em}
-.foot{display:grid;gap:12px}.foot .sources a{color:#9BC4B4}
-.foot .src-row{display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:6px}.foot hr{border:0;border-top:1px dashed #4a3628;margin:8px 0}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Serif TC',serif;background:linear-gradient(180deg,#f5f0e6 0%,#faf6ee 100%);color:#3a3226;min-height:100vh}
+.header{background:#fff;border-bottom:1px solid #e8dcc8;padding:12px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.header a{text-decoration:none;color:#6b5d48;font-size:15px;padding:6px 12px;border-radius:6px;transition:background .2s}
+.header a:hover{background:#f0e8d8}
+.header .brand{font-weight:700;font-size:18px;color:#3a3226}
+.container{max-width:1400px;margin:0 auto;padding:24px}
+.section-title{font-size:22px;font-weight:600;margin:20px 0 16px;color:#3a3226;border-left:4px solid #b8956a;padding-left:12px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.count{font-size:14px;color:#8b7355;font-weight:400}
+.filter-bar{display:flex;gap:10px;align-items:center;margin:0 0 16px;flex-wrap:wrap}
+.filter-bar select{padding:8px 14px;font-size:14px;border:1px solid #c9b896;border-radius:6px;background:#fff;color:#3a3226;font-family:inherit;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);cursor:pointer;transition:transform .2s,box-shadow .2s;text-decoration:none;color:#3a3226;display:block}
+.card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.1)}
+.thumb{width:100%;aspect-ratio:4/3;background:#f5f0e6;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.meta{padding:10px 12px;font-size:13px;color:#6b5d48}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="index.html">331.today 陶藝家<small>台灣現代陶藝數位展廊 CERAMIST PORTAL</small></a>
-    <nav class="mainnav" aria-label="主選單">
-      <a class="m-item" href="../index.html">首頁</a>
-      <button class="m-item m-trigger" data-mega="megaSurname">全部陶藝家（姓氏）<svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-      <a class="m-item" href="#sec-special">窯・品牌</a>
-      <a class="m-item" href="#stat">統計</a>
-    </nav>
-    <a class="nav-cta" href="#stat">共 306 位</a>
-    <button class="nav-toggle" id="navToggle" aria-label="開啟選單" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
-  </div>
-  <div class="mega" id="megaSurname" role="menu">
-    <div class="mega-inner">
-      <div class="mc"><b>姓氏（16）</b><a href="#sec-伍">伍</a><a href="#sec-何">何</a><a href="#sec-余">余</a><a href="#sec-傅">傅</a><a href="#sec-刁">刁</a><a href="#sec-劉">劉</a><a href="#sec-卓">卓</a><a href="#sec-古">古</a><a href="#sec-吳">吳</a><a href="#sec-呂">呂</a><a href="#sec-周">周</a><a href="#sec-唐">唐</a><a href="#sec-姚">姚</a><a href="#sec-孫">孫</a><a href="#sec-宋">宋</a><a href="#sec-官">官</a></div><div class="mc"><b>姓氏（16）</b><a href="#sec-宮">宮</a><a href="#sec-巫">巫</a><a href="#sec-康">康</a><a href="#sec-廖">廖</a><a href="#sec-張">張</a><a href="#sec-彭">彭</a><a href="#sec-徐">徐</a><a href="#sec-戚">戚</a><a href="#sec-施">施</a><a href="#sec-曹">曹</a><a href="#sec-曾">曾</a><a href="#sec-朱">朱</a><a href="#sec-李">李</a><a href="#sec-杜">杜</a><a href="#sec-林">林</a><a href="#sec-梁">梁</a></div><div class="mc"><b>姓氏（16）</b><a href="#sec-楊">楊</a><a href="#sec-江">江</a><a href="#sec-沈">沈</a><a href="#sec-洪">洪</a><a href="#sec-游">游</a><a href="#sec-湯">湯</a><a href="#sec-王">王</a><a href="#sec-田">田</a><a href="#sec-白">白</a><a href="#sec-石">石</a><a href="#sec-神">神</a><a href="#sec-程">程</a><a href="#sec-章">章</a><a href="#sec-紀">紀</a><a href="#sec-翁">翁</a><a href="#sec-胡">胡</a></div><div class="mc"><b>姓氏（15）</b><a href="#sec-范">范</a><a href="#sec-葉">葉</a><a href="#sec-董">董</a><a href="#sec-許">許</a><a href="#sec-詹">詹</a><a href="#sec-連">連</a><a href="#sec-遊">遊</a><a href="#sec-邱">邱</a><a href="#sec-邵">邵</a><a href="#sec-郭">郭</a><a href="#sec-阮">阮</a><a href="#sec-陳">陳</a><a href="#sec-高">高</a><a href="#sec-麥">麥</a><a href="#sec-黃">黃</a></div><div class="mc"><b>窯・品牌・代號</b><a href="#sec-special">窯名 / 品牌 / 別名</a><a href="#stat">統計一覽</a></div>
-      <div class="mega-feat"><b>直接以姓氏分類</b>　點姓即跳至對應區段；點任一位作者即進入其個人網站。窯名・品牌・別名另立專區。</div>
-    </div>
-  </div>
-  <nav class="nav-panel" id="navPanel" aria-label="行動選單">
-    <a href="../index.html">首頁</a>
-    <a href="#stat">統計一覽</a>
-    <a href="#sec-special">窯・品牌・代號</a>
-  </nav>
-</header>
-
-<nav class="breadcrumb" aria-label="麵包屑導航">
-  <div class="wrap crumb"><a href="../index.html">331.today</a><span class="sep">›</span><span aria-current="page">陶藝家全覽</span></div>
-</nav>
-
-<main>
-  <section class="hero" id="top"><div class="wrap">
-    <div class="eyebrow">CERAMIST PORTAL · 331.TODAY</div>
-    <h1>台灣陶藝家<br>全覽索引</h1>
-    <p>以姓氏分類的整合入口——收錄 306 位陶藝家與 19 座窯名・品牌・別名，每一位都有一座獨立的多頁式個人網站（含作品集、展覽、著作、聯絡）。</p>
-    <div class="stats">
-      <div class="stat"><b>306</b><span>位作者</span></div>
-      <div class="stat"><b>63</b><span>種姓氏</span></div>
-      <div class="stat"><b>19</b><span>窯・品牌・代號</span></div>
-    </div>
-  </div></section>
-
-  <nav class="quickbar" aria-label="姓氏快速索引"><div class="wrap quick"><a class="qk" href="#sec-伍">伍</a><a class="qk" href="#sec-何">何</a><a class="qk" href="#sec-余">余</a><a class="qk" href="#sec-傅">傅</a><a class="qk" href="#sec-刁">刁</a><a class="qk" href="#sec-劉">劉</a><a class="qk" href="#sec-卓">卓</a><a class="qk" href="#sec-古">古</a><a class="qk" href="#sec-吳">吳</a><a class="qk" href="#sec-呂">呂</a><a class="qk" href="#sec-周">周</a><a class="qk" href="#sec-唐">唐</a><a class="qk" href="#sec-姚">姚</a><a class="qk" href="#sec-孫">孫</a><a class="qk" href="#sec-宋">宋</a><a class="qk" href="#sec-官">官</a><a class="qk" href="#sec-宮">宮</a><a class="qk" href="#sec-巫">巫</a><a class="qk" href="#sec-康">康</a><a class="qk" href="#sec-廖">廖</a><a class="qk" href="#sec-張">張</a><a class="qk" href="#sec-彭">彭</a><a class="qk" href="#sec-徐">徐</a><a class="qk" href="#sec-戚">戚</a><a class="qk" href="#sec-施">施</a><a class="qk" href="#sec-曹">曹</a><a class="qk" href="#sec-曾">曾</a><a class="qk" href="#sec-朱">朱</a><a class="qk" href="#sec-李">李</a><a class="qk" href="#sec-杜">杜</a><a class="qk" href="#sec-林">林</a><a class="qk" href="#sec-梁">梁</a><a class="qk" href="#sec-楊">楊</a><a class="qk" href="#sec-江">江</a><a class="qk" href="#sec-沈">沈</a><a class="qk" href="#sec-洪">洪</a><a class="qk" href="#sec-游">游</a><a class="qk" href="#sec-湯">湯</a><a class="qk" href="#sec-王">王</a><a class="qk" href="#sec-田">田</a><a class="qk" href="#sec-白">白</a><a class="qk" href="#sec-石">石</a><a class="qk" href="#sec-神">神</a><a class="qk" href="#sec-程">程</a><a class="qk" href="#sec-章">章</a><a class="qk" href="#sec-紀">紀</a><a class="qk" href="#sec-翁">翁</a><a class="qk" href="#sec-胡">胡</a><a class="qk" href="#sec-范">范</a><a class="qk" href="#sec-葉">葉</a><a class="qk" href="#sec-董">董</a><a class="qk" href="#sec-許">許</a><a class="qk" href="#sec-詹">詹</a><a class="qk" href="#sec-連">連</a><a class="qk" href="#sec-遊">遊</a><a class="qk" href="#sec-邱">邱</a><a class="qk" href="#sec-邵">邵</a><a class="qk" href="#sec-郭">郭</a><a class="qk" href="#sec-阮">阮</a><a class="qk" href="#sec-陳">陳</a><a class="qk" href="#sec-高">高</a><a class="qk" href="#sec-麥">麥</a><a class="qk" href="#sec-黃">黃</a><a class="qk qk-s" href="#sec-special">窯・品牌</a></div></nav>
-
-  <section class="sec" id="sec-伍"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">伍</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="伍坤山/index.html">伍坤山</a></div></section><section class="sec" id="sec-何"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">何</h2><span class="sec-cnt">3 位</span></div><div class="acards"><a class="ac" href="何志隆/index.html">何志隆</a><a class="ac" href="何啟徵/index.html">何啟徵</a><a class="ac" href="何瑤如/index.html">何瑤如</a></div></section><section class="sec" id="sec-余"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">余</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="余成忠/index.html">余成忠</a><a class="ac" href="余維和/index.html">余維和</a></div></section><section class="sec" id="sec-傅"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">傅</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="傅永悌/index.html">傅永悌</a><a class="ac" href="傅狷夫/index.html">傅狷夫</a></div></section><section class="sec" id="sec-刁"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">刁</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="刁宏亮/index.html">刁宏亮</a></div></section><section class="sec" id="sec-劉"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">劉</h2><span class="sec-cnt">12 位</span></div><div class="acards"><a class="ac" href="劉小評/index.html">劉小評</a><a class="ac" href="劉世平/index.html">劉世平</a><a class="ac" href="劉再興/index.html">劉再興</a><a class="ac" href="劉作泥/index.html">劉作泥</a><a class="ac" href="劉武/index.html">劉武</a><a class="ac" href="劉映汝/index.html">劉映汝</a><a class="ac" href="劉真真/index.html">劉真真</a><a class="ac" href="劉淑婉/index.html">劉淑婉</a><a class="ac" href="劉欽瑩/index.html">劉欽瑩</a><a class="ac" href="劉榮輝/index.html">劉榮輝</a><a class="ac" href="劉奮飛/index.html">劉奮飛</a><a class="ac" href="劉鎮洲/index.html">劉鎮洲</a></div></section><section class="sec" id="sec-卓"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">卓</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="卓銘順/index.html">卓銘順</a></div></section><section class="sec" id="sec-古"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">古</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="古川子/index.html">古川子</a></div></section><section class="sec" id="sec-吳"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">吳</h2><span class="sec-cnt">20 位</span></div><div class="acards"><a class="ac" href="吳水沂/index.html">吳水沂</a><a class="ac" href="吳永輝/index.html">吳永輝</a><a class="ac" href="吳明儀/index.html">吳明儀</a><a class="ac" href="吳金象/index.html">吳金象</a><a class="ac" href="吳金維/index.html">吳金維</a><a class="ac" href="吳俊忠/index.html">吳俊忠</a><a class="ac" href="吳建福/index.html">吳建福</a><a class="ac" href="吳政憲/index.html">吳政憲</a><a class="ac" href="吳茂成/index.html">吳茂成</a><a class="ac" href="吳晟誌/index.html">吳晟誌</a><a class="ac" href="吳偉丞/index.html">吳偉丞</a><a class="ac" href="吳堅材/index.html">吳堅材</a><a class="ac" href="吳菊/index.html">吳菊</a><a class="ac" href="吳進風/index.html">吳進風</a><a class="ac" href="吳開興/index.html">吳開興</a><a class="ac" href="吳毓堂/index.html">吳毓堂</a><a class="ac" href="吳遠中/index.html">吳遠中</a><a class="ac" href="吳燧木/index.html">吳燧木</a><a class="ac" href="吳麗嬌/index.html">吳麗嬌</a><a class="ac" href="吳讓農/index.html">吳讓農</a></div></section><section class="sec" id="sec-呂"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">呂</h2><span class="sec-cnt">3 位</span></div><div class="acards"><a class="ac" href="呂之蓉/index.html">呂之蓉</a><a class="ac" href="呂淑珍/index.html">呂淑珍</a><a class="ac" href="呂嘉靖/index.html">呂嘉靖</a></div></section><section class="sec" id="sec-周"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">周</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="周妙文/index.html">周妙文</a><a class="ac" href="周邦玲/index.html">周邦玲</a></div></section><section class="sec" id="sec-唐"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">唐</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="唐國樑/index.html">唐國樑</a></div></section><section class="sec" id="sec-姚"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">姚</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="姚一葦/index.html">姚一葦</a></div></section><section class="sec" id="sec-孫"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">孫</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="孫文斌/index.html">孫文斌</a><a class="ac" href="孫超/index.html">孫超</a></div></section><section class="sec" id="sec-宋"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">宋</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="宋廷璧/index.html">宋廷璧</a></div></section><section class="sec" id="sec-官"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">官</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="官貞良/index.html">官貞良</a></div></section><section class="sec" id="sec-宮"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">宮</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="宮重文/index.html">宮重文</a></div></section><section class="sec" id="sec-巫"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">巫</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="巫漢青/index.html">巫漢青</a></div></section><section class="sec" id="sec-康"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">康</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="康嘉良/index.html">康嘉良</a></div></section><section class="sec" id="sec-廖"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">廖</h2><span class="sec-cnt">4 位</span></div><div class="acards"><a class="ac" href="廖天照/index.html">廖天照</a><a class="ac" href="廖明亮/index.html">廖明亮</a><a class="ac" href="廖瑞章/index.html">廖瑞章</a><a class="ac" href="廖學舟/index.html">廖學舟</a></div></section><section class="sec" id="sec-張"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">張</h2><span class="sec-cnt">11 位</span></div><div class="acards"><a class="ac" href="張山/index.html">張山</a><a class="ac" href="張永昇/index.html">張永昇</a><a class="ac" href="張向泊/index.html">張向泊</a><a class="ac" href="張家誌/index.html">張家誌</a><a class="ac" href="張書曜/index.html">張書曜</a><a class="ac" href="張書耀/index.html">張書耀</a><a class="ac" href="張素/index.html">張素</a><a class="ac" href="張清淵/index.html">張清淵</a><a class="ac" href="張勝雄/index.html">張勝雄</a><a class="ac" href="張璽元/index.html">張璽元</a><a class="ac" href="張繼陶/index.html">張繼陶</a></div></section><section class="sec" id="sec-彭"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">彭</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="彭宗文/index.html">彭宗文</a><a class="ac" href="彭雅美/index.html">彭雅美</a></div></section><section class="sec" id="sec-徐"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">徐</h2><span class="sec-cnt">9 位</span></div><div class="acards"><a class="ac" href="徐文哲/index.html">徐文哲</a><a class="ac" href="徐永旭/index.html">徐永旭</a><a class="ac" href="徐兆平/index.html">徐兆平</a><a class="ac" href="徐兆煜/index.html">徐兆煜</a><a class="ac" href="徐秀棠/index.html">徐秀棠</a><a class="ac" href="徐明稷/index.html">徐明稷</a><a class="ac" href="徐美月/index.html">徐美月</a><a class="ac" href="徐崇林/index.html">徐崇林</a><a class="ac" href="徐興隆/index.html">徐興隆</a></div></section><section class="sec" id="sec-戚"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">戚</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="戚維義/index.html">戚維義</a></div></section><section class="sec" id="sec-施"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">施</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="施宣宇/index.html">施宣宇</a><a class="ac" href="施惠吟/index.html">施惠吟</a></div></section><section class="sec" id="sec-曹"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">曹</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="曹世妹/index.html">曹世妹</a></div></section><section class="sec" id="sec-曾"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">曾</h2><span class="sec-cnt">9 位</span></div><div class="acards"><a class="ac" href="曾火漾/index.html">曾火漾</a><a class="ac" href="曾永鴻/index.html">曾永鴻</a><a class="ac" href="曾明男/index.html">曾明男</a><a class="ac" href="曾冠錄/index.html">曾冠錄</a><a class="ac" href="曾政銘/index.html">曾政銘</a><a class="ac" href="曾泰洋/index.html">曾泰洋</a><a class="ac" href="曾財萬/index.html">曾財萬</a><a class="ac" href="曾愛真/index.html">曾愛真</a><a class="ac" href="曾鵬/index.html">曾鵬</a></div></section><section class="sec" id="sec-朱"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">朱</h2><span class="sec-cnt">5 位</span></div><div class="acards"><a class="ac" href="朱邦雄/index.html">朱邦雄</a><a class="ac" href="朱坤培/index.html">朱坤培</a><a class="ac" href="朱芳毅/index.html">朱芳毅</a><a class="ac" href="朱義成/index.html">朱義成</a><a class="ac" href="朱寶雍/index.html">朱寶雍</a></div></section><section class="sec" id="sec-李"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">李</h2><span class="sec-cnt">18 位</span></div><div class="acards"><a class="ac" href="李仁嵋/index.html">李仁嵋</a><a class="ac" href="李天民/index.html">李天民</a><a class="ac" href="李永生/index.html">李永生</a><a class="ac" href="李永明/index.html">李永明</a><a class="ac" href="李石樵/index.html">李石樵</a><a class="ac" href="李宗儒/index.html">李宗儒</a><a class="ac" href="李幸龍/index.html">李幸龍</a><a class="ac" href="李明雄/index.html">李明雄</a><a class="ac" href="李邱吉/index.html">李邱吉</a><a class="ac" href="李金生/index.html">李金生</a><a class="ac" href="李金碧/index.html">李金碧</a><a class="ac" href="李亮一/index.html">李亮一</a><a class="ac" href="李茂宗/index.html">李茂宗</a><a class="ac" href="李梅樹/index.html">李梅樹</a><a class="ac" href="李淳雄/index.html">李淳雄</a><a class="ac" href="李進福/index.html">李進福</a><a class="ac" href="李澤藩/index.html">李澤藩</a><a class="ac" href="李懷錦/index.html">李懷錦</a></div></section><section class="sec" id="sec-杜"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">杜</h2><span class="sec-cnt">3 位</span></div><div class="acards"><a class="ac" href="杜文聰/index.html">杜文聰</a><a class="ac" href="杜芃萱/index.html">杜芃萱</a><a class="ac" href="杜輔仁/index.html">杜輔仁</a></div></section><section class="sec" id="sec-林"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">林</h2><span class="sec-cnt">24 位</span></div><div class="acards"><a class="ac" href="林之謙/index.html">林之謙</a><a class="ac" href="林文貞/index.html">林文貞</a><a class="ac" href="林秀娘/index.html">林秀娘</a><a class="ac" href="林松本/index.html">林松本</a><a class="ac" href="林治娟/index.html">林治娟</a><a class="ac" href="林俊彬/index.html">林俊彬</a><a class="ac" href="林昭慶/index.html">林昭慶</a><a class="ac" href="林柏根/index.html">林柏根</a><a class="ac" href="林美雅/index.html">林美雅</a><a class="ac" href="林恭助/index.html">林恭助</a><a class="ac" href="林振龍/index.html">林振龍</a><a class="ac" href="林國隆/index.html">林國隆</a><a class="ac" href="林敏毅/index.html">林敏毅</a><a class="ac" href="林添福/index.html">林添福</a><a class="ac" href="林清河/index.html">林清河</a><a class="ac" href="林博裕/index.html">林博裕</a><a class="ac" href="林善瑛/index.html">林善瑛</a><a class="ac" href="林瑛/index.html">林瑛</a><a class="ac" href="林瑞華-竹南蛇釉/index.html">林瑞華-竹南蛇釉</a><a class="ac" href="林義傑/index.html">林義傑</a><a class="ac" href="林葆家/index.html">林葆家</a><a class="ac" href="林靖崧/index.html">林靖崧</a><a class="ac" href="林墡瑛/index.html">林墡瑛</a><a class="ac" href="林錦鐘/index.html">林錦鐘</a></div></section><section class="sec" id="sec-梁"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">梁</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="梁冠英/index.html">梁冠英</a></div></section><section class="sec" id="sec-楊"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">楊</h2><span class="sec-cnt">7 位</span></div><div class="acards"><a class="ac" href="楊元太/index.html">楊元太</a><a class="ac" href="楊文霓/index.html">楊文霓</a><a class="ac" href="楊正雍/index.html">楊正雍</a><a class="ac" href="楊宗嘉/index.html">楊宗嘉</a><a class="ac" href="楊春生/index.html">楊春生</a><a class="ac" href="楊英風/index.html">楊英風</a><a class="ac" href="楊雪/index.html">楊雪</a></div></section><section class="sec" id="sec-江"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">江</h2><span class="sec-cnt">3 位</span></div><div class="acards"><a class="ac" href="江有庭/index.html">江有庭</a><a class="ac" href="江玗/index.html">江玗</a><a class="ac" href="江聰敏/index.html">江聰敏</a></div></section><section class="sec" id="sec-沈"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">沈</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="沈東寧/index.html">沈東寧</a></div></section><section class="sec" id="sec-洪"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">洪</h2><span class="sec-cnt">4 位</span></div><div class="acards"><a class="ac" href="洪文郁/index.html">洪文郁</a><a class="ac" href="洪進貴/index.html">洪進貴</a><a class="ac" href="洪瑞麟/index.html">洪瑞麟</a><a class="ac" href="洪瑩琪/index.html">洪瑩琪</a></div></section><section class="sec" id="sec-游"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">游</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="游正民/index.html">游正民</a><a class="ac" href="游榮林/index.html">游榮林</a></div></section><section class="sec" id="sec-湯"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">湯</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="湯潤清/index.html">湯潤清</a></div></section><section class="sec" id="sec-王"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">王</h2><span class="sec-cnt">14 位</span></div><div class="acards"><a class="ac" href="王世芳/index.html">王世芳</a><a class="ac" href="王正鴻/index.html">王正鴻</a><a class="ac" href="王百祿/index.html">王百祿</a><a class="ac" href="王宏祥/index.html">王宏祥</a><a class="ac" href="王秀琴/index.html">王秀琴</a><a class="ac" href="王明發/index.html">王明發</a><a class="ac" href="王俊傑/index.html">王俊傑</a><a class="ac" href="王昱心/index.html">王昱心</a><a class="ac" href="王修功/index.html">王修功</a><a class="ac" href="王泰銘/index.html">王泰銘</a><a class="ac" href="王惠民/index.html">王惠民</a><a class="ac" href="王福長/index.html">王福長</a><a class="ac" href="王德生/index.html">王德生</a><a class="ac" href="王龍德/index.html">王龍德</a></div></section><section class="sec" id="sec-田"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">田</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="田承泰/index.html">田承泰</a></div></section><section class="sec" id="sec-白"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">白</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="白木全/index.html">白木全</a><a class="ac" href="白宗晉/index.html">白宗晉</a></div></section><section class="sec" id="sec-石"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">石</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="石玉霖/index.html">石玉霖</a></div></section><section class="sec" id="sec-神"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">神</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="神山清子/index.html">神山清子</a></div></section><section class="sec" id="sec-程"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">程</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="程剛/index.html">程剛</a><a class="ac" href="程逸仁/index.html">程逸仁</a></div></section><section class="sec" id="sec-章"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">章</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="章格銘/index.html">章格銘</a><a class="ac" href="章碧霞/index.html">章碧霞</a></div></section><section class="sec" id="sec-紀"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">紀</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="紀世傑/index.html">紀世傑</a></div></section><section class="sec" id="sec-翁"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">翁</h2><span class="sec-cnt">3 位</span></div><div class="acards"><a class="ac" href="翁姍慧/index.html">翁姍慧</a><a class="ac" href="翁明川/index.html">翁明川</a><a class="ac" href="翁國珍/index.html">翁國珍</a></div></section><section class="sec" id="sec-胡"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">胡</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="胡宗顯/index.html">胡宗顯</a><a class="ac" href="胡維澤/index.html">胡維澤</a></div></section><section class="sec" id="sec-范"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">范</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="范振金/index.html">范振金</a></div></section><section class="sec" id="sec-葉"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">葉</h2><span class="sec-cnt">4 位</span></div><div class="acards"><a class="ac" href="葉子/index.html">葉子</a><a class="ac" href="葉文/index.html">葉文</a><a class="ac" href="葉佐燁/index.html">葉佐燁</a><a class="ac" href="葉萱勳/index.html">葉萱勳</a></div></section><section class="sec" id="sec-董"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">董</h2><span class="sec-cnt">2 位</span></div><div class="acards"><a class="ac" href="董大山/index.html">董大山</a><a class="ac" href="董淑慧/index.html">董淑慧</a></div></section><section class="sec" id="sec-許"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">許</h2><span class="sec-cnt">7 位</span></div><div class="acards"><a class="ac" href="許中晴/index.html">許中晴</a><a class="ac" href="許旭倫/index.html">許旭倫</a><a class="ac" href="許明香/index.html">許明香</a><a class="ac" href="許揚仁/index.html">許揚仁</a><a class="ac" href="許朝宗/index.html">許朝宗</a><a class="ac" href="許德家/index.html">許德家</a><a class="ac" href="許慧娜/index.html">許慧娜</a></div></section><section class="sec" id="sec-詹"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">詹</h2><span class="sec-cnt">3 位</span></div><div class="acards"><a class="ac" href="詹文政/index.html">詹文政</a><a class="ac" href="詹文森/index.html">詹文森</a><a class="ac" href="詹智勝/index.html">詹智勝</a></div></section><section class="sec" id="sec-連"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">連</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="連寶猜/index.html">連寶猜</a></div></section><section class="sec" id="sec-遊"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">遊</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="遊曉昊/index.html">遊曉昊</a></div></section><section class="sec" id="sec-邱"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">邱</h2><span class="sec-cnt">7 位</span></div><div class="acards"><a class="ac" href="邱上捷/index.html">邱上捷</a><a class="ac" href="邱玉錡/index.html">邱玉錡</a><a class="ac" href="邱明泉/index.html">邱明泉</a><a class="ac" href="邱奕志/index.html">邱奕志</a><a class="ac" href="邱建清/index.html">邱建清</a><a class="ac" href="邱煥堂/index.html">邱煥堂</a><a class="ac" href="邱顯裕/index.html">邱顯裕</a></div></section><section class="sec" id="sec-邵"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">邵</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="邵椋揚/index.html">邵椋揚</a></div></section><section class="sec" id="sec-郭"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">郭</h2><span class="sec-cnt">6 位</span></div><div class="acards"><a class="ac" href="郭明本/index.html">郭明本</a><a class="ac" href="郭明慶/index.html">郭明慶</a><a class="ac" href="郭青榕/index.html">郭青榕</a><a class="ac" href="郭雅眉/index.html">郭雅眉</a><a class="ac" href="郭詩謙/index.html">郭詩謙</a><a class="ac" href="郭聰仁/index.html">郭聰仁</a></div></section><section class="sec" id="sec-阮"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">阮</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="阮俊隆/index.html">阮俊隆</a></div></section><section class="sec" id="sec-陳"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">陳</h2><span class="sec-cnt">37 位</span></div><div class="acards"><a class="ac" href="陳九駱/index.html">陳九駱</a><a class="ac" href="陳士钜/index.html">陳士钜</a><a class="ac" href="陳正川/index.html">陳正川</a><a class="ac" href="陳正勳/index.html">陳正勳</a><a class="ac" href="陳永興/index.html">陳永興</a><a class="ac" href="陳玉葉/index.html">陳玉葉</a><a class="ac" href="陳佐導/index.html">陳佐導</a><a class="ac" href="陳志忠/index.html">陳志忠</a><a class="ac" href="陳志強/index.html">陳志強</a><a class="ac" href="陳良柏/index.html">陳良柏</a><a class="ac" href="陳坤和/index.html">陳坤和</a><a class="ac" href="陳明男/index.html">陳明男</a><a class="ac" href="陳明亮/index.html">陳明亮</a><a class="ac" href="陳明輝/index.html">陳明輝</a><a class="ac" href="陳明謙/index.html">陳明謙</a><a class="ac" href="陳俊光/index.html">陳俊光</a><a class="ac" href="陳威恩/index.html">陳威恩</a><a class="ac" href="陳建智/index.html">陳建智</a><a class="ac" href="陳秋吉/index.html">陳秋吉</a><a class="ac" href="陳峰霖/index.html">陳峰霖</a><a class="ac" href="陳啟南/index.html">陳啟南</a><a class="ac" href="陳國光/index.html">陳國光</a><a class="ac" href="陳國能/index.html">陳國能</a><a class="ac" href="陳淑耘/index.html">陳淑耘</a><a class="ac" href="陳淑惠/index.html">陳淑惠</a><a class="ac" href="陳淑華/index.html">陳淑華</a><a class="ac" href="陳紹寬/index.html">陳紹寬</a><a class="ac" href="陳景亮/index.html">陳景亮</a><a class="ac" href="陳硯平/index.html">陳硯平</a><a class="ac" href="陳雅萍/index.html">陳雅萍</a><a class="ac" href="陳傳/index.html">陳傳</a><a class="ac" href="陳新上/index.html">陳新上</a><a class="ac" href="陳新讚/index.html">陳新讚</a><a class="ac" href="陳煥堂/index.html">陳煥堂</a><a class="ac" href="陳實涵/index.html">陳實涵</a><a class="ac" href="陳銘濃/index.html">陳銘濃</a><a class="ac" href="陳獻譽/index.html">陳獻譽</a></div></section><section class="sec" id="sec-高"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">高</h2><span class="sec-cnt">3 位</span></div><div class="acards"><a class="ac" href="高枝明/index.html">高枝明</a><a class="ac" href="高偉能/index.html">高偉能</a><a class="ac" href="高淑惠/index.html">高淑惠</a></div></section><section class="sec" id="sec-麥"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">麥</h2><span class="sec-cnt">1 位</span></div><div class="acards"><a class="ac" href="麥傳亮/index.html">麥傳亮</a></div></section><section class="sec" id="sec-黃"><div class="sec-head"><span class="sec-no">姓氏</span><h2 class="sec-title">黃</h2><span class="sec-cnt">18 位</span></div><div class="acards"><a class="ac" href="黃大安/index.html">黃大安</a><a class="ac" href="黃天來/index.html">黃天來</a><a class="ac" href="黃文勇/index.html">黃文勇</a><a class="ac" href="黃以芳/index.html">黃以芳</a><a class="ac" href="黃永全/index.html">黃永全</a><a class="ac" href="黃玉英/index.html">黃玉英</a><a class="ac" href="黃吉正/index.html">黃吉正</a><a class="ac" href="黃存仁/index.html">黃存仁</a><a class="ac" href="黃克強/index.html">黃克強</a><a class="ac" href="黃芳真/index.html">黃芳真</a><a class="ac" href="黃敏城/index.html">黃敏城</a><a class="ac" href="黃敏欽/index.html">黃敏欽</a><a class="ac" href="黃福昌/index.html">黃福昌</a><a class="ac" href="黃龜理/index.html">黃龜理</a><a class="ac" href="黃寶琳/index.html">黃寶琳</a><a class="ac" href="黃櫳賢/index.html">黃櫳賢</a><a class="ac" href="黃耀鋒/index.html">黃耀鋒</a><a class="ac" href="黃鑫沛/index.html">黃鑫沛</a></div></section><section class="sec" id="sec-special"><div class="sec-head"><span class="sec-no">窯・品牌・代號</span><h2 class="sec-title">窯名 / 品牌 / 別名</h2><span class="sec-cnt">19 筆</span></div><div class="scards"><a class="sc" href="二穀/index.html"><b>二穀</b></a><a class="sc" href="三古默農/index.html"><b>三古默農</b></a><a class="sc" href="下田窯/index.html"><b>下田窯</b></a><a class="sc" href="火雲式柴燒/index.html"><b>火雲式柴燒</b></a><a class="sc" href="有泥窯/index.html"><b>有泥窯</b></a><a class="sc" href="沉穩/index.html"><b>沉穩</b></a><a class="sc" href="和成窯/index.html"><b>和成窯</b></a><a class="sc" href="長弓/index.html"><b>長弓</b></a><a class="sc" href="青瓷/index.html"><b>青瓷</b></a><a class="sc" href="陶作坊/index.html"><b>陶作坊</b></a><a class="sc" href="陶藝家/index.html"><b>陶藝家</b></a><a class="sc" href="陸寶窯/index.html"><b>陸寶窯</b></a><a class="sc" href="焱窯/index.html"><b>焱窯</b></a><a class="sc" href="黑山窯/index.html"><b>黑山窯</b></a><a class="sc" href="圓山窯/index.html"><b>圓山窯</b></a><a class="sc" href="達木/index.html"><b>達木</b></a><a class="sc" href="遙寧軒/index.html"><b>遙寧軒</b></a><a class="sc" href="還原茶倉/index.html"><b>還原茶倉</b></a><a class="sc" href="藏山窯/index.html"><b>藏山窯</b></a></div></section>
-
-  <section class="sec" id="stat"><div class="sec-head"><span class="sec-no">統計</span><h2 class="sec-title">收錄一覽</h2></div>
-    <p style="color:var(--muted);max-width:760px;font-size:14px">本入口整合 ceramist 資料夾下全部陶藝家個人網站：306 位作者分屬 63 種姓氏，另收 19 筆窯名・品牌・別名；每位網站均以 02-shaozai 土火質樸語彙統一建置（Mega Menu・麵包屑・作品集圖庫・右下浮動 Sitemap/LINE），內容依公開權威資料整理。</p>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap foot">
-    <span>© <span id="year"></span> 331.today 陶藝家平台｜整合 306 位陶藝家個人網站</span>
-    <span>依公開資料建置之數位展廊（各站內含 REPLACE- 聯絡佔位欄位，上線前請替換）</span>
-    <hr>
-    <div class="sources">站點：
-      <div class="src-row"><a href="../index.html">331.today 首頁</a><a href="landing/02-shaozai/index.html">02 柴燒模板</a><a href="landing/README.txt">版型說明</a></div>
-    </div>
-  </div>
-</footer>
-
-<div class="floatbar">
-  <button class="float-btn f-map" id="sitemapBtn" aria-label="站點地圖"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>地圖</button>
-  <a class="float-btn f-line" href="https://line.me/R/ti/p/REPLACE-LINE" aria-label="LINE 聯絡"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.9 2 10.8c0 4.1 3.1 7.6 7.4 8.7.3.1.7.3.8.6.1.3.1.9 0 1.4l-.2 1.1c0 .3-.1.7.6.4 4.9-2 7.5-4.3 8.9-5.9C21.7 15.6 22 13.2 22 10.8 22 5.9 17.5 2 12 2zm3.7 9.6h-2.6l-2.3 3.4c-.1.2-.4.1-.4-.1V11.6H7.8c-.2 0-.4-.2-.4-.4s.2-.4.4-.4h3.9v2.4c0 .2.3.3.4.1l2-3c.1-.2.4-.1.4.1v2.4h2.2c.2 0 .4.2.4.4s-.2.4-.4.4z"/></svg>LINE</a>
+<div class="header">
+  <a class="brand" href="../index.html">三三藝 331.today</a>
+  <a href="../index.html">回首頁</a>
 </div>
-
-<div class="modal" id="sitemapModal" role="dialog" aria-modal="true" aria-label="站點地圖">
-  <div class="modal-card"><h3>站點地圖</h3>
-    <div class="smap-rows"><a href="#top">首頁</a><a href="#stat">統計一覽</a><a href="#sec-special">窯・品牌・代號</a><a href="../index.html">331.today</a></div>
-    <button class="modal-close" id="modalClose">關閉</button>
+<div class="container">
+  <div class="section-title">陶藝家 <span class="count" id="cnt"></span></div>
+  <div class="filter-bar">
+    <select id="strokeFilter">
+      <option value="">全部筆畫</option>
+      <option value="1">1–10 畫</option>
+      <option value="2">11–20 畫</option>
+      <option value="3">21 畫以上</option>
+    </select>
   </div>
+  <div class="grid" id="grid"></div>
 </div>
-
 <script>
-(function(){
-  document.getElementById('year').textContent=new Date().getFullYear();
-  var trig=document.querySelector('.m-trigger[data-mega="megaSurname"]'),mega=document.getElementById('megaSurname');
-  if(trig&&mega){trig.addEventListener('mouseenter',function(){mega.classList.add('open');});trig.addEventListener('click',function(e){e.preventDefault();mega.classList.toggle('open');});mega.addEventListener('mouseleave',function(){mega.classList.remove('open');});}
-  var t=document.getElementById('navToggle'),p=document.getElementById('navPanel');
-  t.addEventListener('click',function(){var o=p.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
-  p.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){p.classList.remove('open');t.setAttribute('aria-expanded','false');});});
-  var sb=document.getElementById('sitemapBtn'),sm=document.getElementById('sitemapModal'),mc=document.getElementById('modalClose');
-  sb.addEventListener('click',function(){sm.classList.add('open');});mc.addEventListener('click',function(){sm.classList.remove('open');});
-  sm.addEventListener('click',function(e){if(e.target===sm){sm.classList.remove('open');}});
-  var qk=document.querySelectorAll('.qk');
-  qk.forEach(function(q){q.addEventListener('click',function(){qk.forEach(function(x){x.classList.remove('on');});q.classList.add('on');});});
-})();
+// 第一字筆畫數參照表（常用繁體字）
+const STROKES = {
+"三":3,"下":3,"二":2,"伍":6,"何":7,"傅":12,"刁":2,"劉":15,"卓":8,"古":5,
+"吳":7,"呂":7,"周":8,"和":8,"唐":10,"圓":13,"姚":9,"孫":10,"宋":7,"官":8,
+"宮":10,"巫":7,"康":11,"廖":14,"張":11,"彭":12,"徐":10,"戚":11,"施":9,
+"曹":11,"曾":12,"有":6,"朱":6,"李":7,"杜":7,"林":8,"梁":11,"楊":13,
+"江":6,"沈":7,"沉":7,"洪":9,"游":12,"湯":12,"火":4,"焱":12,"王":4,
+"田":5,"白":5,"石":5,"神":10,"程":12,"章":11,"紀":9,"翁":10,"胡":9,
+"范":8,"葉":12,"董":12,"藏":17,"許":11,"詹":13,"連":10,"遊":12,"達":12,
+"遙":13,"還":16,"邱":7,"邵":7,"郭":10,"長":8,"阮":6,"陳":11,"陶":16,
+"陸":16,"青":8,"高":10,"麥":11,"黃":12,"黑":12
+};
+function strokeBucket(name){
+  const s = STROKES[name[0]] || 1;
+  if(s <= 10) return '1';
+  if(s <= 20) return '2';
+  return '3';
+}
+const ARTISTS = [
+"三古默農","下田窯","二穀","伍坤山","何啟徵","何志隆","何瑤如","余成忠","余維和",
+"傅永悌","傅狷夫","刁宏亮","劉世平","劉作泥","劉再興","劉奮飛","劉小評","劉映汝",
+"劉榮輝","劉欽瑩","劉武","劉淑婉","劉真真","劉鎮洲","卓銘順","古川子","吳俊忠",
+"吳偉丞","吳堅材","吳建福","吳政憲","吳明儀","吳晟誌","吳毓堂","吳水沂","吳永輝",
+"吳燧木","吳茂成","吳菊","吳讓農","吳進風","吳遠中","吳金維","吳金象","吳開興",
+"吳麗嬌","呂之蓉","呂嘉靖","呂淑珍","周妙文","周邦玲","和成窯","唐國樑","圓山窯",
+"姚一葦","孫文斌","孫超","宋廷璧","官貞良","宮重文","巫漢青","康嘉良","廖天照",
+"廖學舟","廖明亮","廖瑞章","張勝雄","張向泊","張家誌","張山","張書曜","張書耀",
+"張永昇","張清淵","張璽元","張素","張繼陶","彭宗文","彭雅美","徐兆平","徐兆煜",
+"徐崇林","徐文哲","徐明稷","徐永旭","徐秀棠","徐美月","徐興隆","戚維義","施宣宇",
+"施惠吟","曹世妹","曾冠錄","曾愛真","曾政銘","曾明男","曾永鴻","曾泰洋","曾火漾",
+"曾財萬","曾鵬","有泥窯","朱坤培","朱寶雍","朱義成","朱芳毅","朱邦雄","李亮一",
+"李仁嵋","李天民","李宗儒","李幸龍","李懷錦","李明雄","李梅樹","李永明","李永生",
+"李淳雄","李澤藩","李石樵","李茂宗","李進福","李邱吉","李金生","李金碧","杜文聰",
+"杜芃萱","杜輔仁","林之謙","林俊彬","林博裕","林善瑛","林國隆","林墡瑛","林恭助",
+"林振龍","林敏毅","林文貞","林昭慶","林松本","林柏根","林治娟","林添福","林清河",
+"林瑛","林瑞華-竹南蛇釉","林秀娘","林美雅","林義傑","林葆家","林錦鐘","林靖崧",
+"梁冠英","楊元太","楊宗嘉","楊文霓","楊春生","楊正雍","楊英風","楊雪","江有庭",
+"江玗","江聰敏","沈東寧","沉穩","洪文郁","洪瑞麟","洪瑩琪","洪進貴","游榮林",
+"游正民","湯潤清","火雲式柴燒","焱窯","王世芳","王俊傑","王修功","王宏祥","王德生",
+"王惠民","王明發","王昱心","王正鴻","王泰銘","王百祿","王福長","王秀琴","王龍德",
+"田承泰","白宗晉","白木全","石玉霖","神山清子","程剛","程逸仁","章格銘","章碧霞",
+"紀世傑","翁國珍","翁姍慧","翁明川","胡宗顯","胡維澤","范振金","葉佐燁","葉子",
+"葉文","葉萱勳","董大山","董淑慧","藏山窯","許中晴","許德家","許慧娜","許揚仁",
+"許旭倫","許明香","許朝宗","詹文政","詹文森","詹智勝","連寶猜","遊曉昊","達木",
+"遙寧軒","還原茶倉","邱上捷","邱奕志","邱建清","邱明泉","邱煥堂","邱玉錡","邱顯裕",
+"邵椋揚","郭明慶","郭明本","郭聰仁","郭詩謙","郭雅眉","郭青榕","長弓","阮俊隆",
+"陳九駱","陳佐導","陳俊光","陳傳","陳啟南","陳國光","陳國能","陳坤和","陳士钜",
+"陳威恩","陳實涵","陳峰霖","陳建智","陳志強","陳志忠","陳新上","陳新讚","陳明亮",
+"陳明男","陳明謙","陳明輝","陳景亮","陳正勳","陳正川","陳永興","陳淑惠","陳淑耘",
+"陳淑華","陳煥堂","陳獻譽","陳玉葉","陳硯平","陳秋吉","陳紹寬","陳良柏","陳銘濃",
+"陳雅萍","陶作坊","陶藝家","陸寶窯","青瓷","高偉能","高枝明","高淑惠","麥傳亮",
+"黃以芳","黃克強","黃吉正","黃大安","黃天來","黃存仁","黃寶琳","黃敏城","黃敏欽",
+"黃文勇","黃櫳賢","黃永全","黃玉英","黃福昌","黃耀鋒","黃芳真","黃鑫沛","黃龜理",
+"黑山窯"
+];
+const grid = document.getElementById('grid');
+const cnt = document.getElementById('cnt');
+const filterSel = document.getElementById('strokeFilter');
+
+function render(){
+  const bucket = filterSel.value;
+  const list = bucket ? ARTISTS.filter(n => strokeBucket(n) === bucket) : ARTISTS;
+  cnt.textContent = list.length + ' 位';
+  grid.innerHTML = '';
+  list.forEach(name => {
+    const card = document.createElement('a');
+    card.className = 'card';
+    card.href = encodeURIComponent(name) + '/index.html';
+    card.innerHTML = `
+      <div class="thumb"><img src="${encodeURIComponent(name)}/_shots/index_desktop.jpg" alt="${name}"
+        onerror="this.onerror=null;this.src='${encodeURIComponent(name)}/_shots/works_desktop.jpg'"></div>
+      <div class="meta">${name}</div>`;
+    grid.appendChild(card);
+  });
+}
+filterSel.onchange = render;
+render();
 </script>
 </body>
 </html>

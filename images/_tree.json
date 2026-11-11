@@ -1,0 +1,796 @@
+{
+ "generated": "2026-11-11 13:05:49",
+ "levels": [
+  {
+   "slug": "art",
+   "label": "藝術品",
+   "count": 1466,
+   "tabs": [
+    {
+     "label": "陶藝家",
+     "action": "switchPage('ceramist')"
+    }
+   ],
+   "children": [
+    {
+     "slug": "sculpture",
+     "label": "雕塑",
+     "count": 107,
+     "dir": "images/art/sculpture/"
+    },
+    {
+     "slug": "painting",
+     "label": "書畫",
+     "count": 5,
+     "dir": "images/art/painting/"
+    },
+    {
+     "slug": "calligraphy",
+     "label": "書法篆刻",
+     "count": 5,
+     "dir": "images/art/calligraphy/"
+    },
+    {
+     "slug": "printmaking",
+     "label": "版畫",
+     "count": 5,
+     "dir": "images/art/printmaking/"
+    },
+    {
+     "slug": "photography",
+     "label": "攝影",
+     "count": 1,
+     "dir": "images/art/photography/"
+    },
+    {
+     "slug": "ceramics_art",
+     "label": "陶塑工藝",
+     "count": 5,
+     "dir": "images/art/ceramics_art/"
+    },
+    {
+     "slug": "metalwork",
+     "label": "金工擺件",
+     "count": 5,
+     "dir": "images/art/metalwork/"
+    },
+    {
+     "slug": "textile",
+     "label": "織繡",
+     "count": 0,
+     "dir": "images/art/textile/"
+    },
+    {
+     "slug": "mixed",
+     "label": "綜合媒材",
+     "count": 5,
+     "dir": "images/art/mixed/"
+    },
+    {
+     "slug": "franz",
+     "label": "法藍瓷",
+     "count": 1306,
+     "dir": "images/franz/"
+    },
+    {
+     "slug": "print",
+     "label": "法藍瓷印刷",
+     "count": 22,
+     "dir": "images/print/"
+    }
+   ]
+  },
+  {
+   "slug": "jewelry",
+   "label": "珠寶",
+   "count": 217,
+   "tabs": [
+    {
+     "label": "珠寶總覽",
+     "action": "switchPage('accessory')"
+    }
+   ],
+   "children": [
+    {
+     "slug": "jade",
+     "label": "翡翠玉石",
+     "count": 207,
+     "dir": "images/jewelry/jade/"
+    },
+    {
+     "slug": "diamond",
+     "label": "鑽石",
+     "count": 0,
+     "dir": "images/jewelry/diamond/"
+    },
+    {
+     "slug": "emerald",
+     "label": "祖母綠",
+     "count": 0,
+     "dir": "images/jewelry/emerald/"
+    },
+    {
+     "slug": "ruby_sapphire",
+     "label": "紅藍寶",
+     "count": 0,
+     "dir": "images/jewelry/ruby_sapphire/"
+    },
+    {
+     "slug": "pearl",
+     "label": "珍珠",
+     "count": 0,
+     "dir": "images/jewelry/pearl/"
+    },
+    {
+     "slug": "coral",
+     "label": "珊瑚",
+     "count": 0,
+     "dir": "images/jewelry/coral/"
+    },
+    {
+     "slug": "gold",
+     "label": "金工",
+     "count": 0,
+     "dir": "images/jewelry/gold/"
+    },
+    {
+     "slug": "carving",
+     "label": "玉雕件",
+     "count": 5,
+     "dir": "images/jewelry/carving/"
+    },
+    {
+     "slug": "beads",
+     "label": "串珠手珠",
+     "count": 5,
+     "dir": "images/jewelry/beads/"
+    },
+    {
+     "slug": "amber",
+     "label": "琥珀蜜蠟",
+     "count": 0,
+     "dir": "images/jewelry/amber/"
+    }
+   ]
+  },
+  {
+   "slug": "ceramics",
+   "label": "陶瓷",
+   "count": 6677,
+   "tabs": [
+    {
+     "label": "陶瓷",
+     "action": "switchPage('ceramic')"
+    },
+    {
+     "label": "紫砂壺",
+     "action": "switchPage('zisha')"
+    },
+    {
+     "label": "茶壺",
+     "action": "switchPage('teapot')"
+    },
+    {
+     "label": "三三藝",
+     "action": "switchPage('s331')"
+    },
+    {
+     "label": "陶藝（古典）",
+     "action": "switchPage('pottery')"
+    }
+   ],
+   "children": [
+    {
+     "slug": "teapot",
+     "label": "茶壺",
+     "count": 4442,
+     "dir": "images/ceramics/teapot/"
+    },
+    {
+     "slug": "porcelain",
+     "label": "瓷器",
+     "count": 688,
+     "dir": "images/ceramics/porcelain/"
+    },
+    {
+     "slug": "tea_tools",
+     "label": "茶具配件",
+     "count": 555,
+     "dir": "images/ceramics/tea_tools/"
+    },
+    {
+     "slug": "gaiwan",
+     "label": "蓋碗",
+     "count": 5,
+     "dir": "images/ceramics/gaiwan/"
+    },
+    {
+     "slug": "cup",
+     "label": "品茗杯",
+     "count": 5,
+     "dir": "images/ceramics/cup/"
+    },
+    {
+     "slug": "caddy",
+     "label": "茶倉",
+     "count": 5,
+     "dir": "images/ceramics/caddy/"
+    },
+    {
+     "slug": "vase",
+     "label": "花器",
+     "count": 37,
+     "dir": "images/ceramics/vase/"
+    },
+    {
+     "slug": "tray",
+     "label": "茶盤",
+     "count": 5,
+     "dir": "images/ceramics/tray/"
+    },
+    {
+     "slug": "sculpture",
+     "label": "陶塑",
+     "count": 1,
+     "dir": "images/ceramics/sculpture/"
+    },
+    {
+     "slug": "fengzi",
+     "label": "豐子汝窯",
+     "count": 934,
+     "dir": "images/fengzi/"
+    }
+   ]
+  },
+  {
+   "slug": "watches",
+   "label": "名錶",
+   "count": 1,
+   "tabs": [],
+   "children": [
+    {
+     "slug": "mechanical",
+     "label": "機械錶",
+     "count": 1,
+     "dir": "images/watches/mechanical/"
+    },
+    {
+     "slug": "quartz",
+     "label": "石英錶",
+     "count": 0,
+     "dir": "images/watches/quartz/"
+    },
+    {
+     "slug": "pocket",
+     "label": "懷錶",
+     "count": 0,
+     "dir": "images/watches/pocket/"
+    },
+    {
+     "slug": "antique_watch",
+     "label": "古董錶",
+     "count": 0,
+     "dir": "images/watches/antique_watch/"
+    },
+    {
+     "slug": "strap",
+     "label": "錶帶",
+     "count": 0,
+     "dir": "images/watches/strap/"
+    },
+    {
+     "slug": "box",
+     "label": "錶盒配件",
+     "count": 0,
+     "dir": "images/watches/box/"
+    },
+    {
+     "slug": "clock",
+     "label": "座鐘掛鐘",
+     "count": 0,
+     "dir": "images/watches/clock/"
+    },
+    {
+     "slug": "parts",
+     "label": "維修零件",
+     "count": 0,
+     "dir": "images/watches/parts/"
+    },
+    {
+     "slug": "sets",
+     "label": "收藏套組",
+     "count": 0,
+     "dir": "images/watches/sets/"
+    },
+    {
+     "slug": "jewel_watch",
+     "label": "珠寶錶",
+     "count": 0,
+     "dir": "images/watches/jewel_watch/"
+    }
+   ]
+  },
+  {
+   "slug": "tea",
+   "label": "茶與器",
+   "count": 26,
+   "tabs": [],
+   "children": [
+    {
+     "slug": "green_tea",
+     "label": "綠茶",
+     "count": 0,
+     "dir": "images/tea/green_tea/"
+    },
+    {
+     "slug": "white_tea",
+     "label": "白茶",
+     "count": 0,
+     "dir": "images/tea/white_tea/"
+    },
+    {
+     "slug": "yellow_tea",
+     "label": "黃茶",
+     "count": 0,
+     "dir": "images/tea/yellow_tea/"
+    },
+    {
+     "slug": "oolong",
+     "label": "青茶（烏龍）",
+     "count": 0,
+     "dir": "images/tea/oolong/"
+    },
+    {
+     "slug": "black_tea",
+     "label": "紅茶",
+     "count": 16,
+     "dir": "images/tea/black_tea/"
+    },
+    {
+     "slug": "puer",
+     "label": "黑茶（普洱）",
+     "count": 0,
+     "dir": "images/tea/puer/"
+    },
+    {
+     "slug": "flower_tea",
+     "label": "花茶",
+     "count": 0,
+     "dir": "images/tea/flower_tea/"
+    },
+    {
+     "slug": "teaware",
+     "label": "茶器",
+     "count": 5,
+     "dir": "images/tea/teaware/"
+    },
+    {
+     "slug": "tea_accessory",
+     "label": "茶道具",
+     "count": 5,
+     "dir": "images/tea/tea_accessory/"
+    },
+    {
+     "slug": "tea_gift",
+     "label": "茶葉禮盒",
+     "count": 0,
+     "dir": "images/tea/tea_gift/"
+    }
+   ]
+  },
+  {
+   "slug": "wine",
+   "label": "酒",
+   "count": 1,
+   "tabs": [],
+   "children": [
+    {
+     "slug": "grape_wine",
+     "label": "葡萄酒",
+     "count": 0,
+     "dir": "images/wine/grape_wine/"
+    },
+    {
+     "slug": "whisky",
+     "label": "威士忌",
+     "count": 1,
+     "dir": "images/wine/whisky/"
+    },
+    {
+     "slug": "sake",
+     "label": "清酒",
+     "count": 0,
+     "dir": "images/wine/sake/"
+    },
+    {
+     "slug": "brandy",
+     "label": "白蘭地",
+     "count": 0,
+     "dir": "images/wine/brandy/"
+    },
+    {
+     "slug": "kaoliang",
+     "label": "高粱酒",
+     "count": 0,
+     "dir": "images/wine/kaoliang/"
+    },
+    {
+     "slug": "baijiu",
+     "label": "中式白酒",
+     "count": 0,
+     "dir": "images/wine/baijiu/"
+    },
+    {
+     "slug": "champagne",
+     "label": "香檳",
+     "count": 0,
+     "dir": "images/wine/champagne/"
+    },
+    {
+     "slug": "fortified",
+     "label": "加烈酒",
+     "count": 0,
+     "dir": "images/wine/fortified/"
+    },
+    {
+     "slug": "wine_vessel",
+     "label": "酒器",
+     "count": 0,
+     "dir": "images/wine/wine_vessel/"
+    },
+    {
+     "slug": "cellar_set",
+     "label": "藏酒套組",
+     "count": 0,
+     "dir": "images/wine/cellar_set/"
+    }
+   ]
+  },
+  {
+   "slug": "instruments",
+   "label": "樂器",
+   "count": 1,
+   "tabs": [],
+   "children": [
+    {
+     "slug": "guqin",
+     "label": "古琴",
+     "count": 1,
+     "dir": "images/instruments/guqin/"
+    },
+    {
+     "slug": "erhu",
+     "label": "二胡",
+     "count": 0,
+     "dir": "images/instruments/erhu/"
+    },
+    {
+     "slug": "pipa",
+     "label": "琵琶",
+     "count": 0,
+     "dir": "images/instruments/pipa/"
+    },
+    {
+     "slug": "dizi",
+     "label": "笛簫",
+     "count": 0,
+     "dir": "images/instruments/dizi/"
+    },
+    {
+     "slug": "zheng",
+     "label": "古箏",
+     "count": 0,
+     "dir": "images/instruments/zheng/"
+    },
+    {
+     "slug": "sheng",
+     "label": "笙",
+     "count": 0,
+     "dir": "images/instruments/sheng/"
+    },
+    {
+     "slug": "drum",
+     "label": "鼓",
+     "count": 0,
+     "dir": "images/instruments/drum/"
+    },
+    {
+     "slug": "gong",
+     "label": "鑼鈸",
+     "count": 0,
+     "dir": "images/instruments/gong/"
+    },
+    {
+     "slug": "accessory",
+     "label": "樂器配件",
+     "count": 0,
+     "dir": "images/instruments/accessory/"
+    },
+    {
+     "slug": "suona",
+     "label": "嗩吶",
+     "count": 0,
+     "dir": "images/instruments/suona/"
+    }
+   ]
+  },
+  {
+   "slug": "antiques",
+   "label": "古董文玩",
+   "count": 237,
+   "tabs": [
+    {
+     "label": "古玩總覽",
+     "action": "switchPage('archive')"
+    }
+   ],
+   "children": [
+    {
+     "slug": "stationery",
+     "label": "文房雜項",
+     "count": 66,
+     "dir": "images/antiques/stationery/"
+    },
+    {
+     "slug": "bronze",
+     "label": "銅器",
+     "count": 0,
+     "dir": "images/antiques/bronze/"
+    },
+    {
+     "slug": "jade_antique",
+     "label": "古玉",
+     "count": 5,
+     "dir": "images/antiques/jade_antique/"
+    },
+    {
+     "slug": "bamboo_wood",
+     "label": "竹木牙角",
+     "count": 0,
+     "dir": "images/antiques/bamboo_wood/"
+    },
+    {
+     "slug": "lacquer",
+     "label": "漆器",
+     "count": 0,
+     "dir": "images/antiques/lacquer/"
+    },
+    {
+     "slug": "enamel",
+     "label": "琺瑯",
+     "count": 0,
+     "dir": "images/antiques/enamel/"
+    },
+    {
+     "slug": "buddha",
+     "label": "佛像",
+     "count": 0,
+     "dir": "images/antiques/buddha/"
+    },
+    {
+     "slug": "snuff",
+     "label": "鼻煙壺",
+     "count": 0,
+     "dir": "images/antiques/snuff/"
+    },
+    {
+     "slug": "misc_antique",
+     "label": "雜項",
+     "count": 5,
+     "dir": "images/antiques/misc_antique/"
+    },
+    {
+     "slug": "xiaomao",
+     "label": "小毛石雕",
+     "count": 161,
+     "dir": "images/xiaomao_stone/"
+    }
+   ]
+  },
+  {
+   "slug": "wood",
+   "label": "原木",
+   "count": 11,
+   "tabs": [],
+   "children": [
+    {
+     "slug": "agarwood",
+     "label": "沉香",
+     "count": 4,
+     "dir": "images/wood/agarwood/"
+    },
+    {
+     "slug": "sandalwood",
+     "label": "檀香",
+     "count": 0,
+     "dir": "images/wood/sandalwood/"
+    },
+    {
+     "slug": "huanghuali",
+     "label": "黃花梨",
+     "count": 0,
+     "dir": "images/wood/huanghuali/"
+    },
+    {
+     "slug": "zitan",
+     "label": "紫檀",
+     "count": 0,
+     "dir": "images/wood/zitan/"
+    },
+    {
+     "slug": "cypress",
+     "label": "崖柏",
+     "count": 0,
+     "dir": "images/wood/cypress/"
+    },
+    {
+     "slug": "furniture",
+     "label": "原木家具",
+     "count": 0,
+     "dir": "images/wood/furniture/"
+    },
+    {
+     "slug": "timber",
+     "label": "板材",
+     "count": 0,
+     "dir": "images/wood/timber/"
+    },
+    {
+     "slug": "root",
+     "label": "根雕",
+     "count": 0,
+     "dir": "images/wood/root/"
+    },
+    {
+     "slug": "carving_wood",
+     "label": "木雕擺件",
+     "count": 5,
+     "dir": "images/wood/carving_wood/"
+    },
+    {
+     "slug": "other_wood",
+     "label": "其他木種",
+     "count": 2,
+     "dir": "images/wood/other_wood/"
+    }
+   ]
+  },
+  {
+   "slug": "coins_stamps",
+   "label": "錢幣與珍郵",
+   "count": 1,
+   "tabs": [],
+   "children": [
+    {
+     "slug": "ancient_coin",
+     "label": "古錢",
+     "count": 1,
+     "dir": "images/coins_stamps/ancient_coin/"
+    },
+    {
+     "slug": "silver",
+     "label": "銀幣",
+     "count": 0,
+     "dir": "images/coins_stamps/silver/"
+    },
+    {
+     "slug": "gold_coin",
+     "label": "金幣",
+     "count": 0,
+     "dir": "images/coins_stamps/gold_coin/"
+    },
+    {
+     "slug": "banknote",
+     "label": "紙鈔",
+     "count": 0,
+     "dir": "images/coins_stamps/banknote/"
+    },
+    {
+     "slug": "stamp",
+     "label": "郵票",
+     "count": 0,
+     "dir": "images/coins_stamps/stamp/"
+    },
+    {
+     "slug": "first_day",
+     "label": "首日封",
+     "count": 0,
+     "dir": "images/coins_stamps/first_day/"
+    },
+    {
+     "slug": "commemorative",
+     "label": "紀念幣",
+     "count": 0,
+     "dir": "images/coins_stamps/commemorative/"
+    },
+    {
+     "slug": "album",
+     "label": "錢幣冊",
+     "count": 0,
+     "dir": "images/coins_stamps/album/"
+    },
+    {
+     "slug": "philately",
+     "label": "集郵用品",
+     "count": 0,
+     "dir": "images/coins_stamps/philately/"
+    },
+    {
+     "slug": "specimen",
+     "label": "樣幣樣張",
+     "count": 0,
+     "dir": "images/coins_stamps/specimen/"
+    }
+   ]
+  },
+  {
+   "slug": "estate",
+   "label": "房與地",
+   "count": 1,
+   "tabs": [],
+   "children": [
+    {
+     "slug": "villa",
+     "label": "別墅",
+     "count": 1,
+     "dir": "images/estate/villa/"
+    },
+    {
+     "slug": "manor",
+     "label": "莊園",
+     "count": 0,
+     "dir": "images/estate/manor/"
+    },
+    {
+     "slug": "old_house",
+     "label": "老宅",
+     "count": 0,
+     "dir": "images/estate/old_house/"
+    },
+    {
+     "slug": "shop",
+     "label": "店面",
+     "count": 0,
+     "dir": "images/estate/shop/"
+    },
+    {
+     "slug": "land",
+     "label": "土地",
+     "count": 0,
+     "dir": "images/estate/land/"
+    },
+    {
+     "slug": "farm",
+     "label": "農舍",
+     "count": 0,
+     "dir": "images/estate/farm/"
+    },
+    {
+     "slug": "hotspring",
+     "label": "溫泉宅",
+     "count": 0,
+     "dir": "images/estate/hotspring/"
+    },
+    {
+     "slug": "office",
+     "label": "商辦",
+     "count": 0,
+     "dir": "images/estate/office/"
+    },
+    {
+     "slug": "parking",
+     "label": "車位",
+     "count": 0,
+     "dir": "images/estate/parking/"
+    },
+    {
+     "slug": "farmland",
+     "label": "農地林地",
+     "count": 0,
+     "dir": "images/estate/farmland/"
+    }
+   ]
+  }
+ ],
+ "review": []
+}

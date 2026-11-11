@@ -1,47 +1,23 @@
 /**
- * 三三藝 Grid Gallery - 主程式
+ * 三三藝 Grid Gallery - 主程式（靜態頁版）
  * 佳士得風格分類導航，每頁 48 張，分頁導航
+ * 卡片連結至 artwork/AW-XXXX.html 靜態頁
  */
-
 (function () {
   'use strict';
 
-  // ===== 設定 =====
-  const CONFIG = {
-    pageSize: 48,
-  };
+  const CONFIG = { pageSize: 48 };
 
-  // 分類中文名稱對照（14 分類 + 全部）
   const CATEGORY_NAMES = {
     all: '全部作品',
-    'tea-leaves': '茶葉',
-    'tea-utensils': '茶器具',
-    ceramics: '陶瓷',
-    sculpture: '雕塑',
-    'scholar-objects': '文玩',
-    bracelets: '手串',
-    agarwood: '沉香',
-    'yixing-teapot': '紫砂壺',
-    painting: '繪畫',
-    antique: '古物',
-    coral: '珊瑚',
-    jade: '玉石',
-    books: '書籍',
-    other: '其他',
+    'tea-leaves': '茶葉', 'tea-utensils': '茶器具', ceramics: '陶瓷',
+    sculpture: '雕塑', 'scholar-objects': '文玩', bracelets: '手串',
+    agarwood: '沉香', 'yixing-teapot': '紫砂壺', painting: '繪畫',
+    antique: '古物', coral: '珊瑚', jade: '玉石', books: '書籍', other: '其他',
   };
 
-  // ===== 狀態 =====
-  const state = {
-    category: 'all',
-    sort: 'default',
-    layout: 'grid',
-    page: 1,
-    filtered: [],
-    displayed: [],
-    lightboxIndex: -1,
-  };
+  const state = { category: 'all', sort: 'default', layout: 'grid', page: 1, filtered: [] };
 
-  // ===== DOM 參考 =====
   const els = {
     grid: document.getElementById('grid-container'),
     categoryNav: document.getElementById('category-nav'),
@@ -49,148 +25,96 @@
     resultCount: document.getElementById('result-count'),
     pageIndicator: document.getElementById('page-indicator'),
     pagination: document.getElementById('pagination'),
-    lightbox: document.getElementById('lightbox'),
-    lightboxImage: document.getElementById('lightbox-image'),
-    lightboxTitle: document.getElementById('lightbox-title'),
-    lightboxId: document.getElementById('lightbox-id'),
-    lightboxClose: document.getElementById('lightbox-close'),
-    lightboxPrev: document.getElementById('lightbox-prev'),
-    lightboxNext: document.getElementById('lightbox-next'),
   };
 
-  // ===== 初始化 =====
   function init() {
     if (typeof ARTWORKS === 'undefined' || !ARTWORKS.length) {
-      els.grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">◯</div><div class="empty-state-text">尚無作品資料，請將圖片放入 import/ 資料夾後執行 build-gallery.ps1</div></div>';
+      if (els.grid) els.grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">◯</div><div class="empty-state-text">尚無作品資料</div></div>';
       return;
     }
+    // 從 URL 讀取 ?cat= 參數
+    const urlCat = new URLSearchParams(window.location.search).get('cat');
+    if (urlCat && CATEGORY_NAMES[urlCat]) state.category = urlCat;
 
     renderCategoryNav();
     applyFilters();
     bindEvents();
   }
 
-  // ===== 動態產生分類導航（下拉選單，只顯示有作品的分類） =====
   function renderCategoryNav() {
-    // 計算各分類數量
     const counts = {};
-    ARTWORKS.forEach(function (a) {
-      counts[a.category] = (counts[a.category] || 0) + 1;
-    });
-
-    // 只取有作品的分類，依 CATEGORY_NAMES 順序排列，未知分類排最後
+    ARTWORKS.forEach(function (a) { counts[a.category] = (counts[a.category] || 0) + 1; });
     const cats = Object.keys(counts).filter(function (c) { return counts[c] > 0; });
     cats.sort(function (a, b) {
       const ai = Object.keys(CATEGORY_NAMES).indexOf(a);
       const bi = Object.keys(CATEGORY_NAMES).indexOf(b);
       if (ai === -1 && bi === -1) return a.localeCompare(b);
-      if (ai === -1) return 1;
-      if (bi === -1) return -1;
+      if (ai === -1) return 1; if (bi === -1) return -1;
       return ai - bi;
     });
-
     let html = '<select class="cat-select" id="cat-select" aria-label="選擇分類">';
-
-    // 全部作品
     html += '<option value="all">全部作品（' + ARTWORKS.length.toLocaleString() + '）</option>';
-
-    // 有作品的分類（動態）
     cats.forEach(function (cat) {
       const name = CATEGORY_NAMES[cat] || cat;
-      html += '<option value="' + cat + '">' + escapeHtml(name) + '（' + counts[cat].toLocaleString() + '）</option>';
+      html += '<option value="' + cat + '"' + (cat === state.category ? ' selected' : '') + '>' + escapeHtml(name) + '（' + counts[cat].toLocaleString() + '）</option>';
     });
-
     html += '</select>';
     els.categoryNav.innerHTML = html;
   }
 
-  // ===== 篩選與排序 =====
   function applyFilters() {
     state.page = 1;
-
-    // 篩選
-    let items = state.category === 'all'
-      ? ARTWORKS.slice()
-      : ARTWORKS.filter(function (a) { return a.category === state.category; });
-
-    // 排序
+    let items = state.category === 'all' ? ARTWORKS.slice() : ARTWORKS.filter(function (a) { return a.category === state.category; });
     items = sortItems(items, state.sort);
-
     state.filtered = items;
     renderPage();
   }
 
   function sortItems(items, sortType) {
     switch (sortType) {
-      case 'random':
-        return items.slice().sort(function () { return Math.random() - 0.5; });
-      case 'id-asc':
-        return items.slice().sort(function (a, b) { return a.id.localeCompare(b.id); });
-      case 'id-desc':
-        return items.slice().sort(function (a, b) { return b.id.localeCompare(a.id); });
-      default:
-        return items;
+      case 'random': return items.slice().sort(function () { return Math.random() - 0.5; });
+      case 'id-asc': return items.slice().sort(function (a, b) { return a.id.localeCompare(b.id); });
+      case 'id-desc': return items.slice().sort(function (a, b) { return b.id.localeCompare(a.id); });
+      default: return items;
     }
   }
 
-  // ===== 分頁資訊 =====
-  function getTotalPages() {
-    return Math.max(1, Math.ceil(state.filtered.length / CONFIG.pageSize));
-  }
-
+  function getTotalPages() { return Math.max(1, Math.ceil(state.filtered.length / CONFIG.pageSize)); }
   function getPageItems() {
     const start = (state.page - 1) * CONFIG.pageSize;
-    const end = start + CONFIG.pageSize;
-    return state.filtered.slice(start, end);
+    return state.filtered.slice(start, start + CONFIG.pageSize);
   }
 
-  // ===== 渲染頁面 =====
   function renderPage() {
     const totalPages = getTotalPages();
     if (state.page > totalPages) state.page = totalPages;
-
     const items = getPageItems();
-    state.displayed = items;
 
-    // 更新計數與頁碼指示
     els.resultCount.textContent = state.filtered.length.toLocaleString() + ' 件作品';
     const startNum = state.filtered.length === 0 ? 0 : (state.page - 1) * CONFIG.pageSize + 1;
     const endNum = Math.min(state.page * CONFIG.pageSize, state.filtered.length);
     els.pageIndicator.textContent = '第 ' + startNum + '–' + endNum + ' 件';
 
-    // 渲染 Grid
     els.grid.innerHTML = '';
-
     if (items.length === 0) {
       els.grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">◯</div><div class="empty-state-text">此分類尚無作品</div></div>';
       els.pagination.innerHTML = '';
       return;
     }
-
     const fragment = document.createDocumentFragment();
-    items.forEach(function (artwork, idx) {
-      const card = createCard(artwork, idx);
-      fragment.appendChild(card);
-    });
+    items.forEach(function (artwork, idx) { fragment.appendChild(createCard(artwork, idx)); });
     els.grid.appendChild(fragment);
-
-    // 渲染分頁
     renderPagination();
-
-    // 捲動至圖庫頂部
     document.getElementById('gallery').scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  // ===== 建立作品卡片（連結至詳情頁） =====
   function createCard(artwork, index) {
     const card = document.createElement('a');
     card.className = 'artwork-card';
-    card.href = 'artwork.html?id=' + encodeURIComponent(artwork.id);
+    card.href = 'artwork/' + artwork.id + '.html';
     card.dataset.index = index;
     card.setAttribute('aria-label', artwork.title + ' (' + artwork.id + ')');
-
     const catName = CATEGORY_NAMES[artwork.category] || artwork.category;
-
     card.innerHTML =
       '<div class="artwork-image-wrap">' +
         '<span class="artwork-category-badge">' + catName + '</span>' +
@@ -202,238 +126,92 @@
           '</div>' +
         '</div>' +
       '</div>';
-
     lazyLoadImage(card.querySelector('.artwork-image'));
-
     return card;
   }
 
-  // ===== 懶加載 =====
   function lazyLoadImage(img) {
     if (!img) return;
-
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(function (entries, obs) {
         entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            loadImage(img);
-            obs.unobserve(img);
-          }
+          if (entry.isIntersecting) { loadImage(img); obs.unobserve(img); }
         });
       }, { rootMargin: '200px' });
       observer.observe(img);
-    } else {
-      loadImage(img);
-    }
+    } else { loadImage(img); }
   }
 
   function loadImage(img) {
     const src = img.dataset.src;
     if (!src) return;
-
     const tempImg = new Image();
     tempImg.onload = function () {
-      img.src = src;
-      img.classList.add('loaded');
-      img.parentElement.classList.add('loaded');
+      img.src = src; img.classList.add('loaded'); img.parentElement.classList.add('loaded');
     };
-    tempImg.onerror = function () {
-      img.parentElement.classList.add('loaded');
-      img.style.background = '#e7e5e4';
-    };
+    tempImg.onerror = function () { img.parentElement.classList.add('loaded'); img.style.background = '#e7e5e4'; };
     tempImg.src = src;
   }
 
-  // ===== 分頁導航 =====
   function renderPagination() {
     const totalPages = getTotalPages();
     const current = state.page;
-
-    if (totalPages <= 1) {
-      els.pagination.innerHTML = '';
-      return;
-    }
-
+    if (totalPages <= 1) { els.pagination.innerHTML = ''; return; }
     let html = '';
-
-    // 上一頁
-    html += '<button class="page-btn page-nav-btn" data-page="' + (current - 1) + '" ' +
-      (current === 1 ? 'disabled' : '') + ' aria-label="上一頁">&#8249;</button>';
-
-    // 頁碼邏輯：顯示首頁、末頁、當前頁前後各 2 頁，中間用省略號
+    html += '<button class="page-btn page-nav-btn" data-page="' + (current - 1) + '" ' + (current === 1 ? 'disabled' : '') + ' aria-label="上一頁">&#8249;</button>';
     const pages = getPageNumbers(current, totalPages);
-
     pages.forEach(function (p) {
-      if (p === '...') {
-        html += '<span class="page-ellipsis">…</span>';
-      } else {
-        html += '<button class="page-btn' + (p === current ? ' active' : '') + '" data-page="' + p + '">' + p + '</button>';
-      }
+      if (p === '...') { html += '<span class="page-ellipsis">…</span>'; }
+      else { html += '<button class="page-btn' + (p === current ? ' active' : '') + '" data-page="' + p + '">' + p + '</button>'; }
     });
-
-    // 下一頁
-    html += '<button class="page-btn page-nav-btn" data-page="' + (current + 1) + '" ' +
-      (current === totalPages ? 'disabled' : '') + ' aria-label="下一頁">&#8250;</button>';
-
-    // 頁碼資訊
+    html += '<button class="page-btn page-nav-btn" data-page="' + (current + 1) + '" ' + (current === totalPages ? 'disabled' : '') + ' aria-label="下一頁">&#8250;</button>';
     html += '<div class="page-info">第 ' + current + ' / ' + totalPages + ' 頁 · 每頁 ' + CONFIG.pageSize + ' 件</div>';
-
     els.pagination.innerHTML = html;
   }
 
   function getPageNumbers(current, total) {
-    const delta = 2;
-    const range = [];
-    const rangeWithDots = [];
+    const delta = 2, range = [], rangeWithDots = [];
     let l;
-
     range.push(1);
     if (total <= 1) return range;
-
-    for (let i = current - delta; i <= current + delta; i++) {
-      if (i > 1 && i < total) range.push(i);
-    }
+    for (let i = current - delta; i <= current + delta; i++) { if (i > 1 && i < total) range.push(i); }
     range.push(total);
-
     range.forEach(function (i) {
-      if (l) {
-        if (i - l === 2) {
-          rangeWithDots.push(l + 1);
-        } else if (i - l > 2) {
-          rangeWithDots.push('...');
-        }
-      }
-      rangeWithDots.push(i);
-      l = i;
+      if (l) { if (i - l === 2) { rangeWithDots.push(l + 1); } else if (i - l > 2) { rangeWithDots.push('...'); } }
+      rangeWithDots.push(i); l = i;
     });
-
     return rangeWithDots;
   }
 
   function goToPage(page) {
     const totalPages = getTotalPages();
     if (page < 1 || page > totalPages) return;
-    state.page = page;
-    renderPage();
+    state.page = page; renderPage();
   }
 
-  // ===== Lightbox =====
-  function openLightbox(index) {
-    if (index < 0 || index >= state.displayed.length) return;
-
-    state.lightboxIndex = index;
-    updateLightbox();
-    els.lightbox.classList.add('active');
-    els.lightbox.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeLightbox() {
-    els.lightbox.classList.remove('active');
-    els.lightbox.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-    state.lightboxIndex = -1;
-  }
-
-  function updateLightbox() {
-    const artwork = state.displayed[state.lightboxIndex];
-    if (!artwork) return;
-
-    els.lightboxImage.src = artwork.full;
-    els.lightboxImage.alt = artwork.title;
-    els.lightboxTitle.textContent = artwork.title;
-    els.lightboxId.textContent = artwork.id + ' · ' + (CATEGORY_NAMES[artwork.category] || artwork.category);
-  }
-
-  function lightboxPrev() {
-    if (state.lightboxIndex > 0) {
-      state.lightboxIndex--;
-      updateLightbox();
-    }
-  }
-
-  function lightboxNext() {
-    if (state.lightboxIndex < state.displayed.length - 1) {
-      state.lightboxIndex++;
-      updateLightbox();
-    }
-  }
-
-  // ===== 事件綁定 =====
   function bindEvents() {
-    // 分類導航（下拉選單）
     els.categoryNav.addEventListener('change', function (e) {
-      if (e.target.classList.contains('cat-select')) {
-        state.category = e.target.value;
-        applyFilters();
-      }
+      if (e.target.classList.contains('cat-select')) { state.category = e.target.value; applyFilters(); }
     });
-
-    // 排序
-    els.sortSelect.addEventListener('change', function (e) {
-      state.sort = e.target.value;
-      applyFilters();
-    });
-
-    // 顯示模式切換
+    if (els.sortSelect) {
+      els.sortSelect.addEventListener('change', function (e) { state.sort = e.target.value; applyFilters(); });
+    }
     document.querySelectorAll('.layout-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
         document.querySelectorAll('.layout-btn').forEach(function (b) { b.classList.remove('active'); });
         btn.classList.add('active');
         state.layout = btn.dataset.layout;
-
-        if (state.layout === 'masonry') {
-          els.grid.classList.add('masonry');
-        } else {
-          els.grid.classList.remove('masonry');
-        }
+        if (state.layout === 'masonry') { els.grid.classList.add('masonry'); } else { els.grid.classList.remove('masonry'); }
       });
     });
-
-    // 分頁點擊
     els.pagination.addEventListener('click', function (e) {
       const btn = e.target.closest('.page-btn');
       if (!btn || btn.disabled) return;
       const page = parseInt(btn.dataset.page, 10);
-      if (!isNaN(page)) {
-        goToPage(page);
-      }
+      if (!isNaN(page)) goToPage(page);
     });
-
-    // Lightbox
-    els.lightboxClose.addEventListener('click', closeLightbox);
-    els.lightboxPrev.addEventListener('click', lightboxPrev);
-    els.lightboxNext.addEventListener('click', lightboxNext);
-
-    els.lightbox.addEventListener('click', function (e) {
-      if (e.target === els.lightbox) closeLightbox();
-    });
-
-    // 鍵盤導航
-    document.addEventListener('keydown', function (e) {
-      if (!els.lightbox.classList.contains('active')) return;
-      switch (e.key) {
-        case 'Escape': closeLightbox(); break;
-        case 'ArrowLeft': lightboxPrev(); break;
-        case 'ArrowRight': lightboxNext(); break;
-      }
-    });
-
-    // 觸控滑動
-    let touchStartX = 0;
-    els.lightbox.addEventListener('touchstart', function (e) {
-      touchStartX = e.changedTouches[0].screenX;
-    }, { passive: true });
-
-    els.lightbox.addEventListener('touchend', function (e) {
-      const diff = touchStartX - e.changedTouches[0].screenX;
-      if (Math.abs(diff) > 50) {
-        if (diff > 0) lightboxNext(); else lightboxPrev();
-      }
-    }, { passive: true });
   }
 
-  // ===== 工具 =====
   function escapeHtml(str) {
     if (!str) return '';
     const div = document.createElement('div');
@@ -441,10 +219,5 @@
     return div.innerHTML;
   }
 
-  // ===== 啟動 =====
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }
 })();

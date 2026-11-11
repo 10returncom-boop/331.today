@@ -1,0 +1,17 @@
+# 暫存與預覽
+.preview*/
+.preview/
+shot_*.png
+_*.jpg
+_*.png
+_*.webp
+_*.jpeg
+_shots/
+
+# 原始檔（非網頁資產）
+*.src.jpg
+
+# 系統
+Thumbs.db
+.DS_Store
+desktop.ini
